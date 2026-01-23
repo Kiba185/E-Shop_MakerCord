@@ -1,9 +1,11 @@
-  const App = () => {
-     return (
-       <div>
-         <h1>Welcome to MakerCord E-Shop</h1>
-       </div>
-     );
-   };
+import Header from './components/Header';
 
-   export default App;
+const App = () => {
+    return (
+      <>
+        <Header />
+      </>
+    );
+  };
+
+  export default App;
