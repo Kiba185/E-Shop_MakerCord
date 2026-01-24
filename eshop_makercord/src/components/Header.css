@@ -1,4 +1,3 @@
-
 header {
     width: 100%;   
     height: 120px;
@@ -7,12 +6,12 @@ header {
     display: flex;
     flex-direction: column;
     padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.397) 0px 5px 25px;
 }
-
 .header-top {
-    height: 80%;
+    height: 80%;    
     width: 100%;
-    background-color: rgb(50, 75, 97);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +36,7 @@ header {
 .header-bottom {
     height: 20%;
     width: 100%;
-    background-color: green;
+    background-color: var(--green);
 }
 
 .nav-links {
