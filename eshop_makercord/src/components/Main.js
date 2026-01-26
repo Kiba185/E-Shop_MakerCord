@@ -1,12 +1,10 @@
 import "./Main.css";
+import Introduction from "./Introduction";
 
 const Main = () => {
   return (
     <main>
-      <div className="introduction">
-        <h1>Welcome to MakerCord E-Shop</h1>
-        <p>Your one-stop shop for all MakerCord products!</p>
-      </div>
+      <Introduction />
       <div className="products-overview">
         <h2>Featured Products</h2>
         <div className="product-list">
