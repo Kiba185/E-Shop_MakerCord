@@ -8,6 +8,6 @@
 
 body {
     margin: 0;
-    font-family: roboto condensed;
+    font-family: 'Roboto Condensed';
     background-color: var(--gray);
 }
