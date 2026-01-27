@@ -1,0 +1,18 @@
+.add-to-cart-button {
+    position: absolute;
+    bottom: 40px;
+    right: 35px;
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 800;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+}
