@@ -1,11 +1,8 @@
-
-
 const Products = () => {
-  return (
-    <div>
-      Products
-    </div>
-  )
+  return <main>
+    <h2>Products Page</h2>
+
+  </main>
 }
 
 export default Products

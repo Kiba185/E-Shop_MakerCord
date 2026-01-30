@@ -12,12 +12,12 @@ const Header = () => {
   return (
     <header>
       <div className="header-top">
-        <img src={logo} className="logo" alt="Logo" />
+        <NavLink to="/"><img src={logo} className="logo" alt="Logo" /></NavLink>
         <input id="searchbar" type="search" placeholder="Search..." />
         <nav className="nav-links">
           <NavLink to="/contact"><img src={contact_icon} alt="Contact" /></NavLink>
           <NavLink to="/cart"><img src={cart_icon} alt="Cart" /></NavLink>
-          <NavLink to="/UserProfile"><img src={profile_icon} alt="Profile" /></NavLink>
+          <NavLink to="/user-profile"><img src={profile_icon} alt="Profile" /></NavLink>
           <NavLink to="/translation"><img src={translation_icon} alt="Translation" /></NavLink>
         </nav>
       </div>

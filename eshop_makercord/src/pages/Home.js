@@ -2,12 +2,11 @@ import Introduction from '../components/Introduction';
 import ProductsOverview from '../components/ProductsOverview';
 
 const Home = () => {
-  return (
-    <main>
+  return <main>
       <Introduction />
       <ProductsOverview />
-    </main>
-  )
+  </main>
+  
 }
 
 export default Home

@@ -1,9 +1,8 @@
 const UserProfile = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <main>
+    <h2>User Profile Page</h2>
+
+  </main>
 }
 
 export default UserProfile
