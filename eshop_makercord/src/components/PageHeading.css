@@ -1,0 +1,14 @@
+.page-heading {
+    text-align: center;
+    margin: 20px 0;
+    background-color: var(--white);
+    box-shadow: var(--box_shadow);
+    padding: 30px;
+}
+
+.page-heading h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--green);
+    font-weight: 700;
+}

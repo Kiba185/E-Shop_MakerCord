@@ -1,0 +1,9 @@
+.contact-section {
+    padding: 50px 30%;
+    background-color: var(--white);
+    text-align: center;
+    box-shadow: var(--box_shadow);
+    margin: 50px 0;
+    height: 50vh;
+
+}

@@ -13,3 +13,7 @@ body {
     font-family: 'Roboto Condensed';
     background-color: var(--gray);
 }
+
+main {
+    padding: 20px 16%
+}

@@ -1,7 +1,10 @@
+import PageHeading from "../components/PageHeading"
+import ContactSection from "../components/ContactSection"
+
 const Contact = () => {
   return <main>
-    <h2>Contact Page</h2>
-
+    <PageHeading>Contact Us</PageHeading>
+    <ContactSection />
   </main>
 }
 
