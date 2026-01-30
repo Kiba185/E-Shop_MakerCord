@@ -19,6 +19,6 @@ const App = () => {
             <Route path="*" element={<Error />} />
         </Route>
     </Routes>;
-  };
+};
 
   export default App;
