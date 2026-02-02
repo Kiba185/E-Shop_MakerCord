@@ -3,8 +3,8 @@ import "./Introduction.css";
 const Introduction = () => {
     return (
         <section className="introduction">
-            <h1>Welcome to MakerCord E-Shop</h1>
-            <p>Your one-stop shop for all MakerCord products!</p>
+            <h1>Vítejte v obchodě MakerCord</h1>
+            <p>Vše pro MakerCord na jednom místě!</p>
         </section>
     );
 }

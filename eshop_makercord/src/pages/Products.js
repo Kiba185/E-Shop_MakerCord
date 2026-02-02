@@ -1,8 +1,8 @@
 const Products = () => {
   return <main>
-    <h2>Products Page</h2>
+    <h2>Produkty</h2>
 
   </main>
-}
+} 
 
 export default Products

@@ -1,0 +1,92 @@
+import "./CartSummary.css";
+import { useState } from "react";
+import { useCart } from "../context/CartContext";
+
+const CartSummary = () => {
+  const {
+    subtotal,
+    vatAmount,
+    totalBeforeDiscount,
+    discountAmount,
+    total,
+    appliedCode,
+    applyPromoCode,
+    clearPromoCode,
+  } = useCart();
+
+  const [code, setCode] = useState("");
+  const [message, setMessage] = useState(null);
+
+  const handleApply = () => {
+    const ok = applyPromoCode(code);
+    if (ok) {
+      setMessage({ type: "success", text: `Kód ${code.toUpperCase()} byl použit.` });
+    } else {
+      setMessage({ type: "error", text: "Neplatný slevový kód." });
+    }
+  };
+
+  const handleClear = () => {
+    clearPromoCode();
+    setCode("");
+    setMessage(null);
+  };
+
+  const fmt = (n) => n?.toFixed(2) ?? "0.00";
+
+  return (
+    <aside className="cart-summary">
+      <h3>Souhrn objednávky</h3>
+
+      <div className="summary-row">
+        <span>Celkem bez DPH</span>
+        <span>{fmt(subtotal)} Kč</span>
+      </div>
+
+      <div className="summary-row">
+        <span>DPH</span>
+        <span>{fmt(vatAmount)} Kč</span>
+      </div>
+
+      <div className="summary-row">
+        <span>Celkem</span>
+        <span>{fmt(totalBeforeDiscount)} Kč</span>
+      </div>
+
+      {discountAmount > 0 && (
+        <div className="summary-row discount">
+          <span>Sleva ({appliedCode})</span>
+          <span>-{fmt(discountAmount)} Kč</span>
+        </div>
+      )}
+
+      <div className="summary-row total">
+        <strong>Cena celkem</strong>
+        <strong>{fmt(total)} Kč</strong>
+      </div>
+
+      <div className="promo">
+        <label htmlFor="promo">Slevový kód</label>
+        <div className="promo-controls">
+          <input id="promo" value={code} onChange={(e) => setCode(e.target.value)} placeholder="Zadejte kód" />
+          <button className="apply" onClick={handleApply}>Použít</button>
+        </div>
+        {appliedCode && (
+          <div className="applied">
+            <span>Kód <strong>{appliedCode}</strong> použit.</span>
+            <button className="clear" onClick={handleClear}>Odebrat</button>
+          </div>
+        )}
+        {message && (
+          <div className={`message ${message.type}`}>{message.text}</div>
+        )}
+
+        <div style={{ marginTop: 12, textAlign: 'right' }}>
+          <button className="continue">Pokračovat</button>
+        </div>
+      </div>
+    </aside>
+  );
+};
+
+export default CartSummary;

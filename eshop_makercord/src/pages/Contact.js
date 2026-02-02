@@ -3,7 +3,7 @@ import ContactSection from "../components/ContactSection"
 
 const Contact = () => {
   return <main>
-    <PageHeading>Contact Us</PageHeading>
+    <PageHeading>Kontakt</PageHeading>
     <ContactSection />
   </main>
 }

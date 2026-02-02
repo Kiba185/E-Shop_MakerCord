@@ -1,6 +1,6 @@
 const Error = () => {
   return <main>
-    <h2>Error Page</h2>
+    <h2>Chyba</h2>
 
   </main>
 

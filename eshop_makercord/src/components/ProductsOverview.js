@@ -14,8 +14,8 @@ const ProductsOverview = () => {
                         <img src={image} alt={name} />
                         <h3>{name}</h3>
                         <p>{description}</p>
-                        <p className="price">{price}<span className="currency">KČ</span></p>
-                        <AddToCartButton />
+                        <p className="price">{price}<span className="currency">Kč</span></p>
+                        <AddToCartButton product={product} />
                     </div>
                 );
             })}
