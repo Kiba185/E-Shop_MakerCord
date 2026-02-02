@@ -1,6 +1,9 @@
 .cart-product-list {
+    width: 71%;
     padding: 18px 18px;
-    flex: 1;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
 }
 
 .cart-product-list-empty {
@@ -23,10 +26,6 @@
     object-fit: cover;
     border-radius: 8px;
     box-shadow: rgba(0,0,0,0.05) 0px 4px 10px;
-}
-
-.cart-product-main {
-    flex: 1;
 }
 
 .cart-product-name {
@@ -78,8 +77,4 @@
     font-size: 18px;
     cursor: pointer;
     color: var(--black);
-}
-
-@media (max-width: 900px) {
-    .cart-product-right { align-items: flex-start; }
 }

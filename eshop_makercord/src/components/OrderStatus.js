@@ -13,8 +13,10 @@ const OrderStatus = ({ orderStatus = 1 }) => {
       {steps.map((label, idx) => {
         const isCompleted = idx + 1 <= orderStatus;
         return (
-          <div key={idx} className={`order-status-step ${isCompleted ? "completed" : ""}`}>
-            <div className={`order-status-step-circle ${isCompleted ? "completed" : ""}`} />
+          <div key={idx} className="order-status-step">
+            <div className={`order-status-step-circle ${isCompleted ? "completed" : ""}`}>
+                <div className={`order-status-step-dot ${isCompleted ? "completed" : ""}`} />
+            </div>
             <h4 className="order-status-label">{label}</h4>
             {idx > 0 && <div className="order-status-line" />}
           </div>

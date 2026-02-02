@@ -4,6 +4,7 @@
     background-color: var(--white);
     box-shadow: var(--box_shadow);
     padding: 30px;
+    border-radius: 5px;
 }
 
 .page-heading h2 {

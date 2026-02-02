@@ -2,7 +2,7 @@ import "./CartSummary.css";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 
-const CartSummary = () => {
+const CartSummary = ({ setOrderStatus }) => {
   const {
     subtotal,
     vatAmount,
@@ -32,10 +32,14 @@ const CartSummary = () => {
     setMessage(null);
   };
 
+  const handleContinue = () => {
+    if (typeof setOrderStatus === "function") setOrderStatus(2);
+  };
+
   const fmt = (n) => n?.toFixed(2) ?? "0.00";
 
   return (
-    <aside className="cart-summary">
+    <section className="cart-summary">
       <h3>Souhrn objednávky</h3>
 
       <div className="summary-row">
@@ -82,10 +86,11 @@ const CartSummary = () => {
         )}
 
         <div style={{ marginTop: 12, textAlign: 'right' }}>
-          <button className="continue">Pokračovat</button>
+          <button className="continue" onClick={() => setOrderStatus(2)}>Pokračovat</button>
+          <button className="continue" onClick={() => setOrderStatus(1)}>Zpět</button>
         </div>
       </div>
-    </aside>
+    </section>
   );
 };
 
