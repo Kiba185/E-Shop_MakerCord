@@ -1,0 +1,56 @@
+.shipping-payment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shipping-payment-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shipping-payment-option {
+    position: relative;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shipping-payment-option:hover {
+    border-color: #999;
+    background-color: #f9f9f9;
+}
+
+.shipping-payment-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.shipping-payment-option input[type="radio"]:checked + label {
+    color: #999;
+    opacity: 0.5;
+}
+
+.shipping-payment-option input[type="radio"]:checked {
+    visibility: hidden;
+}
+
+.shipping-payment-option label {
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.shipping-payment-option input[type="radio"]:checked ~ * {
+    opacity: 0.5;
+    color: #999;
+}

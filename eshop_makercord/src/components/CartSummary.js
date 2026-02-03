@@ -85,9 +85,9 @@ const CartSummary = ({ setOrderStatus }) => {
           <div className={`message ${message.type}`}>{message.text}</div>
         )}
 
-        <div style={{ marginTop: 12, textAlign: 'right' }}>
+        <div className="summary-actions">
+          <button className="back" onClick={() => setOrderStatus(1)}>Zpět</button>
           <button className="continue" onClick={() => setOrderStatus(2)}>Pokračovat</button>
-          <button className="continue" onClick={() => setOrderStatus(1)}>Zpět</button>
         </div>
       </div>
     </section>

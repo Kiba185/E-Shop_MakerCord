@@ -73,9 +73,27 @@
 
 .continue {
     background: var(--green);
-    color: white;
+    color: var(--white);
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.back {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.summary-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-top: 12px;
 }

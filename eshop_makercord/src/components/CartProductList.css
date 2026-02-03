@@ -8,8 +8,9 @@
 
 .cart-product-list-empty {
     text-align: center;
-    color: var(--gray);
+    color: var(--black);
     padding: 40px 0;
+    font-size: 40px;
 }
 
 .cart-product-item {
