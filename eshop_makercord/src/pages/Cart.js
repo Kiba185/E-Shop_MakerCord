@@ -16,11 +16,16 @@ const Cart = () => {
       <PageHeading>Nákupní košík</PageHeading>
       <OrderStatus orderStatus={orderStatus} />
       <div className="cart-content">
-        {orderStatus === 2 ? (
-          <ShippingPaymentSection />
-        ) : (
-          <CartProductList products={cart} />
-        )}
+        {
+          switch (orderStatus) {
+            case 1:
+              return <CartProductList />;
+            case 2:
+              return <ShippingPaymentSection setOrderStatus={setOrderStatus} />;
+            default:
+              return null;
+          }
+        }
         <CartSummary setOrderStatus={setOrderStatus} />
       </div>
     </main>
