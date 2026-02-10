@@ -1,8 +1,8 @@
 import "./CartSummary.css";
 import { useState } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 
-const CartSummary = ({ setOrderStatus }) => {
+const CartSummary = ({ setOrderStatus, orderStatus }) => {
   const {
     subtotal,
     vatAmount,
@@ -33,8 +33,12 @@ const CartSummary = ({ setOrderStatus }) => {
   };
 
   const handleContinue = () => {
-    if (typeof setOrderStatus === "function") setOrderStatus(2);
+    setOrderStatus(orderStatus + 1);
   };
+
+  const handleBack = () => {
+    setOrderStatus(orderStatus - 1);
+  }
 
   const fmt = (n) => n?.toFixed(2) ?? "0.00";
 
@@ -86,8 +90,8 @@ const CartSummary = ({ setOrderStatus }) => {
         )}
 
         <div className="summary-actions">
-          <button className="back" onClick={() => setOrderStatus(1)}>Zpět</button>
-          <button className="continue" onClick={() => setOrderStatus(2)}>Pokračovat</button>
+          <button className="back" onClick={handleBack}>Zpět</button>
+          <button className="continue" onClick={handleContinue}>Pokračovat</button>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import "./CartProductList.css";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 
 const CartProductList = ({ products }) => {
     const { updateQuantity, removeFromCart } = useCart();

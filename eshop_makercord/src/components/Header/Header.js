@@ -2,12 +2,12 @@ import "./Header.css";
 
 import { NavLink } from "react-router-dom";
 
-import logo from "../images/logo.png";
-import contact_icon from "../images/contact_icon.png";
-import cart_icon from "../images/cart_icon.png";
-import profile_icon from "../images/profile_icon.png";
-import translation_icon from "../images/translation_icon.png";
-import { useCart } from "../context/CartContext";
+import logo from "../../images/logo.png";
+import contact_icon from "../../images/contact_icon.png";
+import cart_icon from "../../images/cart_icon.png";
+import profile_icon from "../../images/profile_icon.png";
+import translation_icon from "../../images/translation_icon.png";
+import { useCart } from "../../context/CartContext";
 
 const Header = () => {
   const { totalItems } = useCart();
