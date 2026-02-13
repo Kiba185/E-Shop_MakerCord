@@ -2,7 +2,7 @@ import "./CartSummary.css";
 import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 
-const CartSummary = ({ setOrderStatus, orderStatus }) => {
+const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
   const {
     subtotal,
     vatAmount,
@@ -33,11 +33,15 @@ const CartSummary = ({ setOrderStatus, orderStatus }) => {
   };
 
   const handleContinue = () => {
-    setOrderStatus(orderStatus + 1);
+    if (!products || products.length > 0) {
+      setOrderStatus(orderStatus >= 4 ? 4 : orderStatus + 1);
+    }
   };
 
   const handleBack = () => {
-    setOrderStatus(orderStatus - 1);
+    setOrderStatus(
+      orderStatus <= 1 ? 1 : orderStatus - 1
+    );
   }
 
   const fmt = (n) => n?.toFixed(2) ?? "0.00";

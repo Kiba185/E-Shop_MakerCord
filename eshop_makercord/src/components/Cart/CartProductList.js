@@ -20,7 +20,7 @@ const CartProductList = ({ products }) => {
                     <div className="cart-product-main">
                         <h4 className="cart-product-name">{product.name}</h4>
                         <div className="cart-product-controls">
-                            <button className="qty-btn" onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))}>-</button>
+                            <button className="qty-btn" onClick={() => updateQuantity(product.id, Math.max(0, product.quantity - 1))}>-</button>
                             <span className="cart-product-quantity">{product.quantity} <span className="unit">ks</span></span>
                             <button className="qty-btn" onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
                         </div>

@@ -23,7 +23,7 @@ const Cart = () => {
                 return (
                   <>
                     <CartProductList products={cart} />
-                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
+                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart} />
                   </>
                 );
               case 2:
@@ -33,14 +33,14 @@ const Cart = () => {
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
                   </>
                 );
-                case 3:
+              case 3:
                 return (
                   <>
                     <CartProductList products={cart} />
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
                   </>
                 );
-                case 4:
+              case 4:
                 return (
                   <>
                     <CartProductList products={cart} />
@@ -52,9 +52,6 @@ const Cart = () => {
             }
           })()
         }
-          }
-        }
-        
       </div>
     </main>
   );

@@ -1,7 +1,9 @@
 .shipping-payment-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: 71%;
+    padding: 18px 18px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
 }
 
 .shipping-payment-group {
