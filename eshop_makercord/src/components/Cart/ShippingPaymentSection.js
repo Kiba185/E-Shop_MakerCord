@@ -4,16 +4,16 @@ import React, {useState} from "react";
 const ShippingPaymentSection = () => {
 
     const [shippingMethod, setShippingMethod] = useState("pickup");
-    const [paymentMethod, setPaymentMethod] = useState("card");
+   // const [paymentMethod, setPaymentMethod] = useState("card");
 
     const handleShippingChange = (e) => {
         setShippingMethod(e.target.value);
     };
-
+/*
     const handlePaymentChange = (e) => {
         setPaymentMethod(e.target.value);
     };
-
+*/
 
 
     return (
