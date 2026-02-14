@@ -51,21 +51,21 @@ header {
     gap: 45px;
     flex-shrink: 0;
     padding: 0;
-}
 
-.nav-links img {
-    height: 30px;
-    width: 30px;
 }
 
 .cart-link {
     position: relative;
     display: inline-block;
+    padding-top: 7px;
+    font-size: 30px;
+    color: var(--black);
 }
+
 
 .cart-badge {
     position: absolute;
-    top: -6px;
+    top: 0;
     right: -6px;
     background-color: var(--red, #e74c3c);
     color: white;

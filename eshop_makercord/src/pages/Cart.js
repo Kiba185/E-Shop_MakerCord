@@ -6,6 +6,8 @@ import CartProductList from "../components/Cart/CartProductList"
 import ShippingPaymentSection from "../components/Cart/ShippingPaymentSection"
 import { useCart } from "../context/CartContext"
 import CartSummary from "../components/Cart/CartSummary"
+import DeliveryDetails from "../components/Cart/DeliveryDetails"
+import Summary from "../components/Cart/Summary"
 
 const Cart = () => {
   const [orderStatus, setOrderStatus] = useState(1);
@@ -36,14 +38,14 @@ const Cart = () => {
               case 3:
                 return (
                   <>
-                    <CartProductList products={cart} />
+                    <DeliveryDetails />
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
                   </>
                 );
               case 4:
                 return (
                   <>
-                    <CartProductList products={cart} />
+                    <Summary />
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
                   </>
                 );
