@@ -24,6 +24,7 @@ const Cart = () => {
               case 1:
                 return (
                   <>
+                  
                     <CartProductList products={cart} />
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart} />
                   </>
