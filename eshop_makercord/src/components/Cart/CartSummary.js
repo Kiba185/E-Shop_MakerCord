@@ -8,6 +8,8 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
     vatAmount,
     totalBeforeDiscount,
     discountAmount,
+    shippingAmount,
+    paymentMethodAmount,
     total,
     appliedCode,
     applyPromoCode,
@@ -70,6 +72,20 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
         <div className="summary-row discount">
           <span>Sleva ({appliedCode})</span>
           <span>-{fmt(discountAmount)} Kč</span>
+        </div>
+      )}
+
+      {orderStatus >= 2 && (
+        <div className="summary-row">
+          <span>Dopravné</span>
+          <span>{fmt(shippingAmount)} Kč</span>
+        </div>
+      )}
+
+      {orderStatus >= 2 && (
+        <div className="summary-row">
+          <span>Způsob platby</span>
+          <span>{fmt(paymentMethodAmount)} Kč</span>
         </div>
       )}
 

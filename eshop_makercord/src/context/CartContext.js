@@ -75,8 +75,10 @@ export const CartProvider = ({ children }) => {
   const subtotal = cart.reduce((sum, p) => sum + (p.price * (p.quantity || 0)), 0);
   const vatAmount = subtotal * VAT_RATE;
   const totalBeforeDiscount = subtotal + vatAmount;
+  const shippingAmount = 0;
+  const paymentMethodAmount = 0;
   const discountAmount = totalBeforeDiscount * discountPercent;
-  const total = totalBeforeDiscount - discountAmount;
+  const total = totalBeforeDiscount - discountAmount + shippingAmount + paymentMethodAmount;
 
   return (
     <CartContext.Provider
@@ -90,6 +92,8 @@ export const CartProvider = ({ children }) => {
         vatAmount,
         totalBeforeDiscount,
         discountAmount,
+        shippingAmount,
+        paymentMethodAmount,  
         total,
         appliedCode,
         applyPromoCode,
