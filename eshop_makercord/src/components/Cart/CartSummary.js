@@ -41,6 +41,7 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
   const handleBack = () => {
     setOrderStatus(
       orderStatus <= 1 ? 1 : orderStatus - 1
+
     );
   }
 
@@ -94,8 +95,8 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
         )}
 
         <div className="summary-actions">
-          <button className="back" onClick={handleBack}>Zpět</button>
-          <button className="continue" onClick={handleContinue}>Pokračovat</button>
+          <button className={`back ${orderStatus === 1 ? 'deactive' : ''}`} onClick={handleBack}>Zpět</button>
+          <button className={`continue ${!products || products.length === 0 ? 'deactive' : ''}`} onClick={handleContinue}>Pokračovat</button>
         </div>
       </div>
     </section>

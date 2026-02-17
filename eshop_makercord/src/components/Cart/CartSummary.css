@@ -82,6 +82,10 @@
     font-size: 15px;
 }
 
+.continue.deactive {
+    background: var(--deactive);
+}
+
 .back {
     background: var(--green);
     color: var(--white);
@@ -89,6 +93,10 @@
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.back.deactive {
+    visibility: hidden;
 }
 
 .summary-actions {

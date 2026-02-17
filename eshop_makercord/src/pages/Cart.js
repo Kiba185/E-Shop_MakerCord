@@ -16,7 +16,7 @@ const Cart = () => {
   return ( 
     <main className="cart-page">
       <PageHeading>Nákupní košík</PageHeading>
-      <OrderStatus orderStatus={orderStatus} />
+      <OrderStatus orderStatus={orderStatus} setOrderStatus={setOrderStatus} />
       <div className="cart-content">
         {
           (() => {
@@ -24,7 +24,6 @@ const Cart = () => {
               case 1:
                 return (
                   <>
-                  
                     <CartProductList products={cart} />
                     <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart} />
                   </>
@@ -33,21 +32,21 @@ const Cart = () => {
                 return (
                   <>
                     <ShippingPaymentSection />
-                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
+                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart}/>
                   </>
                 );
               case 3:
                 return (
                   <>
                     <DeliveryDetails />
-                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
+                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart}/>
                   </>
                 );
               case 4:
                 return (
                   <>
                     <Summary />
-                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} />
+                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart}/>
                   </>
                 );
               default:

@@ -1,12 +1,13 @@
 import "./OrderStatus.css";
 
-const OrderStatus = ({ orderStatus = 1 }) => {
+const OrderStatus = ({ orderStatus = 1, setOrderStatus }) => {
   const steps = [
     "Nákupní košík",
     "Doprava a platba",
     "Dodací údaje",
     "Souhrn",
   ];
+
 
   return (
     <section className="order-status">
@@ -20,7 +21,7 @@ const OrderStatus = ({ orderStatus = 1 }) => {
             <h4 className="order-status-label">{label}</h4>
             {idx > 0 && <div className="order-status-line" />}
           </div>
-        );
+        )
       })}
     </section>
   );
