@@ -1,9 +1,61 @@
 .contact-section {
-    padding: 50px 30%;
+    padding: 75px 20% 50px 20%;
     background-color: var(--white);
     text-align: center;
     box-shadow: var(--box_shadow);
     margin: 50px 0;
     height: 50vh;
+    border-radius: 6px;
+}
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form input {
+    background: var(--white);
+    box-shadow: var(--box_shadow);
+    border: none;
+    border-bottom: 1px var(--black) solid;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px var(--green) solid;
+}
+
+.contact-form textarea {
+    background: var(--white);
+    box-shadow: var(--box_shadow);
+    border: none;
+    border-bottom: 1px var(--black) solid;
+    padding: 15px;
+    border-radius: 6px;
+    resize: none;
+    cursor: var(--black);
+}
+
+.contact-form textarea:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px var(--green) solid;
+}
+
+
+.contact-form button {
+    background: var(--green);
+    box-shadow: var(--box_shadow);
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
 }

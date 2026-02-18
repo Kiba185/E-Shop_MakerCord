@@ -11,42 +11,42 @@ const products = [
     image: image1,
     name: "MakerCord Basic Kit",
     description: "Basic kit for MakerCord",
-    price: 99.99
+    price: 99
     },
     {
     id: 2,
     image: image2,
     name: "MakerCord Advanced Kit",
     description: "Advanced kit for MakerCord",
-    price: 199.99
+    price: 199
     },
     {
     id: 3,
     image: image3,
     name: "MakerCord Pro Kit",
     description: "Professional kit for MakerCord",
-    price: 299.99
+    price: 299
     },
     {
     id: 4,
     image: image4,
     name: "MakerCord Ultimate Kit",
     description: "Ultimate kit for MakerCord",
-    price: 399.99
+    price: 399
     },
     {
     id: 5,
     image: image5,
     name: "MakerCord Starter Kit",
     description: "Starter kit for MakerCord",
-    price: 49.99
+    price: 49
     },
     {
     id: 6,
     image: image6,
     name: "MakerCord Premium Kit",
     description: "Premium kit for MakerCord",
-    price: 599.99
+    price: 599
     }
 ];
 

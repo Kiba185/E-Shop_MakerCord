@@ -27,7 +27,7 @@ const CartProductList = ({ products }) => {
                             <span className="cart-product-quantity">{product.quantity} <span className="unit">ks</span></span>
                             <button className="qty-btn" onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
                         </div>
-                        <div className="cart-product-price">{product.price.toFixed(0)} <span className="currency">Kč</span></div>
+                        <div className="cart-product-price">{product.price} <span className="currency">Kč</span></div>
                         <button title="Odebrat" className="remove-button" onClick={() => removeFromCart(product.id)}><FaRegTrashAlt /></button>
                     </div>
                 </div>

@@ -72,9 +72,9 @@ export const CartProvider = ({ children }) => {
     setAppliedCode(null);
   };
 
-  const subtotal = cart.reduce((sum, p) => sum + (p.price * (p.quantity || 0)), 0);
-  const vatAmount = subtotal * VAT_RATE;
-  const totalBeforeDiscount = subtotal + vatAmount;
+  const totalBeforeDiscount = cart.reduce((sum, p) => sum + (p.price * (p.quantity || 0)), 0);
+  const vatAmount = totalBeforeDiscount * VAT_RATE;
+  const subtotal = totalBeforeDiscount - vatAmount;
   const shippingAmount = 0;
   const paymentMethodAmount = 0;
   const discountAmount = totalBeforeDiscount * discountPercent;
