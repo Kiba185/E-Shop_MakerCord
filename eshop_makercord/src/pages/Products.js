@@ -1,7 +1,10 @@
+import ProductsOverview from '../components/ProductsOverview';
+import PageHeading from '../components/PageHeading';
+
 const Products = () => {
   return <main>
-    <h2>Produkty</h2>
-
+    <PageHeading>Produkty</PageHeading>
+    <ProductsOverview />
   </main>
 } 
 

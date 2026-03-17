@@ -1,12 +1,11 @@
 import Introduction from '../components/Introduction';
-import ProductsOverview from '../components/ProductsOverview';
+import ProductsCarousel from '../components/ProductsCarousel';
 
 const Home = () => {
   return <main>
       <Introduction />
-      <ProductsOverview />
+      <ProductsCarousel />
   </main>
-  
 }
 
 export default Home

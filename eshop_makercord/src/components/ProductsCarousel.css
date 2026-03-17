@@ -1,35 +1,4 @@
-.filter-section {
-    position: relative;
-    box-shadow: var(--box_shadow);
-    background-color: var(--white);
-}
-
-.sorting-section {
-    position: relative;
-    display: flex;
-    width: 80%;
-    height: 50px;
-}
-
-.sorting-section button {
-    border: none;
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.sorting-section .checked {
-    background-color: var(--green);
-    color: var(--white);
-}
-
-.sorting-section input {
-    box-shadow: var(--box_shadow);
-    background-color: var(--white);
-}
-
-.products-list {
+.products-carousel {
     display: flex;
     flex-wrap: wrap;
     gap: auto;
@@ -88,4 +57,10 @@
     color: var(--black);
     margin: 0;
     font-family: 'Karantina';
+}
+
+.view-all {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
