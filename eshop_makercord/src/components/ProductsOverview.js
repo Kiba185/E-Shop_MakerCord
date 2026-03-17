@@ -1,10 +1,11 @@
 import "../components/ProductsOverview.css";
 import data from "../data";
 import AddToCartButton from "./AddToCartButton";
+import React, {useState} from "react";
 
 const ProductsOverview = () => {
     const filteredProducts = data.filter(product => [1, 2, 3, 4, 5, 6].includes(product.id));
-
+    let [sortOrder, setSortOrder] = useState("recommended");
     return (
         <div className="products-overview">
             <div className="filter-section">
@@ -22,9 +23,9 @@ const ProductsOverview = () => {
                 </div>
             </div>
             <div className="sorting-section">
-                <button className="checked" id="sort-recommended" value="recommended">Doporučujeme</button>
-                <button className=""  id="sort-cheapest" value="cheapest">Nejlevnější</button>
-                <button className=""  id="sort-expensive" value="expensive">Nejdražší</button>
+                <button className={sortOrder === "recommended" ? "checked" : ""} id="sort-recommended" value="recommended" onClick={() => (setSortOrder("recommended"))}>Doporučujeme</button>
+                <button className={sortOrder === "cheapest" ? "checked" : ""}  id="sort-cheapest" value="cheapest" onClick={() => (setSortOrder("cheapest"))}>Nejlevnější</button>
+                <button className={sortOrder === "expensive" ? "checked" : ""}  id="sort-expensive" value="expensive" onClick={() => (setSortOrder("expensive"))}>Nejdražší</button>
             </div>
             <div className="products-list">
                 {filteredProducts.map((product) => {
