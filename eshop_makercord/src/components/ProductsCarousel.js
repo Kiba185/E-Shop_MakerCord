@@ -4,31 +4,46 @@ import data from "../data";
 import ProductCard from "./ProductCard";
 
 const ProductsCarousel = () => {
-    const [index, setIndex] = useState(8);
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        if (index < 0){
+            setIndex(data.length - 1)
+        }
+        else if (index > data.length - 1){
+            setIndex(0)
+        }
+    }, [index])
+
+    useEffect(() => {
+        setInterval(() => {
+            setIndex(index + 1)
+        }, 3000);
+    }, [index])
 
     return (
         <div className="products-carousel">
             <div className="carousel-content" >
                 {data.map((product, productIndex) => {
-                    let mainClass = "c0"
+                    let mainClass = "c5"
 
                     if (productIndex === index){
                         mainClass = "c0"
                     }
                     
-                    if (productIndex === index + 1 || productIndex === (index + 1 - data.length)){
+                    if (productIndex === index + 1){
                         mainClass = "c1"
                     }
 
-                    if (productIndex === index + 2 || productIndex === (index + 2 - data.length)){
+                    if (productIndex === index + 2){
                         mainClass = "c2"
                     }
 
-                    if (productIndex === index + 3 || productIndex === (index + 3 - data.length)){
+                    if (productIndex === index + 3){
                         mainClass = "c3"
                     }
 
-                    if (productIndex === index + 4 || productIndex === (index + 4 - data.length)){
+                    if (productIndex === index + 4){
                         mainClass = "c4"
                     }
                     

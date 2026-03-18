@@ -11,7 +11,7 @@
     flex-direction: row;
     width: 100%;
     height: 500px;
-    /* overflow: hidden;  */
+    overflow: hidden; 
 }
 
 /* Obal pro každou jednotlivou kartu */
@@ -19,36 +19,36 @@
     position: absolute;
     width: 25%;
     height: 100%;
-    /* opacity: 0; */
-    transition: all 0.5s linear ;
+    visibility: hidden;
+    transition: all 0.5s ease ;
 }
 
 .carousel-item.c0 {
-    opacity: 1;
+    visibility: hidden;
     transform: translateX(-100%);
 }
 
 .carousel-item.c1 {
-    opacity: 1;
+    visibility: visible;
     transform: translateX(0);
 }
 
 .carousel-item.c2 {
-    opacity: 1;
+    visibility: visible;
     transform: translateX(100%);
 }
 
 .carousel-item.c3 {
-    opacity: 1;
+    visibility: visible;
     transform: translateX(200%);
 }
 
 .carousel-item.c4 {
-    opacity: 1;
+    visibility: visible;
     transform: translateX(300%);
 }
 
 .carousel-item.c5 {
-    opacity: 1;
+    visibility: hidden;
     transform: translateX(400%);
 }
