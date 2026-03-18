@@ -1,9 +1,10 @@
 import AddToCartButton from "./AddToCartButton";
+import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const { image, name, description, price } = product;
   return (
-    <div className="product-item">
+    <div className="product-card">
         <img src={image} alt={name} />
         <h3>{name}</h3>
         <p>{description}</p>

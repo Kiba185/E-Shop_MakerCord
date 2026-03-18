@@ -7,7 +7,10 @@
     --deactive: #60774475;
 
     --box_shadow:rgba(0, 0, 0, 0.197) 0px 5px 25px;
+
+    box-sizing: border-box;
 }
+
 
 body {
     margin: 0;

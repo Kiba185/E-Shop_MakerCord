@@ -1,20 +1,54 @@
 /* Hlavní okno karuselu (zabere celou šířku main) */
 .products-carousel {
     width: 100%;
-    overflow: hidden; /* Skryje to, co přetéká ven */
+
 }
 
 /* Pás, ve kterém jsou karty vedle sebe */
-.carousel-track {
+.carousel-content {
+    position: relative;
     display: flex; 
-    flex-wrap: nowrap; /* DŮLEŽITÉ: striktně zakáže zalamování karet pod sebe */
-    transition: transform 0.5s ease-in-out; 
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    /* overflow: hidden;  */
 }
 
 /* Obal pro každou jednotlivou kartu */
 .carousel-item {
-    flex: 0 0 25%; /* První nula zakáže smršťování, 25% nastaví šířku (4 karty vedle sebe) */
-    min-width: 25%; /* Pojistka, aby se karta opravdu nezmenšila */
-    box-sizing: border-box;
-    padding: 0 10px; /* Mezera mezi kartami */
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    /* opacity: 0; */
+    transition: all 0.5s linear ;
+}
+
+.carousel-item.c0 {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.carousel-item.c1 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-item.c2 {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+.carousel-item.c3 {
+    opacity: 1;
+    transform: translateX(200%);
+}
+
+.carousel-item.c4 {
+    opacity: 1;
+    transform: translateX(300%);
+}
+
+.carousel-item.c5 {
+    opacity: 1;
+    transform: translateX(400%);
 }
