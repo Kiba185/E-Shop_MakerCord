@@ -1,5 +1,5 @@
 import "./AddToCartButton.css";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 
 const AddToCartButton = ({ onAddToCart, product }) => {
     const { addToCart } = useCart();

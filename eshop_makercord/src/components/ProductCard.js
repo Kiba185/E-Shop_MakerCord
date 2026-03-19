@@ -1,4 +1,4 @@
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "../components/Cart/AddToCartButton";
 import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {

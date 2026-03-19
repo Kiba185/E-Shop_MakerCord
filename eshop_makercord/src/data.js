@@ -48,20 +48,7 @@ const products = [
     description: "Premium kit for MakerCord",
     price: 599
     },
-    {
-    id: 7,
-    image: image1,
-    name: "MakerCord Starter Kit",
-    description: "Starter kit for MakerCord",
-    price: 49
-    },
-    {
-    id: 8,
-    image: image3,
-    name: "MakerCord Premium Kit",
-    description: "Premium kit for MakerCord",
-    price: 599
-    }
+    
 ];
 
 export default products;

@@ -1,6 +1,6 @@
 import "../components/ProductsOverview.css";
 import data from "../data";
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "../components/Cart/AddToCartButton";
 import React, {useState} from "react";
 
 const ProductsOverview = () => {
