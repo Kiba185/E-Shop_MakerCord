@@ -2,6 +2,7 @@ import "../components/ProductsOverview.css";
 import data from "../data";
 import React, {useState, useEffect} from "react";
 import ProductCard from "./ProductCard";
+import Slider from '@mui/material/Slider';
 
 const ProductsOverview = () => {
     let [sortOrder, setSortOrder] = useState("recommended");
@@ -11,13 +12,31 @@ const ProductsOverview = () => {
                 <h3>Filtr</h3>
                 <div className="filters">
                     <div className="price-filter">
-
+                        <h4>Cena:</h4>
+                        <Slider defaultValue={[10, 50]}
+                                min={"0"}
+                                max={"100"}
+                                disableSwap />
+                        <div className="min-label">
+                            <p>10,-</p>
+                        </div>
+                        <div className="max-label">
+                            <p>4500,-</p>
+                        </div>
                     </div>
                     <div className="type-filter">
 
                     </div>
                     <div className="color-filter">
-
+                        <h4>Barva:</h4>
+                        <input type="checkbox" id="red"></input>
+                        <label for="red">Červená</label>
+                        <input type="checkbox" id="green"></input>
+                        <label for="green">Zelená</label>
+                        <input type="checkbox" id="blue"></input>
+                        <label for="blue">Modrá</label>
+                        <input type="checkbox" id="white"></input>
+                        <label for="white">Bílá</label>
                     </div>
                 </div>
             </div>
