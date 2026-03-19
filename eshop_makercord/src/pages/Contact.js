@@ -1,5 +1,5 @@
 import PageHeading from "../components/PageHeading"
-import ContactSection from "../components/ContactSection"
+import ContactSection from "../components/Contact/ContactSection"
 
 import "./Contact.css"
 

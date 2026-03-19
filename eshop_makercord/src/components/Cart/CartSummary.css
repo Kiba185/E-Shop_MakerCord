@@ -40,7 +40,18 @@
 
 .promo-controls input {
     flex: 1;
-    padding: 8px;
+    background: var(--white);
+    box-shadow: var(--box_shadow);
+    border: none;
+    border-bottom: 1px var(--black) solid;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.promo-controls input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px var(--green) solid;
 }
 
 .promo-controls .apply {

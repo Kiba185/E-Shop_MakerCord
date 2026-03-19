@@ -1,10 +1,9 @@
 import "../components/ProductsOverview.css";
 import data from "../data";
-import AddToCartButton from "../components/Cart/AddToCartButton";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import ProductCard from "./ProductCard";
 
 const ProductsOverview = () => {
-    const filteredProducts = data.filter(product => [1, 2, 3, 4, 5, 6].includes(product.id));
     let [sortOrder, setSortOrder] = useState("recommended");
     return (
         <div className="products-overview">
@@ -28,15 +27,10 @@ const ProductsOverview = () => {
                 <button className={sortOrder === "expensive" ? "checked" : ""}  id="sort-expensive" value="expensive" onClick={() => (setSortOrder("expensive"))}>Nejdražší</button>
             </div>
             <div className="products-list">
-                {filteredProducts.map((product) => {
-                const { id, image, name, description, price } = product;
+                {data.map((product) => {
                 return (
-                    <div className="product-item" key={id}>
-                        <img src={image} alt={name} />
-                        <h3>{name}</h3>
-                        <p>{description}</p>
-                        <p className="price">{price}<span className="currency">Kč</span></p>
-                        <AddToCartButton product={product} />
+                    <div className="product-item" key={product.id}>
+                        <ProductCard product={product}/>
                     </div>
                 );
                 })}
