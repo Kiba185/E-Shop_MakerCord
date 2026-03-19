@@ -4,18 +4,19 @@ import data from "../data";
 import ProductCard from "./ProductCard";
 
 const ProductsCarousel = () => {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(9);
+
+    useEffect(() => {
+        if (index > data.length - 1 + 9){
+            setIndex(9)
+        }
+    }, [index])
 
     // useEffect(() => {
-    //     if (index > data.length - 1){
-    //         setIndex(0)
-    //     }
-    // }, [index])
-
-    // useEffect(() => {
-    //     setInterval(() => {
+    //     let setIntervalID = setInterval(() => {
     //         setIndex(index + 1)
-    //     }, 3000);
+    //     }, 1000)
+    //     return () => clearInterval(setIntervalID)
     // }, [index])
 
     return (
@@ -24,39 +25,35 @@ const ProductsCarousel = () => {
                 {data.map((product, productIndex) => {
                     let mainClass = "c5"
 
-                    if (productIndex === index){
+                    if ((index - 1 > data.length - 1 && productIndex === (index) % data.length)){
                         mainClass = "c0"
                     }
                     
-                    if (productIndex === index + 1 || index > data.length - 1 && productIndex === (index + 1) % data.length){
+                    if ((index > data.length - 1 && productIndex === (index + 1) % data.length)){
                         mainClass = "c1"
                     }
 
-                    if (productIndex === index + 2 || index + 1 > data.length - 1 && productIndex === (index + 2) % data.length){
+                    if ((index + 1 > data.length - 1 && productIndex === (index + 2) % data.length)){
                         mainClass = "c2"
                     }
 
-                    if (productIndex === index + 3 || index + 2 > data.length - 1 && productIndex === (index + 3) % data.length){
+                    if ((index + 2 > data.length - 1 && productIndex === (index + 3) % data.length)){
                         mainClass = "c3"
                     }
 
-                    if (productIndex === index + 4 || index + 3 > data.length - 1 && productIndex === (index + 4) % data.length){
+                    if ((index + 3 > data.length - 1 && productIndex === (index + 4) % data.length)){
                         mainClass = "c4"
                     }
                     
-                    if (productIndex === index + 5 || index + 4 > data.length - 1 && productIndex === (index + 5) % data.length){
+                    if ((index + 4 > data.length - 1 && productIndex === (index + 5) % data.length)){
                         mainClass = "c5"
                     }
                     
                     return <div className={`carousel-item ${mainClass}`} key={product.id}>
                         <ProductCard product={product} />
-                        <p>{product.id}</p>
                     </div>
                 })}
-                
             </div>
-            <button className="prev-button" onClick={() => setIndex(index - 1)}>Prev</button>
-            <button className="next-button" onClick={() => setIndex(index + 1)}>Next</button>
         </div>
     );
 };

@@ -5,7 +5,7 @@
     margin: 0;
     padding: 20px;
     background-color: var(--white);
-    box-shadow: var(--box_shadow);
+    box-shadow: rgba(0, 0, 0, 0.197) 0px 2px 11px;
     border-radius: 6px;
 }
 
@@ -30,7 +30,6 @@
     position: absolute;
     top: 66%;
     left: 10%;
-
 }
 
 .product-card .price {
