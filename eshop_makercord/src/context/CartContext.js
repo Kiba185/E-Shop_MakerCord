@@ -80,6 +80,9 @@ export const CartProvider = ({ children }) => {
   const discountAmount = totalBeforeDiscount * discountPercent;
   const total = totalBeforeDiscount - discountAmount + shippingAmount + paymentMethodAmount;
 
+  //cart popup 
+  const [popupToggle, setPopupToggle] = useState(false);
+
   return (
     <CartContext.Provider
       value={{
@@ -98,6 +101,8 @@ export const CartProvider = ({ children }) => {
         appliedCode,
         applyPromoCode,
         clearPromoCode,
+        popupToggle,
+        setPopupToggle,
       }}
     >
       {children}

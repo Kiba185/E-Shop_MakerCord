@@ -2,7 +2,6 @@ import "../components/ProductsOverview.css";
 import data from "../data";
 import React, {useState, useEffect} from "react";
 import ProductCard from "./ProductCard";
-import Slider from '@mui/material/Slider';
 
 const ProductsOverview = () => {
     let [sortOrder, setSortOrder] = useState("recommended");
@@ -13,10 +12,6 @@ const ProductsOverview = () => {
                 <div className="filters">
                     <div className="price-filter">
                         <h4>Cena:</h4>
-                        <Slider defaultValue={[10, 50]}
-                                min={"0"}
-                                max={"100"}
-                                disableSwap />
                         <div className="min-label">
                             <p>10,-</p>
                         </div>

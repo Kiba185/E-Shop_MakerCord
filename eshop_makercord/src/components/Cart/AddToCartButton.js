@@ -1,10 +1,11 @@
 import "./AddToCartButton.css";
 import { useCart } from "../../context/CartContext";
 
-const AddToCartButton = ({ onAddToCart, product }) => {
+const AddToCartButton = ({ onAddToCart, product, setPopupToggle, popupToggle }) => {
     const { addToCart } = useCart();
 
     const handleClick = () => {
+        setPopupToggle(popupToggle = true)
         if (onAddToCart) onAddToCart();
         else if (product) addToCart(product);
     };

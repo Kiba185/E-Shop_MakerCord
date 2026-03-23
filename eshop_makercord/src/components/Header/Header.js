@@ -8,9 +8,12 @@ import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineGTranslate } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
+import { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = (popupToggle) => {
   const { totalItems } = useCart();
+  
+  
 
   return (
     <header>
@@ -23,6 +26,9 @@ const Header = () => {
             <GrCart />
             {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </NavLink>
+          <div className={`cart-popup ${popupToggle ? "active" : ""}`}>
+            <p>Pridano do kosika!!!</p>
+          </div>
           <NavLink to="/user-profile" className="cart-link"><IoPersonOutline /></NavLink>
           <NavLink to="/translation" className="cart-link"><MdOutlineGTranslate /></NavLink>
         </nav>
