@@ -45,6 +45,19 @@ export const CartProvider = ({ children }) => {
 
   const totalItems = cart.reduce((sum, p) => sum + (p.quantity || 0), 0);
 
+  const shippingOptions = {
+    pickup: { label: "Osobní odběr", price: 0 },
+    courier: { label: "Kurýrní služba", price: 150 },
+  };
+
+  const paymentOptions = {
+    card: { label: "Platba kartou online", price: 0 },
+    cod: { label: "Dobírka", price: 50 },
+  };
+
+  const [shippingMethod, setShippingMethod] = useState("pickup");
+  const [paymentMethod, setPaymentMethod] = useState("card");
+
   // DPH a slevový kód
   const VAT_RATE = 0.21; // 21% DPH 
   const [discountPercent, setDiscountPercent] = useState(0);
@@ -75,13 +88,19 @@ export const CartProvider = ({ children }) => {
   const totalBeforeDiscount = cart.reduce((sum, p) => sum + (p.price * (p.quantity || 0)), 0);
   const vatAmount = totalBeforeDiscount * VAT_RATE;
   const subtotal = totalBeforeDiscount - vatAmount;
-  const shippingAmount = 0;
-  const paymentMethodAmount = 0;
+  const shippingAmount = shippingOptions[shippingMethod]?.price ?? 0;
+  const paymentMethodAmount = paymentOptions[paymentMethod]?.price ?? 0;
   const discountAmount = totalBeforeDiscount * discountPercent;
   const total = totalBeforeDiscount - discountAmount + shippingAmount + paymentMethodAmount;
 
-  //cart popup 
+  // cart popup
   const [popupToggle, setPopupToggle] = useState(false);
+  const [popupVersion, setPopupVersion] = useState(0);
+
+  const showCartPopup = () => {
+    setPopupToggle(true);
+    setPopupVersion((prev) => prev + 1);
+  };
 
   return (
     <CartContext.Provider
@@ -91,6 +110,12 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         updateQuantity,
         totalItems,
+        shippingOptions,
+        paymentOptions,
+        shippingMethod,
+        setShippingMethod,
+        paymentMethod,
+        setPaymentMethod,
         subtotal,
         vatAmount,
         totalBeforeDiscount,
@@ -103,6 +128,8 @@ export const CartProvider = ({ children }) => {
         clearPromoCode,
         popupToggle,
         setPopupToggle,
+        popupVersion,
+        showCartPopup,
       }}
     >
       {children}

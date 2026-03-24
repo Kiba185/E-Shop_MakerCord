@@ -78,19 +78,33 @@ header {
 
 .cart-popup {
     position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 20;
-    visibility: hidden;
-    background-color: #e74c3c;
-    width: 200px;
-    height: 50px;
-    color: aliceblue;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+    background-color: var(--green);
+    min-width: 240px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: var(--white);
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-22px);
+    pointer-events: none;
+    visibility: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
 }
 
 .cart-popup.active {
-    
+    opacity: 1;
+    transform: translateY(0);
     visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+}
+
+.cart-popup p {
+    margin: 0;
 }

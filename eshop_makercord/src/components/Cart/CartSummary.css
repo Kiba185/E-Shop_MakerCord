@@ -1,9 +1,14 @@
 .cart-summary {
     width: 27%;
+    min-width: 280px;
+    height: fit-content;
     padding: 20px;
     border-radius: 5px;
     background: var(--white);
     box-shadow: var(--box_shadow);
+    position: sticky;
+    top: 18px;
+    align-self: flex-start;
 }
 
 .cart-summary h3 {

@@ -8,12 +8,20 @@ import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineGTranslate } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const Header = (popupToggle) => {
-  const { totalItems } = useCart();
-  
-  
+const Header = () => {
+  const { totalItems, popupToggle, popupVersion, setPopupToggle } = useCart();
+
+  useEffect(() => {
+    if (!popupToggle) return;
+
+    const timeoutId = setTimeout(() => {
+      setPopupToggle(false);
+    }, 2000);
+
+    return () => clearTimeout(timeoutId);
+  }, [popupToggle, popupVersion, setPopupToggle]);
 
   return (
     <header>
@@ -26,14 +34,14 @@ const Header = (popupToggle) => {
             <GrCart />
             {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </NavLink>
-          <div className={`cart-popup ${popupToggle ? "active" : ""}`}>
-            <p>Pridano do kosika!!!</p>
-          </div>
           <NavLink to="/user-profile" className="cart-link"><IoPersonOutline /></NavLink>
           <NavLink to="/translation" className="cart-link"><MdOutlineGTranslate /></NavLink>
         </nav>
       </div>
       <div className="header-bottom" />
+      <div className={`cart-popup ${popupToggle ? "active" : ""}`}>
+            <p>Produkt přidán do košíku</p>
+      </div>
     </header>
   );
 };

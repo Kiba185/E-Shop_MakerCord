@@ -23,10 +23,17 @@
     border-radius: 50%;
     margin: 15px 0 8px 0;
     border: 2px solid var(--black);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
 .order-status-step-circle.completed {
     border: 2px solid var(--green);
+}
+
+.order-status-step-circle.active {
+    box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.12);
 }
 
 .order-status-step-dot.completed {
@@ -56,4 +63,3 @@
     height: 2px;
     background-color: var(--black);
 }
-

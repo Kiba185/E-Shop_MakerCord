@@ -12,12 +12,19 @@ const OrderStatus = ({ orderStatus = 1, setOrderStatus }) => {
   return (
     <section className="order-status">
       {steps.map((label, idx) => {
-        const isCompleted = idx + 1 <= orderStatus;
+        const stepNumber = idx + 1;
+        const isCompleted = stepNumber <= orderStatus;
+        const isActive = stepNumber === orderStatus;
+
         return (
           <div key={idx} className="order-status-step">
-            <div className={`order-status-step-circle ${isCompleted ? "completed" : ""}`}>
+            <button
+              type="button"
+              className={`order-status-step-circle ${isCompleted ? "completed" : ""} ${isActive ? "active" : ""}`}
+              onClick={() => setOrderStatus(stepNumber)}
+            >
                 <div className={`order-status-step-dot ${isCompleted ? "completed" : ""}`} />
-            </div>
+            </button>
             <h4 className="order-status-label">{label}</h4>
             {idx > 0 && <div className="order-status-line" />}
           </div>
