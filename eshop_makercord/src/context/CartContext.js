@@ -57,6 +57,17 @@ export const CartProvider = ({ children }) => {
 
   const [shippingMethod, setShippingMethod] = useState("pickup");
   const [paymentMethod, setPaymentMethod] = useState("card");
+  const [deliveryDetails, setDeliveryDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    street: "",
+    streetNumber: "",
+    city: "",
+    postalCode: "",
+    country: "cz",
+  });
 
   // DPH a slevový kód
   const VAT_RATE = 0.21; // 21% DPH 
@@ -92,6 +103,10 @@ export const CartProvider = ({ children }) => {
   const paymentMethodAmount = paymentOptions[paymentMethod]?.price ?? 0;
   const discountAmount = totalBeforeDiscount * discountPercent;
   const total = totalBeforeDiscount - discountAmount + shippingAmount + paymentMethodAmount;
+  const isDeliveryDetailsComplete = Object.entries(deliveryDetails).every(([key, value]) => {
+    if (key === "country") return Boolean(value);
+    return String(value).trim() !== "";
+  });
 
   // cart popup
   const [popupToggle, setPopupToggle] = useState(false);
@@ -116,6 +131,9 @@ export const CartProvider = ({ children }) => {
         setShippingMethod,
         paymentMethod,
         setPaymentMethod,
+        deliveryDetails,
+        setDeliveryDetails,
+        isDeliveryDetailsComplete,
         subtotal,
         vatAmount,
         totalBeforeDiscount,

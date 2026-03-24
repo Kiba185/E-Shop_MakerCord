@@ -1,0 +1,38 @@
+.delivery-details-section {
+    width: 71%;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.delivery-details-section h3 {
+    margin: 0 0 16px 0;
+}
+
+.delivery-details-section form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.delivery-details-section input,
+.delivery-details-section select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.delivery-details-section input:focus,
+.delivery-details-section select:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.12);
+}

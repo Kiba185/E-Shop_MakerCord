@@ -1,5 +1,5 @@
 import "./Cart.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeading from "../components/PageHeading"
 import OrderStatus from "../components/Cart/OrderStatus"
 import CartProductList from "../components/Cart/CartProductList"
@@ -12,6 +12,12 @@ import Summary from "../components/Cart/Summary"
 const Cart = () => {
   const [orderStatus, setOrderStatus] = useState(1);
   const { cart } = useCart();
+
+  useEffect(() => {
+    if (cart.length === 0 && orderStatus > 1) {
+      setOrderStatus(1);
+    }
+  }, [cart, orderStatus]);
 
   return ( 
     <main className="cart-page">

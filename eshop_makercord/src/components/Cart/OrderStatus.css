@@ -36,6 +36,11 @@
     box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.12);
 }
 
+.order-status-step-circle.locked {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
 .order-status-step-dot.completed {
     position: absolute;
     width: 85%;

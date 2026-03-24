@@ -14,6 +14,7 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
     appliedCode,
     applyPromoCode,
     clearPromoCode,
+    isDeliveryDetailsComplete,
   } = useCart();
 
   const [code, setCode] = useState("");
@@ -35,7 +36,10 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
   };
 
   const handleContinue = () => {
-    if (!products || products.length > 0) {
+    const hasProducts = !products || products.length > 0;
+    const canGoToNextStep = orderStatus !== 3 || isDeliveryDetailsComplete;
+
+    if (hasProducts && canGoToNextStep) {
       setOrderStatus(orderStatus >= 4 ? 4 : orderStatus + 1);
     }
   };
@@ -48,6 +52,7 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
   }
 
   const fmt = (n) => n?.toFixed(2) ?? "0.00";
+  const isContinueDisabled = (!products || products.length === 0) || (orderStatus === 3 && !isDeliveryDetailsComplete);
 
   return (
     <section className="cart-summary">
@@ -112,7 +117,7 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
 
         <div className="summary-actions">
           <button className={`back ${orderStatus === 1 ? 'deactive' : ''}`} onClick={handleBack}>Zpět</button>
-          <button className={`continue ${!products || products.length === 0 ? 'deactive' : ''}`} onClick={handleContinue}>Pokračovat</button>
+          <button className={`continue ${isContinueDisabled ? 'deactive' : ''}`} onClick={handleContinue} disabled={isContinueDisabled}>Pokračovat</button>
         </div>
       </div>
     </section>

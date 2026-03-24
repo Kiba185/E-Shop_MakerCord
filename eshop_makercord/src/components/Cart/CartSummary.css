@@ -100,6 +100,7 @@
 
 .continue.deactive {
     background: var(--deactive);
+    cursor: not-allowed;
 }
 
 .back {
@@ -113,6 +114,11 @@
 
 .back.deactive {
     visibility: hidden;
+}
+
+.continue:disabled {
+    background: var(--deactive);
+    cursor: not-allowed;
 }
 
 .summary-actions {
