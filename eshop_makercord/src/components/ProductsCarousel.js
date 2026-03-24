@@ -28,7 +28,7 @@ const ProductsCarousel = () => {
 
                     if ((index - 1 > carouselData.length - 1 && productIndex === (index) % carouselData.length)){
                         mainClass = "c0"
-                    }
+                    }  
                     
                     if ((index > carouselData.length - 1 && productIndex === (index + 1) % carouselData.length)){
                         mainClass = "c1"

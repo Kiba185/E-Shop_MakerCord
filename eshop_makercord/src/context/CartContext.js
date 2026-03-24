@@ -1,16 +1,48 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
+const CHECKOUT_STORAGE_KEY = "cartCheckout";
+const CART_STORAGE_KEY = "cart";
+
+const defaultDeliveryDetails = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  street: "",
+  streetNumber: "",
+  city: "",
+  postalCode: "",
+  country: "cz",
+};
+
+const readStorageJSON = (key, fallback) => {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) {
+    return fallback;
+  }
+};
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(() => {
-    try {
-      const raw = localStorage.getItem("cart");
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
-  });
+  const shippingOptions = {
+    pickup: { label: "Osobní odběr", price: 0 },
+    courier: { label: "Kurýrní služba", price: 150 },
+  };
+
+  const paymentOptions = {
+    card: { label: "Platba kartou online", price: 0 },
+    cod: { label: "Dobírka", price: 50 },
+  };
+
+  const promoCodes = {
+    MAKERCORD10: 0.1,
+    WELCOME5: 0.05,
+  };
+
+  const [cart, setCart] = useState(() => readStorageJSON(CART_STORAGE_KEY, []));
+  const storedCheckout = readStorageJSON(CHECKOUT_STORAGE_KEY, {});
 
   useEffect(() => {
     try {
@@ -45,39 +77,39 @@ export const CartProvider = ({ children }) => {
 
   const totalItems = cart.reduce((sum, p) => sum + (p.quantity || 0), 0);
 
-  const shippingOptions = {
-    pickup: { label: "Osobní odběr", price: 0 },
-    courier: { label: "Kurýrní služba", price: 150 },
-  };
-
-  const paymentOptions = {
-    card: { label: "Platba kartou online", price: 0 },
-    cod: { label: "Dobírka", price: 50 },
-  };
-
-  const [shippingMethod, setShippingMethod] = useState("pickup");
-  const [paymentMethod, setPaymentMethod] = useState("card");
-  const [deliveryDetails, setDeliveryDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    street: "",
-    streetNumber: "",
-    city: "",
-    postalCode: "",
-    country: "cz",
-  });
+  const [shippingMethod, setShippingMethod] = useState(() =>
+    shippingOptions[storedCheckout.shippingMethod] ? storedCheckout.shippingMethod : "pickup"
+  );
+  const [paymentMethod, setPaymentMethod] = useState(() =>
+    paymentOptions[storedCheckout.paymentMethod] ? storedCheckout.paymentMethod : "card"
+  );
+  const [deliveryDetails, setDeliveryDetails] = useState(() => ({
+    ...defaultDeliveryDetails,
+    ...(storedCheckout.deliveryDetails || {}),
+  }));
 
   // DPH a slevový kód
   const VAT_RATE = 0.21; // 21% DPH 
-  const [discountPercent, setDiscountPercent] = useState(0);
-  const [appliedCode, setAppliedCode] = useState(null);
+  const initialAppliedCode = typeof storedCheckout.appliedCode === "string"
+    ? storedCheckout.appliedCode.trim().toUpperCase()
+    : null;
+  const initialDiscountPercent = initialAppliedCode ? (promoCodes[initialAppliedCode] ?? 0) : 0;
+  const [discountPercent, setDiscountPercent] = useState(initialDiscountPercent);
+  const [appliedCode, setAppliedCode] = useState(initialAppliedCode);
 
-  const promoCodes = {
-    MAKERCORD10: 0.1,
-    WELCOME5: 0.05,
-  };
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        CHECKOUT_STORAGE_KEY,
+        JSON.stringify({
+          shippingMethod,
+          paymentMethod,
+          deliveryDetails,
+          appliedCode,
+        })
+      );
+    } catch (e) {}
+  }, [shippingMethod, paymentMethod, deliveryDetails, appliedCode]);
 
   const applyPromoCode = (code) => {
     if (!code) return false;
@@ -117,6 +149,20 @@ export const CartProvider = ({ children }) => {
     setPopupVersion((prev) => prev + 1);
   };
 
+  const resetCheckoutState = () => {
+    setCart([]);
+    setShippingMethod("pickup");
+    setPaymentMethod("card");
+    setDeliveryDetails(defaultDeliveryDetails);
+    setDiscountPercent(0);
+    setAppliedCode(null);
+
+    try {
+      localStorage.removeItem(CART_STORAGE_KEY);
+      localStorage.removeItem(CHECKOUT_STORAGE_KEY);
+    } catch (e) {}
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -148,6 +194,7 @@ export const CartProvider = ({ children }) => {
         setPopupToggle,
         popupVersion,
         showCartPopup,
+        resetCheckoutState,
       }}
     >
       {children}

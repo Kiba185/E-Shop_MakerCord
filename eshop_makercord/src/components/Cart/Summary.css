@@ -1,0 +1,249 @@
+.order-summary-panel {
+    width: 100%;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.order-summary-header h3 {
+    margin: 6px 0 10px 0;
+}
+
+.order-summary-kicker {
+    margin: 0;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.order-summary-description {
+    margin: 0;
+    max-width: 680px;
+    color: #5c5c5c;
+    line-height: 1.6;
+}
+
+.order-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "totals contact"
+        "products products";
+    gap: 20px;
+}
+
+.order-summary-card {
+    padding: 22px;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+.order-summary-card h4 {
+    margin: 0 0 18px 0;
+}
+
+.order-summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #e4e4e4;
+}
+
+.order-summary-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.order-summary-item p {
+    margin: 6px 0 0 0;
+    color: #666;
+}
+
+.order-summary-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.order-summary-info-block {
+    padding: 16px;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.order-summary-info-block span {
+    display: block;
+    margin-bottom: 8px;
+    color: #6b6b6b;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.order-summary-info-block strong,
+.order-summary-item strong,
+.order-summary-row strong {
+    color: var(--black);
+}
+
+.order-summary-info-block p {
+    margin: 6px 0 0 0;
+    color: #5f5f5f;
+    line-height: 1.5;
+}
+
+.order-summary-totals {
+    grid-area: totals;
+}
+
+.order-summary-contact {
+    grid-area: contact;
+}
+
+.order-summary-products {
+    grid-area: products;
+}
+
+.order-summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e4e4e4;
+}
+
+.order-summary-row.discount span,
+.order-summary-row.discount strong {
+    color: var(--red, #e74c3c);
+}
+
+.order-summary-row.total {
+    margin-top: 8px;
+    border-bottom: none;
+    font-size: 19px;
+}
+
+.order-summary-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.summary-action {
+    min-width: 180px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.summary-action:disabled {
+    cursor: not-allowed;
+}
+
+.summary-action.back {
+    border: 1px solid #d7d7d7;
+    background: var(--white);
+    color: var(--black);
+}
+
+.summary-action.complete {
+    border: none;
+    background: var(--green);
+    color: var(--white);
+}
+
+.summary-action.complete.loading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-action-loader {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.summary-loader-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: summary-loader-bounce 0.8s infinite ease-in-out;
+}
+
+.summary-loader-dot:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.summary-loader-dot:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.summary-action:hover {
+    transform: translateY(-1px);
+}
+
+.summary-action:disabled:hover {
+    transform: none;
+}
+
+@keyframes summary-loader-bounce {
+    0%, 80%, 100% {
+        transform: scale(0.5);
+        opacity: 0.45;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 980px) {
+    .order-summary-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "totals"
+            "contact"
+            "products";
+    }
+
+    .order-summary-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .order-summary-panel {
+        padding: 22px;
+    }
+
+    .order-summary-item,
+    .order-summary-row,
+    .order-summary-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary-action {
+        width: 100%;
+    }
+}

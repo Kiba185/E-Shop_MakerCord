@@ -9,9 +9,11 @@ import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineGTranslate } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
 import { useEffect } from "react";
+import { useUser } from "../../context/UserContext";
 
 const Header = () => {
   const { totalItems, popupToggle, popupVersion, setPopupToggle } = useCart();
+  const { isLoggedIn } = useUser();
 
   useEffect(() => {
     if (!popupToggle) return;
@@ -34,7 +36,7 @@ const Header = () => {
             <GrCart />
             {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </NavLink>
-          <NavLink to="/user-profile" className="cart-link"><IoPersonOutline /></NavLink>
+          <NavLink to="/user-profile" className={`cart-link user-link ${isLoggedIn ? "logged-in" : ""}`}><IoPersonOutline /></NavLink>
           <NavLink to="/translation" className="cart-link"><MdOutlineGTranslate /></NavLink>
         </nav>
       </div>

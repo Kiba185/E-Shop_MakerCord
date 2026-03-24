@@ -1,0 +1,211 @@
+.user-profile-page {
+    padding-bottom: 56px;
+}
+
+.user-profile-shell {
+    width: min(980px, 100%);
+    margin: 0 auto;
+    padding: 32px;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: var(--box_shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.user-profile-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-profile-kicker {
+    margin: 0;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.user-profile-intro h2,
+.user-profile-intro p {
+    margin: 0;
+}
+
+.auth-toggle {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 6px;
+    background: #e7e5e2;
+    border-radius: 999px;
+    gap: 8px;
+}
+
+.auth-toggle button {
+    border: none;
+    background: transparent;
+    color: var(--black);
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-toggle button.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+.user-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.user-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.user-profile-grid input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d7d3ce;
+    border-radius: 10px;
+    background: #fbfbfb;
+    font-size: 15px;
+}
+
+.user-profile-grid input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(96, 119, 68, 0.14);
+}
+
+.password-field {
+    position: relative;
+    grid-column: 1 / -1;
+}
+
+.password-field input {
+    padding-right: 56px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #6b6864;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.user-profile-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.password-rules {
+    padding: 20px;
+    border-radius: 12px;
+    background: #f7f6f3;
+}
+
+.password-rules h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+}
+
+.password-rules ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+}
+
+.password-rules li {
+    color: #6c6a68;
+}
+
+.password-rules li.valid {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.user-profile-message {
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.user-profile-message.success {
+    background: rgba(96, 119, 68, 0.12);
+    color: var(--green);
+}
+
+.user-profile-message.error {
+    background: rgba(231, 76, 60, 0.12);
+    color: #c0392b;
+}
+
+.user-profile-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primary-action,
+.secondary-action {
+    min-width: 190px;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.primary-action {
+    border: none;
+    background: var(--green);
+    color: var(--white);
+}
+
+.secondary-action {
+    border: 1px solid #d7d3ce;
+    background: var(--white);
+    color: var(--black);
+}
+
+@media (max-width: 760px) {
+    .user-profile-shell {
+        padding: 24px;
+    }
+
+    .auth-toggle {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 18px;
+    }
+
+    .user-profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-profile-actions {
+        flex-direction: column;
+    }
+
+    .primary-action,
+    .secondary-action {
+        width: 100%;
+    }
+}

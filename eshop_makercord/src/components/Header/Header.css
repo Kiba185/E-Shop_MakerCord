@@ -62,6 +62,10 @@ header {
     color: var(--black);
 }
 
+.cart-link.user-link.logged-in {
+    color: var(--green);
+}
+
 
 .cart-badge {
     position: absolute;

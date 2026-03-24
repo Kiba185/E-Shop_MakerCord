@@ -9,19 +9,63 @@ import CartSummary from "../components/Cart/CartSummary"
 import DeliveryDetails from "../components/Cart/DeliveryDetails"
 import Summary from "../components/Cart/Summary"
 
+const ORDER_STATUS_STORAGE_KEY = "cartOrderStatus";
+
 const Cart = () => {
-  const [orderStatus, setOrderStatus] = useState(1);
-  const { cart } = useCart();
+  const { cart, isDeliveryDetailsComplete, resetCheckoutState } = useCart();
+  const [orderCompleted, setOrderCompleted] = useState(false);
+  const [orderStatus, setOrderStatus] = useState(() => {
+    try {
+      const raw = localStorage.getItem(ORDER_STATUS_STORAGE_KEY);
+      const parsed = Number(raw);
+      return parsed >= 1 && parsed <= 4 ? parsed : 1;
+    } catch (e) {
+      return 1;
+    }
+  });
 
   useEffect(() => {
-    if (cart.length === 0 && orderStatus > 1) {
-      setOrderStatus(1);
+    if (orderCompleted) {
+      return;
     }
-  }, [cart, orderStatus]);
+
+    let nextStatus = orderStatus;
+
+    if (cart.length === 0) {
+      nextStatus = 1;
+    } else if (!isDeliveryDetailsComplete && orderStatus > 3) {
+      nextStatus = 3;
+    }
+
+    if (nextStatus !== orderStatus) {
+      setOrderStatus(nextStatus);
+      return;
+    }
+
+    try {
+      localStorage.setItem(ORDER_STATUS_STORAGE_KEY, String(orderStatus));
+    } catch (e) {}
+  }, [cart.length, isDeliveryDetailsComplete, orderCompleted, orderStatus]);
+
+  const handleCompleteOrder = () => {
+    resetCheckoutState();
+    setOrderCompleted(true);
+    setOrderStatus(1);
+
+    try {
+      localStorage.removeItem(ORDER_STATUS_STORAGE_KEY);
+    } catch (e) {}
+  };
 
   return ( 
     <main className="cart-page">
       <PageHeading>Nákupní košík</PageHeading>
+      {orderCompleted ? (
+        <section className="order-finished-message">
+          <h3>Vase objednavka byla uspesne dokoncena.</h3>
+        </section>
+      ) : (
+        <>
       <OrderStatus orderStatus={orderStatus} setOrderStatus={setOrderStatus} />
       <div className="cart-content">
         {
@@ -51,8 +95,7 @@ const Cart = () => {
               case 4:
                 return (
                   <>
-                    <Summary />
-                    <CartSummary setOrderStatus={setOrderStatus} orderStatus={orderStatus} products={cart}/>
+                    <Summary setOrderStatus={setOrderStatus} onCompleteOrder={handleCompleteOrder} />
                   </>
                 );
               default:
@@ -61,6 +104,8 @@ const Cart = () => {
           })()
         }
       </div>
+        </>
+      )}
     </main>
   );
 }
