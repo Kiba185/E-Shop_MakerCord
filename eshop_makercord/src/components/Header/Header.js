@@ -11,6 +11,8 @@ import { useCart } from "../../context/CartContext";
 import { useEffect } from "react";
 import { useUser } from "../../context/UserContext";
 
+import HamMenu from "./HamMenu";
+
 const Header = () => {
   const { totalItems, popupToggle, popupVersion, setPopupToggle } = useCart();
   const { isLoggedIn } = useUser();
@@ -27,6 +29,7 @@ const Header = () => {
 
   return (
     <header>
+      <HamMenu> </HamMenu>
       <div className="header-top">
         <NavLink to="/"><img src={logo} className="logo" alt="Logo" /></NavLink>
         <input id="searchbar" type="search" placeholder="Hledat..." />

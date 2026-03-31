@@ -1,5 +1,4 @@
 header {
-    width: 100%;   
     height: 110px;
     display: flex;
     flex-direction: column;
@@ -7,15 +6,14 @@ header {
     box-shadow: rgba(0, 0, 0, 0.397) 0px 5px 25px;
 }
 .header-top {
-    height: 70%;    
-    width: 100%;
+    height: 70%;
     background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 16%;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 9vw;
 }
 
 .logo {
@@ -29,7 +27,7 @@ header {
 }
 
 #searchbar {
-    margin: 0 200px;
+    margin: 0;
     height: 40px;
     flex: 1;
     padding: 10px 15px;
@@ -111,4 +109,12 @@ header {
 
 .cart-popup p {
     margin: 0;
+}
+
+
+@media (max-width: 1024px) {
+
+    .header-top nav  {
+        display: none;
+    }
 }

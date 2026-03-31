@@ -1,0 +1,25 @@
+.ham-header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    z-index: 20;
+    display: none;
+}
+
+.ham-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10vh;
+    margin: 20px;
+}
+
+@media (max-width: 1024px) {
+
+    .ham-header {
+        display: block;
+    }
+}
