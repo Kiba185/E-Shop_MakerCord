@@ -11,3 +11,9 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+@media (max-width: 1900px) {
+    .home-page {
+        padding: 20px 16vw;
+    }
+}

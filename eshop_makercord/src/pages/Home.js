@@ -3,7 +3,7 @@ import ProductsCarousel from '../components/ProductsCarousel';
 import "./Home.css"
 
 const Home = () => {
-  return <main>
+  return <main className="home-page">
       <Introduction />
       <ProductsCarousel />
       <div className="view-all">

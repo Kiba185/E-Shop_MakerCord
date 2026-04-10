@@ -11,45 +11,185 @@
     width: 100%;
     height: 500px;
     overflow: hidden; 
-    padding: 0 ;
+    padding: 0 0 0 10px ;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Obal pro každou jednotlivou kartu */
 .carousel-item {
     position: absolute;
-    width: 25%;
     height: 100%;
-    visibility: hidden;
+    opacity: 0;
     transition: all 0.6s ease ;
-    padding: 20px 12px;
+    padding: 20px 25px 20px 0;
 }
 
 .carousel-item.c0 {
-    visibility: hidden;
+    opacity: 0;
     transform: translateX(-100%);
 }
 
 .carousel-item.c1 {
-    visibility: visible;
+    opacity: 1;
     transform: translateX(0);
 }
 
 .carousel-item.c2 {
-    visibility: visible;
+    opacity: 1;
     transform: translateX(100%);
 }
 
 .carousel-item.c3 {
-    visibility: visible;
+    opacity: 1;
     transform: translateX(200%);
 }
 
 .carousel-item.c4 {
-    visibility: visible;
+    opacity: 1;
     transform: translateX(300%);
 }
 
 .carousel-item.c5 {
-    visibility: hidden;
+    opacity: 0;
     transform: translateX(400%);
+}
+
+/* Tablet: 3 karty */
+@media (max-width: 1900px) {
+    .carousel-item {
+        padding: 20px calc(9dvw / 3) 20px 0;
+    }
+
+    .carousel-item.c0 {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .carousel-item.c1 {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .carousel-item.c2 {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+
+    .carousel-item.c3 {
+        opacity: 1;
+        transform: translateX(200%);
+    }
+
+    .carousel-item.c4 {
+        opacity: 0;
+        transform: translateX(300%);
+    }
+
+    .carousel-item.c5 {
+        opacity: 0;
+        transform: translateX(400%);
+    }
+}
+
+/* Menší obrazovky: 2 karty */
+@media (max-width: 1440px) {
+    .carousel-item {
+        padding: 20px 12px;
+    }
+
+    .carousel-content {
+        position: relative;
+        display: flex; 
+        flex-direction: row;
+        width: 100%;
+        height: 500px;
+        overflow: hidden; 
+        padding: 0 ;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .carousel-item.c0 {
+        opacity: 0;
+        transform: translateX(-100%);
+        padding-right: 0;
+    }
+
+    .carousel-item.c1 {
+        opacity: 1;
+        transform: translateX(0);
+        padding-left: 12px;
+    }
+
+    .carousel-item.c2 {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+
+    .carousel-item.c3 {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    .carousel-item.c4 {
+        opacity: 0;
+        transform: translateX(300%);
+    }
+
+    .carousel-item.c5 {
+        opacity: 0;
+        transform: translateX(400%);
+    }
+}
+
+/* Mobil: 1 karta */
+@media (max-width: 968px) {
+    .carousel-item {
+        padding: 20px (3% + 12px);
+    }
+
+    .carousel-content {
+        position: relative;
+        display: flex; 
+        flex-direction: row;
+        width: 100%;
+        height: 500px;
+        overflow: hidden; 
+        padding: 0 ;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .carousel-item.c0 {
+        opacity: 0;
+        transform: translateX(-100%);
+        padding-right: 0;
+    }
+
+    .carousel-item.c1 {
+        opacity: 1;
+        transform: translateX(0);
+        padding-left: 12px;
+    }
+
+    .carousel-item.c2 {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    .carousel-item.c3 {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    .carousel-item.c4 {
+        opacity: 0;
+        transform: translateX(300%);
+    }
+
+    .carousel-item.c5 {
+        opacity: 0;
+        transform: translateX(400%);
+    }
 }
