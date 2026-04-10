@@ -13,5 +13,8 @@
     color: var(--green);
 }
 
-@media (max-width: 1900px) {
-}
+/* @media (max-width: 1900px) {
+    .introduction {
+        margin: 20px 10px;
+    }
+} */
