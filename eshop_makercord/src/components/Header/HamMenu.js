@@ -8,25 +8,38 @@ import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineGTranslate } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
-import { useEffect } from "react";
 import { useUser } from "../../context/UserContext";
 
-const HamHeader = () => {
-  const { totalItems, popupToggle, popupVersion, setPopupToggle } = useCart();
+const HamHeader = ({ open, closeMenu }) => {
+  const { totalItems } = useCart();
   const { isLoggedIn } = useUser();
 
-    return(
-        <section className="ham-header">
-            <nav className="ham-links">
-                <NavLink to="/contact" className="cart-link"><LuPhone /></NavLink>
-                <NavLink to="/cart" className="cart-link">
-                    <GrCart />
-                    {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
-                </NavLink>
-                <NavLink to="/user-profile" className={`cart-link user-link ${isLoggedIn ? "logged-in" : ""}`}><IoPersonOutline /></NavLink>
-                <NavLink to="/translation" className="cart-link"><MdOutlineGTranslate /></NavLink>
-            </nav>
-        </section>
-    );
+  return (
+    <section className={`ham-header ${open ? "active" : ""}`}>
+      <div className="ham-header-top">
+        <button type="button" className="ham-close" onClick={closeMenu} aria-label="Zavřít menu">
+          ×
+        </button>
+      </div>
+      <nav className="ham-links">
+        <NavLink to="/" className="ham-link" onClick={closeMenu}>
+          <img src={logo} alt="Logo" className="ham-logo" />
+        </NavLink>
+        <NavLink to="/contact" className="ham-link" onClick={closeMenu}>
+          <LuPhone />
+        </NavLink>
+        <NavLink to="/cart" className="ham-link" onClick={closeMenu}>
+          <GrCart />
+          {totalItems > 0 && <span className="nav-badge">{totalItems}</span>}
+        </NavLink>
+        <NavLink
+          to="/user-profile"
+          className={`ham-link user-link ${isLoggedIn ? "logged-in" : ""}`}
+          onClick={closeMenu}>
+          <IoPersonOutline />
+        </NavLink>
+      </nav>
+    </section>
+  );
 };
 export default HamHeader;
