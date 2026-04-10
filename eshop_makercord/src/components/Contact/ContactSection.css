@@ -1,9 +1,9 @@
 .contact-section {
-    padding: 75px 20% 50px 20%;
+    padding: 4.6875em 20% 3.125em 20%;
     background-color: var(--white);
     text-align: center;
     box-shadow: var(--box_shadow);
-    margin: 50px 0;
+    margin: 3.125em 0;
     height: 50vh;
     border-radius: 6px;
 }
@@ -11,7 +11,7 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875em;
 }
 
 .contact-form input {
@@ -19,7 +19,7 @@
     box-shadow: var(--box_shadow);
     border: none;
     border-bottom: 1px var(--black) solid;
-    padding: 15px;
+    padding: 0.9375em;
     border-radius: 6px;
 }
 
@@ -34,7 +34,7 @@
     box-shadow: var(--box_shadow);
     border: none;
     border-bottom: 1px var(--black) solid;
-    padding: 15px;
+    padding: 0.9375em;
     border-radius: 6px;
     resize: none;
     cursor: var(--black);

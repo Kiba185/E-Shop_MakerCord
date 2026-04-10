@@ -3,7 +3,7 @@
     width: 300px;
     height: 450px;
     margin: 0;
-    padding: 20px;
+    padding: 1.25em;
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.197) 0px 2px 11px;
     border-radius: 6px;
@@ -14,7 +14,7 @@
     left: 50%;
     width: 85%;
     transform: translateX(-50%);
-    top: 20px;
+    top: 1.25em;
     height: 50%;
     object-fit: cover;
     border-radius: 6px;
@@ -39,7 +39,7 @@
     font-size: 3em;
     font-weight: 500;
     color: var(--black);
-    margin: 15px 0;
+    margin: 0.6em 0;
     font-family: 'Karantina';
     
 }

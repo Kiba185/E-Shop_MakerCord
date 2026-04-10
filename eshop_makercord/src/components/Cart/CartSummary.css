@@ -2,30 +2,30 @@
     width: 27%;
     min-width: 280px;
     height: fit-content;
-    padding: 20px;
+    padding: 1.25em;
     border-radius: 5px;
     background: var(--white);
     box-shadow: var(--box_shadow);
     position: sticky;
-    top: 18px;
+    top: 1.125em;
     align-self: flex-start;
 }
 
 .cart-summary h3 {
-    margin: 0 0 12px 0;
+    margin: 0 0 0.75em 0;
     text-transform: none;
 }
 
 .summary-row {
     display: flex;
     justify-content: space-between;
-    padding: 6px 0;
+    padding: 0.375em 0;
     border-bottom: 1px dashed #f0f0f0;
 }
 
 .summary-row.total {
     border-bottom: none;
-    margin-top: 8px;
+    margin-top: 0.5em;
     font-size: 18px;
 }
 
@@ -34,13 +34,13 @@
 }
 
 .promo {
-    margin-top: 14px;
+    margin-top: 0.875em;
 }
 
 .promo-controls {
     display: flex;
-    gap: 8px;
-    margin-top: 8px;
+    gap: 0.5em;
+    margin-top: 0.5em;
 }
 
 .promo-controls input {

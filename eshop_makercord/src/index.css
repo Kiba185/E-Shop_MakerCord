@@ -20,6 +20,16 @@ body {
 
 main {
     position: relative;
-    padding: 20px 16%;
+    padding: 1.25em 16%;
+}
+
+/* Velké monitory */
+@media (min-width: 1920px) {
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1.25em 3.75em;
+        min-height: 95vh;
+    }
 }
 

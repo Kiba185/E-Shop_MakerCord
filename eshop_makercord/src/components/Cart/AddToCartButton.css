@@ -1,12 +1,12 @@
 .add-to-cart-button {
     position: absolute;
-    bottom: 40px;
-    right: 35px;
+    bottom: 2.5em;
+    right: 2.1875em;
     background-color: var(--green);
     color: var(--white);
     font-weight: 800;
     border: none;
-    padding: 8px 14px;
+    padding: 0.5em 0.875em;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.7em;

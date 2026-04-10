@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 24px;
+  gap: 1.5em;
 }
 
 .order-finished-message {
   width: 100%;
-  padding: 48px 32px;
+  padding: 3em 2em;
   background: var(--white);
   border-radius: 8px;
   box-shadow: var(--box_shadow);

@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16%;
+    padding: 0.625em 16%;
     box-sizing: border-box;
     gap: 9vw;
 }
@@ -30,7 +30,7 @@ header {
     margin: 0;
     height: 40px;
     flex: 1;
-    padding: 10px 15px;
+    padding: 0.625em 0.9375em;
     border: none;
     border-radius: 100px;
     font-size: 14px;
@@ -55,7 +55,7 @@ header {
 .nav-link {
     position: relative;
     display: inline-block;
-    padding-top: 7px;
+    padding-top: 0.4375em;
     font-size: 30px;
     color: var(--black);
 }
@@ -73,19 +73,19 @@ header {
     color: white;
     font-weight: 700;
     font-size: 12px;
-    padding: 2px 6px;
+    padding: 0.125em 0.375em;
     border-radius: 12px;
     line-height: 1;
 }
 
 .cart-popup {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 1.25em;
+    right: 1.25em;
     z-index: 200;
     background-color: var(--green);
     min-width: 240px;
-    padding: 14px 18px;
+    padding: 0.875em 1.125em;
     border-radius: 12px;
     color: var(--white);
     text-align: center;

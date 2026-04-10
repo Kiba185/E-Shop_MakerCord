@@ -1,6 +1,6 @@
 .shipping-payment-section {
     width: 71%;
-    padding: 30px;
+    padding: 1.875em;
     background-color: var(--white);
     border-radius: 5px;
     box-shadow: var(--box_shadow);
@@ -10,24 +10,24 @@
 }
 
 .shipping-payment-section h3 {
-    margin: 0 0 16px 0;
+    margin: 0 0 1em 0;
 }
 
 .shipping-payment-group {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75em;
 }
 
 .shipping-payment-option {
     position: relative;
     display: block;
-    padding: 16px;
+    padding: 1em;
     border: 2px solid #ddd;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 12px;
+    margin-bottom: 0.75em;
 }
 
 .shipping-payment-option:hover {

@@ -1,15 +1,15 @@
 .introduction {
     text-align: center;
-    margin: 20px 10px;
+    margin: 1.25em 0.625em;
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 25px;
-    padding: 30px;
+    padding: 1.875em;
     border-radius: 6px;
 }
 
 .introduction h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     color: var(--green);
 }
 
