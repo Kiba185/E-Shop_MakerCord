@@ -1,17 +1,38 @@
 .contact-section {
-    padding: 4.6875em 20% 3.125em 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4.6875em 10% 3.125em 10%;
     background-color: var(--white);
-    text-align: center;
     box-shadow: var(--box_shadow);
     margin: 3.125em 0;
     height: 50vh;
     border-radius: 6px;
 }
 
+.conntact-info {
+    margin-bottom: 3.125em;
+    text-align: left;
+    width: 40%;
+}
+
+.conntact-info h2 {
+    margin: 0;
+    font-size: 1.875em;
+    color: var(--green);
+}
+
+.conntact-info p {
+    margin: 0.625em 0;
+    color: var(--black);
+    text-align: left;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.875em;
+    width: 40%;
 }
 
 .contact-form input {
@@ -38,6 +59,7 @@
     border-radius: 6px;
     resize: none;
     cursor: var(--black);
+    height: 30%;
 }
 
 .contact-form textarea:focus {
