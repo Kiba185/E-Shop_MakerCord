@@ -6,7 +6,6 @@ import logo from "../../images/logo.png";
 import { LuPhone } from "react-icons/lu";
 import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
-import { MdOutlineGTranslate } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
 import { useEffect, useState } from "react";
 import { useUser } from "../../context/UserContext";

@@ -1,0 +1,126 @@
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box_shadow);
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+.product-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 1.25em;
+}
+
+.product-header {
+    margin-bottom: 1.25em;
+}
+
+.product-header h1 {
+    font-size: 2.5em;
+    color: var(--green);
+    font-weight: 700;
+    margin: 0;
+}
+
+.category-tag {
+    color: var(--black);
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+
+.product-price .price {
+    top: 78%;
+    left: 10%;
+    font-size: 3em;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0.6em 0;
+    font-family: 'Karantina';
+    text-decoration: none;
+}
+
+.product-price .currency {
+    font-size: 0.4em;
+    color: var(--black);
+    font-weight: 800;
+    font-family: 'Roboto Condensed';
+    vertical-align: 14px;
+    text-decoration: none;
+}
+
+.product-description h3 {
+    color: var(--green);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.product-description p {
+    color: var(--black);
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+}
+
+.product-image {
+    margin-bottom: 1.25em;
+}
+
+.product-details .add-to-cart-button {
+    font-size: 1.25em;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: var(--box_shadow);
+}
+
+/* Responzivní design */
+@media (min-width: 768px) {
+    .product-details {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2em;
+    }
+
+    .product-content {
+        flex: 1;
+        text-align: left;
+        margin-right: 2em;
+        margin-bottom: 0;
+        max-width: none;
+    }
+
+    .product-image {
+        flex: 1;
+        margin-left: 2em;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-details {
+        padding: 1em;
+    }
+
+    .product-header h1 {
+        font-size: 2em;
+    }
+
+    .product-price {
+        font-size: 1.5em;
+    }
+
+    .product-description h3 {
+        font-size: 1.25em;
+    }
+}

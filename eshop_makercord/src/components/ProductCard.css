@@ -1,3 +1,4 @@
+
 .product-card { 
     position: relative;
     width: 300px;
@@ -7,6 +8,7 @@
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.197) 0px 2px 11px;
     border-radius: 6px;
+    text-decoration: none;
 }
 
 .product-card img {
@@ -24,12 +26,16 @@
     top: 55%;
     left: 10%;
     position: absolute;
+    text-decoration: none;
+    color: var(--black);
 }
 
 .product-card p:first-of-type{
     position: absolute;
     top: 66%;
     left: 10%;
+    text-decoration: none;
+    color: var(--black);
 }
 
 .product-card .price {
@@ -41,7 +47,7 @@
     color: var(--black);
     margin: 0.6em 0;
     font-family: 'Karantina';
-    
+    text-decoration: none;
 }
 
 .product-card .currency {
@@ -50,4 +56,14 @@
     font-weight: 800;
     font-family: 'Roboto Condensed';
     vertical-align: 14px;
+    text-decoration: none;
+}
+
+.product-card .add-to-cart-button {
+    position: absolute;
+    bottom: 2.5em;
+    right: 2.1875em;
+    border-radius: 5px;
+    font-size: 0.7em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
