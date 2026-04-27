@@ -4,7 +4,7 @@
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 25px;
     padding: 1.875em;
-    border-radius: 6px;
+    border-radius: var(--border_radius);
 }
 
 .introduction h1 {
@@ -13,8 +13,3 @@
     color: var(--green);
 }
 
-/* @media (max-width: 1900px) {
-    .introduction {
-        margin: 20px 10px;
-    }
-} */

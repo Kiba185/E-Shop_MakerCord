@@ -7,7 +7,7 @@
     box-shadow: var(--box_shadow);
     margin: 3.125em 0;
     height: 50vh;
-    border-radius: 6px;
+    border-radius: var(--border_radius);
 }
 
 .conntact-info {

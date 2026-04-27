@@ -1,13 +1,13 @@
 .user-profile-page {
-    padding-bottom: 3.5em;
+    padding: 1.25em 16%;
 }
 
 .user-profile-shell {
     width: min(980px, 100%);
     margin: 0 auto;
-    padding: 2em;
+    padding: 3em;
     background: var(--white);
-    border-radius: 14px;
+    border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     display: flex;
     flex-direction: column;
