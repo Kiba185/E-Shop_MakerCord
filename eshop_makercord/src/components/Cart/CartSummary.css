@@ -2,7 +2,8 @@
     width: 27%;
     min-width: 280px;
     height: fit-content;
-    padding: 24px;
+    min-height: 43vh;
+    padding: 2vh;
     border-radius: var(--border_radius);
     background: var(--white);
     box-shadow: var(--box_shadow);
@@ -14,7 +15,7 @@
 .cart-summary h3 {
     margin: 0 0 20px 0;
     text-transform: none;
-    font-size: 18px;
+    font-size: clamp(1vw, 2vw, 20px);
     font-weight: 700;
     color: var(--black);
 }
@@ -22,9 +23,9 @@
 .summary-row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 1vh 0;
     border-bottom: 1px dashed #e8e8e8;
-    font-size: 14px;
+    font-size: clamp(1vw, 2vw, 20px);
 }
 
 .summary-row span:first-child {
@@ -39,13 +40,13 @@
 .summary-row.total {
     border-bottom: none;
     margin-top: 12px;
-    padding-top: 16px;
+    padding-top: 1.5vh;
     border-top: 2px solid #e8e8e8;
-    font-size: 18px;
+    font-size: clamp(1vw, 2vw, 20px);
 }
 
 .summary-row.total strong {
-    font-size: 18px;
+    font-size: clamp(1vw, 2vw, 20px);
 }
 
 .summary-row.discount span {
@@ -53,17 +54,17 @@
 }
 
 .promo {
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 2.4vh;
+    padding-top: 2vh;
     border-top: 1px solid #eee;
 }
 
 .promo > label {
     display: block;
-    font-size: 13px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     font-weight: 600;
     color: #666;
-    margin-bottom: 8px;
+    margin-bottom: 1vh;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -71,7 +72,7 @@
 .promo-controls {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 
 .promo-controls input {
@@ -79,8 +80,8 @@
     background: #f8f8f8;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 12px 14px;
-    font-size: 14px;
+    padding: 1.2vh 1.4vh;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     transition: all 0.2s ease;
 }
 
@@ -92,14 +93,14 @@
 }
 
 .promo-controls .apply {
-    padding: 12px 18px;
+    padding: 1.2vh 1.8vh;
     background: var(--green);
     border: none;
     color: white;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     transition: all 0.2s ease;
     white-space: nowrap;
 }
@@ -114,13 +115,13 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 10px 14px;
+    padding: 1vh 1.4vh;
     background: rgba(56, 142, 60, 0.08);
     border-radius: 8px;
 }
 
 .applied span {
-    font-size: 13px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     color: var(--green);
 }
 
@@ -132,10 +133,10 @@
     background: none;
     border: none;
     color: #e74c3c;
-    font-size: 13px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     cursor: pointer;
     font-weight: 500;
-    padding: 4px 8px;
+    padding: 0.4vh 0.8vh;
     transition: all 0.2s ease;
 }
 
@@ -145,8 +146,8 @@
 
 .message {
     margin-top: 10px;
-    font-size: 13px;
-    padding: 10px 14px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
+    padding: 1vh 1.4vh;
     border-radius: 8px;
 }
 
@@ -164,7 +165,7 @@
     display: flex;
     gap: 12px;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 2vh;
 }
 
 .back {
@@ -175,7 +176,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     transition: all 0.2s ease;
 }
 
@@ -192,11 +193,11 @@
     background: var(--green);
     color: var(--white);
     border: none;
-    padding: 14px 28px;
+    padding: 1.4vh 2.8vh;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(0.8vw, 1.5vw, 14px);
     transition: all 0.2s ease;
 }
 
@@ -236,11 +237,11 @@
     }
 
     .summary-row {
-        font-size: 13px;
+        font-size: clamp(0.8vw, 1.5vw, 14px);
     }
 
     .summary-row.total {
-        font-size: 16px;
+        font-size: clamp(1vw, 2vw, 20px);
     }
 
     .promo-controls {
