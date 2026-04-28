@@ -1,33 +1,42 @@
 .delivery-details-section {
     width: 71%;
-    padding: 1.875em;
+    padding: 30px;
     background-color: var(--white);
-    border-radius: 5px;
+    border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
 }
 
 .delivery-details-section h3 {
-    margin: 0 0 1em 0;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
 }
 
 .delivery-details-section form {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
 .delivery-details-section input,
 .delivery-details-section select {
     width: 100%;
-    padding: 0.75em 0.875em;
-    border: 1px solid #d6d6d6;
-    border-radius: 8px;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     background-color: var(--white);
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    color: var(--black);
+}
+
+.delivery-details-section input::placeholder {
+    color: #aaa;
 }
 
 .delivery-details-section input:focus,
@@ -35,4 +44,46 @@
     outline: none;
     border-color: var(--green);
     box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.12);
+}
+
+.delivery-details-section select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+@media (max-width: 900px) {
+    .delivery-details-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .delivery-details-section {
+        padding: 20px;
+    }
+
+    .delivery-details-section form {
+        grid-template-columns: 1fr;
+    }
+
+    .delivery-details-section input,
+    .delivery-details-section select {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .delivery-details-section {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .delivery-details-section h3 {
+        font-size: 16px;
+    }
 }
