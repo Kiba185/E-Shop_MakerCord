@@ -22,7 +22,8 @@ body {
 
 main {
     position: relative;
-    padding: 1.25em 16%;
+    padding: 1.25vw 16%;
+    min-width: 70vw;
 }
 
 /* Velké monitory */
@@ -30,7 +31,7 @@ main {
     main {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 1.25em 3.75em;
+        padding: 1.25vw 3.75vw;
         min-height: 95vh;
     }
 }
