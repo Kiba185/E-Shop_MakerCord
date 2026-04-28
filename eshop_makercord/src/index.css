@@ -8,7 +8,7 @@
 
     --box_shadow:rgba(0, 0, 0, 0.197) 0px 2px 11px;
 
-    --border_radius: 14px;
+    --border_radius: 1.7vh;
 
     box-sizing: border-box;
 }
