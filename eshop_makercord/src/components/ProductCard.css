@@ -30,44 +30,45 @@
     position: absolute;
     text-decoration: none;
     color: var(--black);
-    font-size: clamp(1.2vw, 3vw, 25px);
+    font-size: clamp(20px, 2vw, 1.3vw);
 }
 
 .product-card p:first-of-type{
     position: absolute;
     top: 66%;
     left: 10%;
+    right: 10%;
     text-decoration: none;
     color: var(--black);
-    font-size: clamp(0.9vw, 1vw, 20px);
+    font-size: clamp(17px, 1vw, 1vw);
 }
 
 .product-card .price {
     position: absolute;
-    top: 78%;
+    top: 83%;
     left: 10%;
-    font-size: 3em;
+    font-size: clamp(35px, 3vw, 3vw);
     font-weight: 500;
     color: var(--black);
-    margin: 0.6em 0;
+    margin: 0;
     font-family: 'Karantina';
     text-decoration: none;
 }
 
 .product-card .currency {
-    font-size: 0.4em;
+    font-size: clamp(15px, 1.2vw, 1vw);
     color: var(--black);
     font-weight: 800;
     font-family: 'Roboto Condensed';
-    vertical-align: 14px;
+    vertical-align: 2vw;
     text-decoration: none;
 }
 
 .product-card .add-to-cart-button {
     position: absolute;
-    bottom: 2.5em;
-    right: 2.1875em;
+    bottom: 3vh;
+    right: 3vh;
     border-radius: 5px;
-    font-size: 0.7em;
+    font-size: clamp(10px, 0.6vw, 0.8vw);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
