@@ -1,6 +1,6 @@
 import "./ProductsCarousel.css";
 import { useEffect, useState } from "react";
-import data from "../data";
+import data from "../../data";
 import ProductCard from "./ProductCard";
 
 const ProductsCarousel = () => {

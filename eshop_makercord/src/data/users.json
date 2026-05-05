@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "firstName": "Jan",
+    "lastName": "Novák",
+    "email": "jan.novak@makercord.cz",
+    "phone": "+420 777 111 222",
+    "password": "MakerCord123!"
+  },
+  {
+    "id": 2,
+    "firstName": "Eliška",
+    "lastName": "Svobodová",
+    "email": "eliska.svobodova@makercord.cz",
+    "phone": "",
+    "password": "Tvoreni2024!"
+  }
+]

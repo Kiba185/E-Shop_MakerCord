@@ -1,4 +1,4 @@
-import ProductsOverview from '../components/ProductsOverview';
+import ProductsOverview from '../components/Products/ProductsOverview';
 import PageHeading from '../components/PageHeading';
 
 const Products = () => {

@@ -1,5 +1,5 @@
 import Introduction from '../components/Introduction';
-import ProductsCarousel from '../components/ProductsCarousel';
+import ProductsCarousel from '../components/Products/ProductsCarousel';
 import "./Home.css"
 
 const Home = () => {

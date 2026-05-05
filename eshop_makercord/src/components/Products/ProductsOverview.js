@@ -1,6 +1,6 @@
 import "./ProductsOverview.css";
 import { useEffect, useMemo, useState } from "react";
-import data from "../data";
+import data from "../../data";
 import ProductCard from "./ProductCard";
 
 const PRODUCTS_PER_PAGE = 12;

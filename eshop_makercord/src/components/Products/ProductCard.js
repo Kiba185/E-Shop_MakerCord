@@ -1,4 +1,4 @@
-import AddToCartButton from "../components/Cart/AddToCartButton";
+import AddToCartButton from "../Cart/AddToCartButton";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
