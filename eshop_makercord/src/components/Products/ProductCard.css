@@ -30,7 +30,7 @@
     position: absolute;
     text-decoration: none;
     color: var(--black);
-    font-size: clamp(20px, 2vw, 1.3vw);
+    font-size: clamp(18px, 1.8vw, 1.2vw);
 }
 
 .product-card p:first-of-type{
@@ -40,14 +40,14 @@
     right: 10%;
     text-decoration: none;
     color: var(--black);
-    font-size: clamp(17px, 1vw, 1vw);
+    font-size: clamp(17px, 1vw, 0.9vw);
 }
 
 .product-card .price {
     position: absolute;
-    top: 83%;
+    bottom: 3.1vh;
     left: 10%;
-    font-size: clamp(35px, 3vw, 3vw);
+    font-size: clamp(50px, 3vw, 6vh);
     font-weight: 500;
     color: var(--black);
     margin: 0;
@@ -56,7 +56,7 @@
 }
 
 .product-card .currency {
-    font-size: clamp(15px, 1.2vw, 1vw);
+    font-size: clamp(15px, 1vw, 1.2vw);
     color: var(--black);
     font-weight: 800;
     font-family: 'Roboto Condensed';
@@ -66,9 +66,10 @@
 
 .product-card .add-to-cart-button {
     position: absolute;
-    bottom: 3vh;
+    bottom: 3.8vh;
     right: 3vh;
-    border-radius: 5px;
-    font-size: clamp(10px, 0.6vw, 0.8vw);
+    border-radius: var(--border_radius);
+    font-size: clamp(20px, 1.5vh, 2vh);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1vh 0.8vw;
 }
