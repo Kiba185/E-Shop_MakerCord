@@ -2,7 +2,7 @@
 .product-card { 
     position: relative;
     width: 300px;
-    min-width: 30.25vh;
+    min-width: 31.35vh;
     height: 450px;
     min-height: 50vh;
     margin: 0;
@@ -44,7 +44,7 @@
 
 .product-card .price {
     position: absolute;
-    bottom: 3.1vh;
+    bottom: 2.5vh;
     left: 10%;
     font-size: clamp(50px, 3vw, 6vh);
     font-weight: 500;
@@ -65,10 +65,10 @@
 
 .product-card .add-to-cart-button {
     position: absolute;
-    bottom: 3.8vh;
-    right: 3vh;
+    bottom: 3.2vh;
+    right: 2.3vh;
     border-radius: var(--border_radius);
     font-size: clamp(15px, 1.5vh, 2vh);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1vh 0.8vw;
+    padding: clamp(8px, 1vh, 2vh) clamp(12px, 1.5vh, 3vh);
 }

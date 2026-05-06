@@ -1,10 +1,10 @@
 .products-overview {
-    width: min(1400px, 100%);
+    width: 100%;
     margin: 0 auto;
     padding: 1.5em 0 3em;
     display: grid;
-    grid-template-columns: 290px minmax(0, 1fr);
-    gap: 1.75em;
+    grid-template-columns: 20% 75%;
+    gap: max(2em, 4%);
     align-items: start;
 }
 
@@ -14,27 +14,29 @@
 }
 
 .filter-section-inner {
-    padding: 1.5em;
+    padding: clamp(16px, 2.5vh, 3vh);
     background: var(--white);
     border-radius: 10px;
     box-shadow: var(--box_shadow);
+    min-width: 13vw;
+    min-height: 55vh;
 }
 
 .filter-section h3 {
     margin: 0 0 1.125em 0;
-    font-size: 28px;
+    font-size: clamp(24px, 3vh, 3.5vh);
 }
 
 .filters {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: clamp(16px, 2.5vh, 3vh);
 }
 
 .filter-group {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: clamp(12px, 2vh, 3vh);
 }
 
 .filter-group-header {
@@ -46,7 +48,7 @@
 
 .filter-group-header h4 {
     margin: 0;
-    font-size: 18px;
+    font-size: clamp(18px, 2.5vh, 3vh);
 }
 
 .clear-filters {
@@ -56,18 +58,20 @@
     font-weight: 700;
     cursor: pointer;
     padding: 0;
+    font-size: clamp(14px, 1.5vh, 2vh);
 }
 
 .filter-options {
     display: flex;
     flex-direction: column;
-    gap: 0.75em;
+    gap: clamp(8px, 1.5vh, 2vh);
 }
 
 .price-range {
     display: flex;
     flex-direction: column;
     gap: 0.75em;
+    min-height: 2vh;
 }
 
 .price-range input[type="range"] {
@@ -81,26 +85,27 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.75em;
-    font-size: 14px;
+    font-size: clamp(14px, 1.5vh, 2vh);
 }
 
 .filter-option {
     display: flex;
     align-items: center;
-    gap: 0.625em;
+    gap: clamp(8px, 1.5vh, 2vh);
     font-weight: 500;
     cursor: pointer;
+    font-size: clamp(14px, 1.5vh, 2vh);
 }
 
 .filter-option input {
-    width: 16px;
-    height: 16px;
+    width: 2vh;
+    height: 2vh;
     accent-color: var(--green);
 }
 
 .color-option .color-swatch {
-    width: 16px;
-    height: 16px;
+    width: 2vh;
+    height: 2vh;
     border-radius: 50%;
     flex-shrink: 0;
     border: 1px solid transparent;
@@ -113,7 +118,8 @@
 .products-content {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: clamp(16px, 2.5vh, 3vh);
+    width: 100%;
 }
 
 .sorting-section {
@@ -133,13 +139,12 @@
     border: none;
     background-color: var(--white);
     color: var(--black);
-    font-size: 1.1em;
+    font-size: clamp(14px, 1.5vh, 2vh);
     cursor: pointer;
+    padding: clamp(8px, 1.5vh, 2vh) clamp(16px, 2.5vh, 3vh);
     font-weight: 700;
-    width: 200px;
-    height: 50px;
     box-shadow: var(--box_shadow);
-    border-radius: 6px;
+    border-radius: var(--border_radius);
     transition: 0.2s ease;
 }
 
@@ -151,7 +156,7 @@
 .products-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: clamp(16px, 2.5vh, 3vh);
 }
 
 .product-item {
@@ -182,7 +187,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: clamp(8px, 1.5vh, 2vh);
 }
 
 .pagination-button,
@@ -191,10 +196,11 @@
     background: var(--white);
     color: var(--black);
     min-width: 46px;
-    padding: 12px 16px;
+    padding: clamp(8px, 1.5vh, 2vh) clamp(16px, 2.5vh, 3vh);
     border-radius: 999px;
     font-weight: 700;
     cursor: pointer;
+    font-size: clamp(20px, 2.5vh, 3vh);
 }
 
 .pagination-pages {
