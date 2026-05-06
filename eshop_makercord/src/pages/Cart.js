@@ -62,7 +62,7 @@ const Cart = () => {
       <PageHeading>Nákupní košík</PageHeading>
       {orderCompleted ? (
         <section className="order-finished-message">
-          <h3>Vase objednavka byla uspesne dokoncena.</h3>
+          <h3>Vaše objednávka byla úspěšne dokončena.</h3>
         </section>
       ) : (
         <>

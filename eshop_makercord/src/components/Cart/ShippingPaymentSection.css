@@ -1,17 +1,18 @@
 .shipping-payment-section {
     width: 71%;
-    padding: 30px;
+    padding: clamp(25px, 2.5vh, 3vh);
     background-color: var(--white);
     border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: clamp(30px, 2vh, 3vh);
+    min-height: 45vh;
 }
 
 .shipping-payment-section h3 {
     margin: 0 0 20px 0;
-    font-size: 18px;
+    font-size: clamp(30px, 2vh, 3vh);
     font-weight: 700;
     color: var(--black);
 }
@@ -19,19 +20,20 @@
 .shipping-payment-section form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: clamp(20px, 1vh, 2vh);
 }
 
 .shipping-payment-option {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 18px 20px;
+    padding: 18px clamp(20px, 2vh, 2.5vh);
     border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border-radius: var(--border_radius);
     cursor: pointer;
     transition: all 0.25s ease;
     background: var(--white);
+    min-height: 7vh;
 }
 
 .shipping-payment-option:hover {
@@ -59,6 +61,8 @@
     content: '';
     width: 22px;
     height: 22px;
+    min-width: 2vh;
+    min-height: 2vh;
     border: 2px solid #ccc;
     border-radius: 50%;
     margin-right: 16px;
@@ -80,7 +84,7 @@
     margin: 0;
     color: var(--black);
     font-weight: 500;
-    font-size: 15px;
+    font-size: clamp(25px, 2vh, 2.5vh);
     line-height: 1.4;
 }
 

@@ -56,27 +56,51 @@
     transform: translateX(400%);
 }
 
-@media (min-width: 6000px) {
+@media (min-width: 8000px) {
     .carousel-item {
         padding: 1.25em 2.4vw 1.25em 0;
+    }
+}
+
+@media (max-width: 8000px) {
+    .carousel-item {
+        padding: 1.25em 0.9vw 1.25em 0;
+    }
+}
+
+@media (max-width: 7000px) {
+    .carousel-item {
+        padding: 1.25em 1vw 1.25em 0;
+    }
+}
+
+@media (max-width: 6000px) {
+    .carousel-item {
+        padding: 1.25em 0.9vw 1.25em 0;
     }
 }
 
 @media (max-width: 5000px) {
     .carousel-item {
-        padding: 1.25em 2.4vw 1.25em 0;
+        padding: 1.25em 0.9vw 1.25em 0;
     }
 }
 
 @media (max-width: 4000px) {
     .carousel-item {
-        padding: 1.25em 2.3vw 1.25em 0;
+        padding: 1.25em 0.8vw 1.25em 0;
+    }
+}
+
+@media (max-width: 3000px) {
+    .carousel-item {
+        padding: 1.25em 0.75vw 1.25em 0;
     }
 }
 
 @media (max-width: 2300px) {
     .carousel-item {
-        padding: 1.25em 1vw 1.25em 0;
+        padding: 1.25em 0.7vw 1.25em 0;
     }
 }
 
@@ -88,18 +112,18 @@
 
 @media (max-width: 1800px) {
     .carousel-item {
-        padding: 1.25em 1.3vw 1.25em 0;
+        padding: 1.25em 0.5vw 1.25em 0;
     }
 }
 
 /* Tablet: 3 karty */
-@media (max-width: 1600px) {
+@media (max-width: 1750px) {
     .carousel-content {
         width: 90%;
     }
 
     .carousel-item {
-        padding: 1.25em 4.5vw 1.25em 0;
+        padding: 1.25em 4vw 1.25em 0;
     }
 
     .carousel-item.c0 {

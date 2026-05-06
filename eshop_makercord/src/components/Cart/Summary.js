@@ -45,16 +45,16 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
     <section className="order-summary-panel">
       <div className="order-summary-header">
         <div>
-          <h3>Souhrn objednavky</h3>
+          <h3>Souhrn objednávky</h3>
           <p className="order-summary-description">
-            Zkontrolujte vsechny udaje pred dokoncenim objednavky.
+            Zkontrolujte všechny údaje před dokončením objednávky.
           </p>
         </div>
       </div>
 
       <div className="order-summary-grid">
         <div className="order-summary-card order-summary-totals">
-          <h4>Cenovy prehled</h4>
+          <h4>Cenovy přehled</h4>
 
           <div className="order-summary-row">
             <span>Celkem bez DPH</span>
@@ -67,7 +67,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
           </div>
 
           <div className="order-summary-row">
-            <span>Mezisoucet</span>
+            <span>Mezisoučet</span>
             <strong>{fmt(totalBeforeDiscount)}</strong>
           </div>
 
@@ -89,13 +89,13 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
           </div>
 
           <div className="order-summary-row total">
-            <span>Celkem k uhrade</span>
+            <span>Celkem k úhradě</span>
             <strong>{fmt(total)}</strong>
           </div>
         </div>
 
         <div className="order-summary-card order-summary-contact">
-          <h4>Kontakt a doruceni</h4>
+          <h4>Kontakt a doručeni</h4>
           <div className="order-summary-info">
             <div className="order-summary-info-block">
               <span>Kontakt</span>
@@ -105,7 +105,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
             </div>
 
             <div className="order-summary-info-block">
-              <span>Dodaci adresa</span>
+              <span>Dodací adresa</span>
               <strong>{fullAddress}</strong>
               <p>{deliveryDetails.city}, {deliveryDetails.postalCode}</p>
               <p>{country}</p>
@@ -126,7 +126,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
         </div>
 
         <div className="order-summary-card order-summary-products">
-          <h4>Objednane polozky</h4>
+          <h4>Objednané položky</h4>
           <div className="order-summary-items">
             {cart.map((product) => (
               <div key={product.id} className="order-summary-item">

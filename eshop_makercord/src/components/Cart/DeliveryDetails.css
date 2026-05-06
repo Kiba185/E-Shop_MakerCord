@@ -1,17 +1,18 @@
 .delivery-details-section {
     width: 71%;
-    padding: 30px;
+    padding: clamp(25px, 2.5vh, 3vh);
     background-color: var(--white);
     border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: clamp(20px, 2vh, 3vh);
+    min-height: 45vh;
 }
 
 .delivery-details-section h3 {
-    margin: 0 0 20px 0;
-    font-size: 18px;
+    margin: 0 0 clamp(20px, 1.8vh, 2.2vh) 0;
+    font-size: clamp(20px, 2vh, 3vh);
     font-weight: 700;
     color: var(--black);
 }
@@ -19,7 +20,7 @@
 .delivery-details-section form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: clamp(20px, 2vh, 3vh);
 }
 
 .delivery-details-section input,
@@ -27,12 +28,13 @@
     width: 100%;
     padding: 14px 16px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: var(--border_radius);
     background-color: var(--white);
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: clamp(15px, 1.5vh, 2.2vh);
     transition: all 0.2s ease;
     color: var(--black);
+    min-height: 4vh;
 }
 
 .delivery-details-section input::placeholder {
