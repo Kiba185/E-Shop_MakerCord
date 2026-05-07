@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import PageHeading from "../components/PageHeading";
 import { useUser } from "../context/UserContext";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
@@ -41,6 +41,18 @@ const UserProfile = () => {
     phone: currentUser?.phone ?? "",
     password: currentUser?.password ?? "",
   }));
+
+  React.useEffect(() => {
+    if (!currentUser) return;
+
+    setProfileForm({
+      firstName: currentUser.firstName ?? "",
+      lastName: currentUser.lastName ?? "",
+      email: currentUser.email ?? "",
+      phone: currentUser.phone ?? "",
+      password: currentUser.password ?? "",
+    });
+  }, [currentUser]);
 
   const passwordChecks = useMemo(() => {
     const password = registerForm.password;

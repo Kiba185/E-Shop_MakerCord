@@ -14,10 +14,21 @@ const readStorageJSON = (key, fallback) => {
   }
 };
 
+const normalizeUser = (user) => ({
+  ...user,
+  id: Number(user.id),
+  firstName: user.firstName?.trim() ?? "",
+  lastName: user.lastName?.trim() ?? "",
+  email: user.email?.trim().toLowerCase() ?? "",
+  phone: user.phone?.trim() ?? "",
+  password: user.password ?? "",
+  isAdmin: Boolean(user.isAdmin),
+});
+
 export const UserProvider = ({ children }) => {
   const [users, setUsers] = useState(() => {
     const stored = readStorageJSON(USERS_STORAGE_KEY, null);
-    return stored || seedUsers;
+    return (stored || seedUsers).map(normalizeUser);
   });
   const [currentUser, setCurrentUser] = useState(() =>
     readStorageJSON(CURRENT_USER_STORAGE_KEY, null)
@@ -66,8 +77,9 @@ export const UserProvider = ({ children }) => {
       firstName: payload.firstName.trim(),
       lastName: payload.lastName.trim(),
       email: normalizedEmail,
-      phone: payload.phone.trim(),
+      phone: payload.phone?.trim() ?? "",
       password: payload.password,
+      isAdmin: false,
     };
 
     setUsers((prev) => [...prev, newUser]);
@@ -105,13 +117,55 @@ export const UserProvider = ({ children }) => {
     setCurrentUser(null);
   };
 
+  const saveUser = (payload) => {
+    const editedUser = normalizeUser(payload);
+
+    if (!editedUser.firstName || !editedUser.lastName || !editedUser.email || !editedUser.password) {
+      return { ok: false, message: "Vyplňte jméno, příjmení, e-mail a heslo." };
+    }
+
+    const emailTaken = users.some(
+      (item) => item.id !== editedUser.id && item.email.toLowerCase() === editedUser.email
+    );
+
+    if (emailTaken) {
+      return { ok: false, message: "Tento e-mail už používá jiný účet." };
+    }
+
+    if (editedUser.id) {
+      setUsers((prev) => prev.map((item) => (item.id === editedUser.id ? editedUser : item)));
+      if (currentUser?.id === editedUser.id) {
+        setCurrentUser(editedUser);
+      }
+      return { ok: true };
+    }
+
+    setUsers((prev) => {
+      const nextId = prev.length > 0 ? Math.max(...prev.map((item) => item.id)) + 1 : 1;
+      return [...prev, { ...editedUser, id: nextId }];
+    });
+    return { ok: true };
+  };
+
+  const deleteUser = (id) => {
+    if (currentUser?.id === id) {
+      return { ok: false, message: "Aktuálně přihlášený účet nelze smazat." };
+    }
+
+    setUsers((prev) => prev.filter((item) => item.id !== id));
+    return { ok: true };
+  };
+
   const value = {
     users,
     currentUser,
+    user: currentUser,
     isLoggedIn: Boolean(currentUser),
     login,
     register,
     updateProfile,
+    saveUser,
+    deleteUser,
     logout,
   };
 

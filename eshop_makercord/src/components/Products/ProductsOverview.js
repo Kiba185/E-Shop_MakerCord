@@ -1,7 +1,7 @@
 import "./ProductsOverview.css";
 import { useEffect, useMemo, useState } from "react";
-import data from "../../data";
 import ProductCard from "./ProductCard";
+import { useProducts } from "../../context/ProductContext";
 
 const PRODUCTS_PER_PAGE = 12;
 const colorPreviewMap = {
@@ -24,9 +24,13 @@ const sortLabels = {
 };
 
 const ProductsOverview = () => {
-  const maxPrice = useMemo(() => Math.max(...data.map((product) => product.price)), []);
-  const availableColors = useMemo(() => [...new Set(data.map((product) => product.color))], []);
-  const availableTypes = useMemo(() => [...new Set(data.map((product) => product.type))], []);
+  const { products: data } = useProducts();
+  const maxPrice = useMemo(
+    () => (data.length > 0 ? Math.max(...data.map((product) => product.price)) : 0),
+    [data]
+  );
+  const availableColors = useMemo(() => [...new Set(data.map((product) => product.color).filter(Boolean))], [data]);
+  const availableTypes = useMemo(() => [...new Set(data.map((product) => product.type).filter(Boolean))], [data]);
 
   const [sortOrder, setSortOrder] = useState("recommended");
   const [selectedMaxPrice, setSelectedMaxPrice] = useState(maxPrice);
@@ -66,7 +70,7 @@ const ProductsOverview = () => {
 
       return matchesPrice && matchesColor && matchesType;
     });
-  }, [selectedColors, selectedMaxPrice, selectedTypes]);
+  }, [data, selectedColors, selectedMaxPrice, selectedTypes]);
 
   const sortedProducts = useMemo(() => {
     const products = [...filteredProducts];
@@ -100,7 +104,11 @@ const ProductsOverview = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [sortOrder, selectedMaxPrice, selectedColors, selectedTypes]);
+  }, [sortOrder, selectedMaxPrice, selectedColors, selectedTypes, data]);
+
+  useEffect(() => {
+    setSelectedMaxPrice(maxPrice);
+  }, [maxPrice]);
 
   useEffect(() => {
     if (currentPage > totalPages) {

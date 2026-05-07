@@ -1,24 +1,33 @@
 import "./ProductsCarousel.css";
 import { useEffect, useState } from "react";
-import data from "../../data";
 import ProductCard from "./ProductCard";
+import { useProducts } from "../../context/ProductContext";
 
 const ProductsCarousel = () => {
+    const { products: data } = useProducts();
     const [index, setIndex] = useState(9);
     const carouselData = data.slice(0, 8);
 
     useEffect(() => {
+        if (carouselData.length === 0) return;
+
         if (index > carouselData.length - 1 + 9){
             setIndex(9)
         }
     }, [index, carouselData.length])
 
     useEffect(() => {
+        if (carouselData.length === 0) return;
+
         let setIntervalID = setInterval(() => {
-            setIndex(index + 1)
+            setIndex((prev) => prev + 1)
         }, 3000)
         return () => clearInterval(setIntervalID)
-    }, [index])
+    }, [carouselData.length])
+
+    if (carouselData.length === 0) {
+        return null;
+    }
 
     return (
         <div className="products-carousel">

@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
-import data from "../data";
 import "./Product.css";
 import AddToCartButton from "../components/Cart/AddToCartButton";
+import { useProducts } from "../context/ProductContext";
 
 const Product = () => {
     const { id } = useParams();
+    const { products: data } = useProducts();
     const product = data.find(p => p.id === Number(id));
     const parameters = product?.parameters || [];
 
