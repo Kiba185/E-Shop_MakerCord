@@ -179,10 +179,10 @@
     color: var(--white);
 }
 
-.secondary-action {
-    border: 1px solid #d7d3ce;
-    background: var(--white);
-    color: var(--black);
+.admin-link .secondary-action {
+    background: var(--blue, #007bff);
+    color: var(--white);
+    border-color: var(--blue, #007bff);
 }
 
 @media (max-width: 760px) {

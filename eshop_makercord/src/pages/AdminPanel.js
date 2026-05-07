@@ -12,15 +12,11 @@ const AdminPanel = () => {
   const [editingProduct, setEditingProduct] = useState(null);
   const [editingUser, setEditingUser] = useState(null);
 
-  // Debug
-  console.log('AdminPanel render - user:', user);
-
   // Check if user is admin
   if (!user) {
     return <div className="admin-panel">
       <h1>Přístup odepřen</h1>
       <p>Nejste přihlášeni. <a href="/user-profile">Přihlaste se zde.</a></p>
-      <p>Debug: user je null/undefined</p>
     </div>;
   }
 
@@ -28,7 +24,6 @@ const AdminPanel = () => {
     return <div className="admin-panel">
       <h1>Přístup odepřen</h1>
       <p>Nemáte administrátorská práva.</p>
-      <p>Debug: user není admin, email: {user.email}, isAdmin: {user.isAdmin}</p>
     </div>;
   }
 

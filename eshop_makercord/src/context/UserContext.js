@@ -15,7 +15,10 @@ const readStorageJSON = (key, fallback) => {
 };
 
 export const UserProvider = ({ children }) => {
-  const [users, setUsers] = useState(() => readStorageJSON(USERS_STORAGE_KEY, seedUsers));
+  const [users, setUsers] = useState(() => {
+    const stored = readStorageJSON(USERS_STORAGE_KEY, null);
+    return stored || seedUsers;
+  });
   const [currentUser, setCurrentUser] = useState(() =>
     readStorageJSON(CURRENT_USER_STORAGE_KEY, null)
   );
@@ -38,12 +41,9 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     const normalizedEmail = email.trim().toLowerCase();
-    console.log('Login attempt:', { email, normalizedEmail, password });
-    console.log('Available users:', users);
     const user = users.find(
       (item) => item.email.toLowerCase() === normalizedEmail && item.password === password
     );
-    console.log('Found user:', user);
 
     if (!user) {
       return { ok: false, message: "Neplatný e-mail nebo heslo." };

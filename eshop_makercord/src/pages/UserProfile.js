@@ -3,7 +3,6 @@ import PageHeading from "../components/PageHeading";
 import { useUser } from "../context/UserContext";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import "./UserProfile.css";
-import { useNavigate } from "react-router-dom";
 
 const passwordRules = [
   "Alespoň 8 znaků",
@@ -29,7 +28,6 @@ const emptyLoginForm = {
 
 const UserProfile = () => {
   const { currentUser, isLoggedIn, login, register, updateProfile, logout } = useUser();
-  const navigate = useNavigate();
   const [mode, setMode] = useState("login");
   const [loginForm, setLoginForm] = useState(emptyLoginForm);
   const [registerForm, setRegisterForm] = useState(emptyRegisterForm);
@@ -43,12 +41,6 @@ const UserProfile = () => {
     phone: currentUser?.phone ?? "",
     password: currentUser?.password ?? "",
   }));
-
-  useEffect(() => {
-    if (isLoggedIn && currentUser && currentUser.isAdmin) {
-      navigate('/admin');
-    }
-  }, [isLoggedIn, currentUser, navigate]);
 
   const passwordChecks = useMemo(() => {
     const password = registerForm.password;
@@ -203,6 +195,11 @@ const UserProfile = () => {
 
             <div className="user-profile-actions">
               <button type="submit" className="primary-action">Uložit změny</button>
+              {currentUser.isAdmin && (
+                <a href="/admin" className="admin-link">
+                  <button type="button" className="secondary-action">Admin panel</button>
+                </a>
+              )}
               <button type="button" className="secondary-action" onClick={logout}>Odhlásit se</button>
             </div>
           </form>
