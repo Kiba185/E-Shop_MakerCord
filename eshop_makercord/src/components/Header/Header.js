@@ -6,6 +6,7 @@ import logo from "../../images/logo.png";
 import { LuPhone } from "react-icons/lu";
 import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
 import { useEffect, useState } from "react";
 import { useUser } from "../../context/UserContext";
@@ -14,7 +15,7 @@ import HamMenu from "./HamMenu";
 
 const Header = () => {
   const { totalItems, popupToggle, popupVersion, setPopupToggle } = useCart();
-  const { isLoggedIn } = useUser();
+  const { currentUser, isLoggedIn } = useUser();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -68,6 +69,11 @@ const Header = () => {
               <GrCart />
               {totalItems > 0 && <span className="nav-badge">{totalItems}</span>}
             </NavLink>
+            {currentUser?.isAdmin && (
+              <NavLink to="/admin" className="nav-link admin-nav-link" title="Administrace">
+                <MdOutlineAdminPanelSettings />
+              </NavLink>
+            )}
             <NavLink to="/user-profile" className={`nav-link user-link ${isLoggedIn ? "logged-in" : ""}`}><IoPersonOutline /></NavLink>
           </nav>
         </div>

@@ -6,12 +6,13 @@ import logo from "../../images/logo.png";
 import { LuPhone } from "react-icons/lu";
 import { GrCart } from "react-icons/gr";
 import { IoPersonOutline } from "react-icons/io5";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { useCart } from "../../context/CartContext";
 import { useUser } from "../../context/UserContext";
 
 const HamHeader = ({ open, closeMenu }) => {
   const { totalItems } = useCart();
-  const { isLoggedIn } = useUser();
+  const { currentUser, isLoggedIn } = useUser();
 
   return (
     <section className={`ham-header ${open ? "active" : ""}`}>
@@ -31,6 +32,11 @@ const HamHeader = ({ open, closeMenu }) => {
           <GrCart />
           {totalItems > 0 && <span className="nav-badge">{totalItems}</span>}
         </NavLink>
+        {currentUser?.isAdmin && (
+          <NavLink to="/admin" className="ham-link" onClick={closeMenu}>
+            <MdOutlineAdminPanelSettings />
+          </NavLink>
+        )}
         <NavLink
           to="/user-profile"
           className={`ham-link user-link ${isLoggedIn ? "logged-in" : ""}`}
