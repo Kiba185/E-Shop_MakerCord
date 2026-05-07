@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <ul className="footer-links">
-                <li><a href="/">Domovsá stránka</a></li>
+                <li><a href="/">Domovská stránka</a></li>
                 <li><a href="/cart">Košík</a></li>
                 <li><a href="/products">Produkty</a></li>
                 <li><a href="/contact">Kontakt</a></li>
