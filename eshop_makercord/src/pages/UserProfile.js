@@ -3,6 +3,7 @@ import PageHeading from "../components/PageHeading";
 import { useUser } from "../context/UserContext";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import "./UserProfile.css";
+import { useNavigate } from "react-router-dom";
 
 const passwordRules = [
   "Alespoň 8 znaků",
@@ -28,6 +29,7 @@ const emptyLoginForm = {
 
 const UserProfile = () => {
   const { currentUser, isLoggedIn, login, register, updateProfile, logout } = useUser();
+  const navigate = useNavigate();
   const [mode, setMode] = useState("login");
   const [loginForm, setLoginForm] = useState(emptyLoginForm);
   const [registerForm, setRegisterForm] = useState(emptyRegisterForm);
@@ -43,14 +45,10 @@ const UserProfile = () => {
   }));
 
   useEffect(() => {
-    setProfileForm({
-      firstName: currentUser?.firstName ?? "",
-      lastName: currentUser?.lastName ?? "",
-      email: currentUser?.email ?? "",
-      phone: currentUser?.phone ?? "",
-      password: currentUser?.password ?? "",
-    });
-  }, [currentUser]);
+    if (isLoggedIn && currentUser && currentUser.isAdmin) {
+      navigate('/admin');
+    }
+  }, [isLoggedIn, currentUser, navigate]);
 
   const passwordChecks = useMemo(() => {
     const password = registerForm.password;

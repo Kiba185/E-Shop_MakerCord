@@ -1,142 +1,267 @@
 [
   {
     "id": 1,
-    "image": "product1.jpg",
-    "name": "MakerCord Basic Kit",
-    "description": "Základní sada pro tvorbu s MakerCord.",
-    "color": "červená",
+    "image": "product_img_1.jpg",
+    "name": "Černý taktický náramek",
+    "description": "Masivní černý náramek z paracordu s pevnou černou sponou. Hrubé pletení dodává surový outdoorový vzhled a hodí se ke každému batohu i bundě.",
+    "color": "černá",
     "type": "náramek",
-    "rating": 2,
-    "price": 99
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Délka", "value": "cca 22 cm" },
+      { "label": "Využití", "value": "každodenní nošení, outdoor" }
+    ],
+    "rating": 4,
+    "price": 149
   },
   {
     "id": 2,
-    "image": "product2.jpg",
-    "name": "MakerCord Advanced Kit",
-    "description": "Rozšířená sada pro pokročilejší tvoření.",
+    "image": "product_img_2.jpg",
+    "name": "Olivový survival kompas",
+    "description": "Survival náramek v olivově zelené barvě s kompasem ve sponě. Praktická volba pro výlety, táboření i pro každého, kdo chce mít navigaci stále po ruce.",
     "color": "zelená",
-    "type": "přívěsek",
-    "rating": 4,
-    "price": 199
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plast, kovové prvky" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "multifunkční plastová spona" },
+      { "label": "Výbava", "value": "kompas a drobné survival prvky" },
+      { "label": "Šířka", "value": "cca 2,6 cm" },
+      { "label": "Délka", "value": "cca 23 cm" }
+    ],
+    "rating": 5,
+    "price": 229
   },
   {
     "id": 3,
-    "image": "product3.jpg",
-    "name": "MakerCord Pro Kit",
-    "description": "Profesionální sada pro náročné projekty.",
-    "color": "modrá",
-    "type": "jiné",
-    "rating": 5,
-    "price": 299
+    "image": "product_img_3.jpg",
+    "name": "Černo-červený sportovní náramek",
+    "description": "Kontrastní černo-červený paracord náramek s plastovou přezkou. Energický vzor je skvělý pro moderní každodenní nošení i pro aktivní styl.",
+    "color": "červená",
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Zapletení", "value": "široké sportovní proplétání" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "červená s černým kontrastem" },
+      { "label": "Šířka", "value": "cca 2,8 cm" },
+      { "label": "Délka", "value": "cca 22 cm" }
+    ],
+    "rating": 4,
+    "price": 169
   },
   {
     "id": 4,
-    "image": "product1.jpg",
-    "name": "MakerCord Ultimate Kit",
-    "description": "Kompletní sada se vším potřebným na jednom místě.",
-    "color": "bílá",
+    "image": "product_img_4.jpg",
+    "name": "Šedý šekl",
+    "description": "Tmavě šedý náramek s kovovým šeklovým zapínáním. Robustní design spojuje čistý paracord s kovovým detailem pro industriální a elegantní vzhled.",
+    "color": "šedá",
     "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
+      { "label": "Zapletení", "value": "kompaktní cobra weave" },
+      { "label": "Zapínání", "value": "kovový šekl se šroubovacím čepem" },
+      { "label": "Povrch", "value": "matně šedý outdoor vzhled" },
+      { "label": "Šířka", "value": "cca 2,4 cm" },
+      { "label": "Délka", "value": "cca 21 cm" }
+    ],
     "rating": 5,
-    "price": 399
+    "price": 239
   },
   {
     "id": 5,
-    "image": "product2.jpg",
-    "name": "MakerCord Starter Kit",
-    "description": "Startovní sada pro první seznámení s MakerCord.",
+    "image": "product_img_5.jpg",
+    "name": "Ohnivý plamen",
+    "description": "Živo černý náramek s oranžovo-žlutými plamennými pruhy. Design působí dynamicky a přitahuje pozornost jako doplněk pro dobrodružné srdce.",
     "color": "červená",
-    "type": "přívěsek",
-    "rating": 1,
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Zapletení", "value": "cobra weave s bočním kontrastem" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "černá, oranžová, žlutá a červená" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Styl", "value": "výrazný outdoor doplněk" }
+    ],
+    "rating": 4,
     "price": 49
   },
   {
     "id": 6,
-    "image": "product3.jpg",
-    "name": "MakerCord Premium Kit",
-    "description": "Prémiová sada s důrazem na detail a kvalitu.",
+    "image": "product_img_6.jpg",
+    "name": "Lesní pulz",
+    "description": "Tmavě zelený náramek s jasně žlutými kříženými pruhy. Svěží kombinace barev působí technicky a přitom zůstává pohodlná pro každodenní nošení.",
     "color": "zelená",
-    "type": "jiné",
-    "rating": 5,
-    "price": 599
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Zapletení", "value": "cobra weave s kříženým opletem" },
+      { "label": "Zapínání", "value": "světlá plastová přezka" },
+      { "label": "Barevný vzor", "value": "tmavě zelená s limetkovým detailem" },
+      { "label": "Šířka", "value": "cca 2,6 cm" },
+      { "label": "Délka", "value": "cca 22 cm" }
+    ],
+    "rating": 4,
+    "price": 59
   },
   {
     "id": 7,
-    "image": "product3.jpg",
-    "name": "MakerCord Forest Band",
-    "description": "Přírodní náramek pro každodenní nošení.",
-    "color": "zelená",
+    "image": "product_img_7.jpg",
+    "name": "Růžový šekl",
+    "description": "Jemně růžový paracord náramek s pevným kovovým šeklem. Vypadá jemně, ale nabízí robustní spojení pro stylový a odolný doplněk.",
+    "color": "růžová",
     "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
+      { "label": "Zapletení", "value": "dvojité ploché pletení" },
+      { "label": "Zapínání", "value": "kovový šekl" },
+      { "label": "Barva kovu", "value": "stříbrná" },
+      { "label": "Šířka", "value": "cca 2,2 cm" },
+      { "label": "Délka", "value": "cca 20 cm" }
+    ],
     "rating": 4,
-    "price": 599
+    "price": 99
   },
   {
     "id": 8,
-    "image": "product3.jpg",
-    "name": "MakerCord Ocean Charm",
-    "description": "Přívěsek inspirovaný tóny moře.",
-    "color": "modrá",
+    "image": "product_img_8.jpg",
+    "name": "Písečná karabina",
+    "description": "Béžový paracord přívěsek s černou karabinou a kroužkem na klíče. Elegantní přírodní look pro batoh, klíče nebo outdoorovou výbavu.",
+    "color": "béžová",
     "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový kroužek, plastová karabina" },
+      { "label": "Zapletení", "value": "krátký cobra weave" },
+      { "label": "Uchycení", "value": "černá karabina a kroužek na klíče" },
+      { "label": "Délka", "value": "cca 12 cm včetně karabiny" },
+      { "label": "Využití", "value": "klíče, batoh, zip" }
+    ],
     "rating": 3,
-    "price": 259
+    "price": 69
   },
   {
     "id": 9,
-    "image": "product3.jpg",
-    "name": "MakerCord Snow Loop",
-    "description": "Minimalistický bílý náramek s čistým zpracováním.",
-    "color": "bílá",
-    "type": "náramek",
+    "image": "product_img_9.jpg",
+    "name": "Olivová pěst",
+    "description": "Zelený přívěsek s opičí pěstí a černým kroužkem. Kulatý tvar je pevný, snadno se hledá a hodí se k dobrodružným klíčům i batohu.",
+    "color": "zelená",
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, plastová karabina" },
+      { "label": "Uzlování", "value": "opičí pěst" },
+      { "label": "Uchycení", "value": "černá karabina" },
+      { "label": "Průměr uzlu", "value": "cca 3 cm" },
+      { "label": "Délka", "value": "cca 14 cm" },
+      { "label": "Využití", "value": "přívěsek na batoh nebo klíče" }
+    ],
     "rating": 4,
-    "price": 349
+    "price": 99
   },
   {
     "id": 10,
-    "image": "product3.jpg",
-    "name": "MakerCord Flame Tag",
-    "description": "Výrazný červený přívěsek s odvážným detailem.",
-    "color": "červená",
+    "image": "product_img_10.jpg",
+    "name": "Modrý hák",
+    "description": "Sytě modrý paracord přívěsek s otočnou kovovou karabinou. Kompaktní a praktický kus pro klíče nebo rychlé zavěšení na kabelku či batoh.",
+    "color": "modrá",
     "type": "přívěsek",
-    "rating": 5,
-    "price": 449
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovová otočná karabina" },
+      { "label": "Zapletení", "value": "kompaktní cobra weave" },
+      { "label": "Uchycení", "value": "otočná karabina v tmavém kovu" },
+      { "label": "Délka", "value": "cca 13 cm" },
+      { "label": "Šířka opletu", "value": "cca 2 cm" }
+    ],
+    "rating": 4,
+    "price": 59
   },
   {
     "id": 11,
-    "image": "product3.jpg",
-    "name": "MakerCord Utility Pack",
-    "description": "Sada doplňků pro pokročilé MakerCord projekty.",
-    "color": "modrá",
-    "type": "jiné",
+    "image": "product_img_11.jpg",
+    "name": "Dračí ocas",
+    "description": "Černo-červený přívěsek s výrazným pleteným tělem. Ostrý kontrast a pevné provedení dávají klíčence osobitý a hravý vzhled.",
+    "color": "červená",
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový kroužek" },
+      { "label": "Zapletení", "value": "spirálové proplétání" },
+      { "label": "Uchycení", "value": "kroužek na klíče" },
+      { "label": "Barevný vzor", "value": "červená a černá" },
+      { "label": "Délka", "value": "cca 12 cm" }
+    ],
     "rating": 3,
-    "price": 529
+    "price": 39
   },
   {
     "id": 12,
-    "image": "product3.jpg",
-    "name": "MakerCord Moss Clip",
-    "description": "Kompaktní zelený přívěsek s pevným zapínáním.",
-    "color": "zelená",
+    "image": "product_img_12.jpg",
+    "name": "Modrá vlna",
+    "description": "Modro-černý paracord přívěsek s melírovaným provazem. Lehký, ale odolný doplněk, který krásně ladí k jednoduchým klíčům i sportovnímu batohu.",
+    "color": "modrá",
     "type": "přívěsek",
-    "rating": 2,
-    "price": 159
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový kroužek" },
+      { "label": "Zapletení", "value": "spirálové proplétání" },
+      { "label": "Uchycení", "value": "kroužek na klíče" },
+      { "label": "Barevný vzor", "value": "modrá s černo-bílým melírem" },
+      { "label": "Délka", "value": "cca 11 cm" }
+    ],
+    "rating": 3,
+    "price": 129
   },
   {
     "id": 13,
-    "image": "product3.jpg",
-    "name": "MakerCord Studio Set",
-    "description": "Kreativní balíček pro tvůrce a designéry.",
-    "color": "bílá",
-    "type": "jiné",
+    "image": "product_img_13.jpg",
+    "name": "Městská opičí pěst",
+    "description": "Maskáčový přívěsek s opičí pěstí a růžovo-šedým vzorem. Stylový detail, který snáze najdete v tašce a zároveň má originální grafiku.",
+    "color": "šedá",
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový kroužek" },
+      { "label": "Uzlování", "value": "opičí pěst s pojistným uzlem" },
+      { "label": "Uchycení", "value": "velký kroužek na klíče" },
+      { "label": "Barevný vzor", "value": "šedá, růžová a světlý melír" },
+      { "label": "Průměr uzlu", "value": "cca 3,5 cm" },
+      { "label": "Délka", "value": "cca 15 cm" }
+    ],
     "rating": 4,
-    "price": 699
+    "price": 99
   },
   {
     "id": 14,
-    "image": "product3.jpg",
-    "name": "MakerCord Ruby Twist",
-    "description": "Výrazný náramek s živým červeným akcentem.",
+    "image": "product_img_14.jpg",
+    "name": "Červený klip",
+    "description": "Paracord přívěsek s červeným popiskem a kovovou karabinou. Praktický a nápadný doplněk, který rychle připnete k tašce, pásku nebo klíčům.",
     "color": "červená",
-    "type": "náramek",
-    "rating": 3,
-    "price": 279
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovová karabina, kovový kroužek" },
+      { "label": "Zapletení", "value": "široký cobra weave" },
+      { "label": "Uchycení", "value": "kovová karabina a kroužek" },
+      { "label": "Doplňky", "value": "červený textilní štítek" },
+      { "label": "Délka", "value": "cca 17 cm" },
+      { "label": "Využití", "value": "klíče, brašna, pracovní poutko" }
+    ],
+    "rating": 4,
+    "price": 59
+  },
+  {
+    "id": 15,
+    "image": "product_img_15.jpg",
+    "name": "Limetková smyčka",
+    "description": "Neonově limetkový paracord přívěsek s jednoduchou smyčkou a uzlem. Jasně viditelný doplněk pro klíče, batoh nebo zip bundy.",
+    "color": "limetková",
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord" },
+      { "label": "Uzlování", "value": "ozdobný koncový uzel" },
+      { "label": "Uchycení", "value": "dlouhá textilní smyčka" },
+      { "label": "Délka", "value": "cca 14 cm" },
+      { "label": "Viditelnost", "value": "výrazná neonově limetková barva" }
+    ],
+    "rating": 4,
+    "price": 99
   }
 ]

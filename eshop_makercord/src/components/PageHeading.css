@@ -8,7 +8,7 @@
 }
 
 .page-heading h2 {
-    font-size: clamp(2.5vw, 4vw, 50px);
+    font-size: clamp(50px, 4vh, 4.5vh);
     margin-bottom: 0.625em;
     color: var(--green);
     font-weight: 700;

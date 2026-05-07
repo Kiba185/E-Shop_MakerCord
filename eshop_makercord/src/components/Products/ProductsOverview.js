@@ -5,10 +5,16 @@ import ProductCard from "./ProductCard";
 
 const PRODUCTS_PER_PAGE = 12;
 const colorPreviewMap = {
+  "černá": "#1f1f1f",
   "červená": "#cf2f2f",
   "zelená": "#3f8f4f",
   "modrá": "#2f66cf",
+  "šedá": "#777777",
   "bílá": "#f3f3f3",
+  "oranžová": "#f07a22",
+  "růžová": "#e85b91",
+  "béžová": "#b59a6d",
+  "limetková": "#a8c927",
 };
 
 const sortLabels = {
@@ -157,7 +163,7 @@ const ProductsOverview = () => {
                     />
                     <span
                       className={`color-swatch ${color === "bílá" ? "light" : ""}`}
-                      style={{ backgroundColor: colorPreviewMap[color] }}
+                      style={{ backgroundColor: colorPreviewMap[color] || color }}
                     />
                     <span>{color}</span>
                   </label>

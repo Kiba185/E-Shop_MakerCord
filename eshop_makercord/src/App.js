@@ -6,8 +6,10 @@ import Products from './pages/Products';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import UserProfile from './pages/UserProfile';
+import SiteMap from './pages/SiteMap'
 import Error from './pages/Error';
 import SharedLayout from './pages/SharedLayout';
+import AdminPanel from './pages/AdminPanel';
 
 const App = () => {
     return <Routes>
@@ -18,6 +20,8 @@ const App = () => {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/site-map" element={<SiteMap />} />
+            <Route path="/admin" element={<AdminPanel />} />
             <Route path="*" element={<Error />} />
         </Route>
     </Routes>;

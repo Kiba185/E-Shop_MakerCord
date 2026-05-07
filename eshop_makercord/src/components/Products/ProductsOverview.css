@@ -16,7 +16,7 @@
 .filter-section-inner {
     padding: clamp(16px, 2.5vh, 3vh);
     background: var(--white);
-    border-radius: 10px;
+    border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     min-width: 13vw;
     min-height: 55vh;

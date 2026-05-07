@@ -38,9 +38,12 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     const normalizedEmail = email.trim().toLowerCase();
+    console.log('Login attempt:', { email, normalizedEmail, password });
+    console.log('Available users:', users);
     const user = users.find(
       (item) => item.email.toLowerCase() === normalizedEmail && item.password === password
     );
+    console.log('Found user:', user);
 
     if (!user) {
       return { ok: false, message: "Neplatný e-mail nebo heslo." };

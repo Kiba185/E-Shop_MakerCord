@@ -1,11 +1,12 @@
 [
   {
     "id": 1,
-    "firstName": "Jan",
-    "lastName": "Novák",
-    "email": "jan.novak@makercord.cz",
-    "phone": "+420 777 111 222",
-    "password": "MakerCord123!"
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin@makercord.cz",
+    "phone": "",
+    "password": "admin",
+    "isAdmin": true
   },
   {
     "id": 2,
@@ -13,6 +14,7 @@
     "lastName": "Svobodová",
     "email": "eliska.svobodova@makercord.cz",
     "phone": "",
-    "password": "Tvoreni2024!"
+    "password": "Tvoreni2024!",
+    "isAdmin": false
   }
 ]

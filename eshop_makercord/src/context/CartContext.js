@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
   const promoCodes = {
     MAKERCORD10: 0.1,
     WELCOME5: 0.05,
-    GIFT: 99,
+    GIFT: 0.99,
   };
 
   const [cart, setCart] = useState(() => readStorageJSON(CART_STORAGE_KEY, []));

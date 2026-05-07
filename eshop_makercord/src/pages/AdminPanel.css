@@ -1,0 +1,131 @@
+.admin-panel {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.admin-panel h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.admin-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.admin-tabs button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-tabs button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.admin-section h2 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.admin-section button {
+  padding: 8px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.admin-section button:hover {
+  background: #218838;
+}
+
+.product-list, .user-list {
+  display: grid;
+  gap: 15px;
+}
+
+.product-item, .user-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.product-item img {
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.product-item div, .user-item div {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background: #ffc107;
+  color: #212529;
+}
+
+.actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+.edit-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.edit-form h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.edit-form input, .edit-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.edit-form button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.edit-form button:last-child {
+  background: #6c757d;
+}
