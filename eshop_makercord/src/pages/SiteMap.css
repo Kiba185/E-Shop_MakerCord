@@ -1,0 +1,244 @@
+.site-map-page {
+    padding: 1.25em 16% 5vh;
+}
+
+.site-map-hero,
+.site-map-section,
+.site-map-summary,
+.site-map-types {
+    background: var(--white);
+    border-radius: var(--border_radius);
+    box-shadow: var(--box_shadow);
+}
+
+.site-map-hero {
+    width: min(1180px, 100%);
+    margin: 0 auto 1.5em;
+    padding: 2.25em;
+}
+
+.site-map-kicker {
+    margin: 0 0 0.55em;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.site-map-hero h1 {
+    margin: 0;
+    color: var(--black);
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+.site-map-hero p {
+    max-width: 720px;
+    margin: 0.75em 0 0;
+    color: #5f5b57;
+    line-height: 1.55;
+}
+
+.site-map-layout {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.35fr);
+    gap: 1.25em;
+    align-items: start;
+}
+
+.site-map-main,
+.site-map-sidebar {
+    display: grid;
+    gap: 1.25em;
+}
+
+.site-map-sidebar {
+    position: sticky;
+    top: 1.5em;
+}
+
+.site-map-section,
+.site-map-summary,
+.site-map-types {
+    padding: 1.25em;
+}
+
+.site-map-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.site-map-section-header h2,
+.site-map-summary h2,
+.site-map-types h2 {
+    margin: 0;
+    color: var(--black);
+    font-size: clamp(22px, 2.5vw, 30px);
+}
+
+.site-map-section-header span {
+    color: var(--green);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.site-map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85em;
+}
+
+.site-map-card,
+.site-map-product {
+    display: flex;
+    gap: 0.9em;
+    min-width: 0;
+    padding: 1em;
+    border: 1px solid #e2ded9;
+    border-radius: 14px;
+    background: #fbfbfb;
+    color: var(--black);
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-map-card:hover,
+.site-map-product:hover {
+    transform: translateY(-2px);
+    border-color: rgba(96, 119, 68, 0.45);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.site-map-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    border-radius: 12px;
+    background: rgba(96, 119, 68, 0.12);
+    color: var(--green);
+    font-size: 22px;
+}
+
+.site-map-card span:last-child,
+.site-map-product span {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.site-map-card strong,
+.site-map-product strong {
+    color: var(--black);
+    font-size: 19px;
+}
+
+.site-map-card small,
+.site-map-product small {
+    color: #6b6864;
+    line-height: 1.4;
+}
+
+.site-map-product-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85em;
+}
+
+.site-map-product {
+    align-items: center;
+}
+
+.site-map-product img {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #e7e5e2;
+}
+
+.site-map-summary dl {
+    display: grid;
+    gap: 0.75em;
+    margin: 1em 0 0;
+}
+
+.site-map-summary dl div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0.9em;
+    border-radius: 12px;
+    background: #f7f6f3;
+}
+
+.site-map-summary dt {
+    color: #5f5b57;
+    font-weight: 800;
+}
+
+.site-map-summary dd {
+    margin: 0;
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.site-map-types div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-top: 1em;
+}
+
+.site-map-types a {
+    padding: 0.65em 0.9em;
+    border-radius: 999px;
+    background: rgba(96, 119, 68, 0.12);
+    color: var(--green);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+    .site-map-page {
+        padding: 1.25em 5vw 5vh;
+    }
+
+    .site-map-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .site-map-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 720px) {
+    .site-map-hero,
+    .site-map-section,
+    .site-map-summary,
+    .site-map-types {
+        padding: 1em;
+    }
+
+    .site-map-section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-map-grid,
+    .site-map-product-list {
+        grid-template-columns: 1fr;
+    }
+}
