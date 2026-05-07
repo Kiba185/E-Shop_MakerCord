@@ -1,267 +1,477 @@
 [
   {
     "id": 1,
-    "image": "product_img_1.jpg",
-    "name": "Černý taktický náramek",
-    "description": "Masivní černý náramek z paracordu s pevnou černou sponou. Hrubé pletení dodává surový outdoorový vzhled a hodí se ke každému batohu i bundě.",
-    "color": "černá",
+    "image": "small_size_product_img_001.webp",
+    "detailImage": "full_size_product_img_001.webp",
+    "name": "Olivový survival náramek s kompasem",
+    "description": "Olivově zelený paracord náramek s multifunkční černou přezkou a kompasem. Praktický outdoorový doplněk pro výlety, kempování i nouzovou výbavu.",
+    "colors": ["zelená", "černá"],
     "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
       { "label": "Zapletení", "value": "cobra weave" },
-      { "label": "Zapínání", "value": "černá plastová přezka" },
-      { "label": "Šířka", "value": "cca 2,5 cm" },
-      { "label": "Délka", "value": "cca 22 cm" },
-      { "label": "Využití", "value": "každodenní nošení, outdoor" }
-    ],
-    "rating": 4,
-    "price": 149
-  },
-  {
-    "id": 2,
-    "image": "product_img_2.jpg",
-    "name": "Olivový survival kompas",
-    "description": "Survival náramek v olivově zelené barvě s kompasem ve sponě. Praktická volba pro výlety, táboření i pro každého, kdo chce mít navigaci stále po ruce.",
-    "color": "zelená",
-    "type": "náramek",
-    "parameters": [
-      { "label": "Materiál", "value": "paracord 550, plast, kovové prvky" },
-      { "label": "Zapletení", "value": "cobra weave" },
-      { "label": "Zapínání", "value": "multifunkční plastová spona" },
-      { "label": "Výbava", "value": "kompas a drobné survival prvky" },
+      { "label": "Zapínání", "value": "multifunkční přezka s kompasem" },
+      { "label": "Výbava", "value": "kompas, píšťalka, křesadlo a škrabka" },
       { "label": "Šířka", "value": "cca 2,6 cm" },
-      { "label": "Délka", "value": "cca 23 cm" }
+      { "label": "Využití", "value": "turistika, survival, outdoor" }
     ],
     "rating": 5,
     "price": 229
   },
   {
-    "id": 3,
-    "image": "product_img_3.jpg",
-    "name": "Černo-červený sportovní náramek",
-    "description": "Kontrastní černo-červený paracord náramek s plastovou přezkou. Energický vzor je skvělý pro moderní každodenní nošení i pro aktivní styl.",
-    "color": "červená",
+    "id": 2,
+    "image": "small_size_product_img_002.webp",
+    "detailImage": "full_size_product_img_002.webp",
+    "name": "Modro-žlutý šekl náramek",
+    "description": "Výrazný modro-žlutý paracord náramek s kovovým šeklem. Barevná kombinace působí sportovně a stříbrné zapínání mu dodává pevný technický detail.",
+    "colors": ["modrá", "žlutá"],
     "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord 550, plastová spona" },
+      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
+      { "label": "Zapletení", "value": "široké cobra weave" },
+      { "label": "Zapínání", "value": "kovový šekl se šroubovacím čepem" },
+      { "label": "Barevný vzor", "value": "královsky modrá se sytě žlutou" },
+      { "label": "Šířka", "value": "cca 2,8 cm" },
+      { "label": "Styl", "value": "sportovní a výrazný" }
+    ],
+    "rating": 5,
+    "price": 249
+  },
+  {
+    "id": 3,
+    "image": "small_size_product_img_003.webp",
+    "detailImage": "full_size_product_img_003.webp",
+    "name": "Neonový sportovní náramek",
+    "description": "Paracord náramek v modré, žluté a neonově zelené barvě s černou plastovou přezkou. Lehký, svěží a dobře viditelný doplněk pro aktivní den.",
+    "colors": ["modrá", "žlutá", "zelená"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
       { "label": "Zapletení", "value": "široké sportovní proplétání" },
       { "label": "Zapínání", "value": "černá plastová přezka" },
-      { "label": "Barevný vzor", "value": "červená s černým kontrastem" },
-      { "label": "Šířka", "value": "cca 2,8 cm" },
-      { "label": "Délka", "value": "cca 22 cm" }
+      { "label": "Barevný vzor", "value": "modrá, žlutá a limetkový detail" },
+      { "label": "Šířka", "value": "cca 2,7 cm" },
+      { "label": "Využití", "value": "každodenní nošení, sport, volný čas" }
     ],
     "rating": 4,
-    "price": 169
+    "price": 179
   },
   {
     "id": 4,
-    "image": "product_img_4.jpg",
-    "name": "Šedý šekl",
-    "description": "Tmavě šedý náramek s kovovým šeklovým zapínáním. Robustní design spojuje čistý paracord s kovovým detailem pro industriální a elegantní vzhled.",
-    "color": "šedá",
+    "image": "small_size_product_img_004.webp",
+    "detailImage": "full_size_product_img_004.webp",
+    "name": "Červený síťovaný náramek",
+    "description": "Sytě červený paracord náramek s bílým dekorativním opletem a černou přezkou. Kontrastní síťovaný vzor působí čistě, odvážně a originálně.",
+    "colors": ["červená", "bílá"],
     "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
-      { "label": "Zapletení", "value": "kompaktní cobra weave" },
-      { "label": "Zapínání", "value": "kovový šekl se šroubovacím čepem" },
-      { "label": "Povrch", "value": "matně šedý outdoor vzhled" },
-      { "label": "Šířka", "value": "cca 2,4 cm" },
-      { "label": "Délka", "value": "cca 21 cm" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave s dekorativní sítí" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "červený základ s bílým opletem" },
+      { "label": "Šířka", "value": "cca 2,8 cm" },
+      { "label": "Styl", "value": "výrazný městský doplněk" }
     ],
-    "rating": 5,
-    "price": 239
+    "rating": 4,
+    "price": 189
   },
   {
     "id": 5,
-    "image": "product_img_5.jpg",
-    "name": "Ohnivý plamen",
-    "description": "Živo černý náramek s oranžovo-žlutými plamennými pruhy. Design působí dynamicky a přitahuje pozornost jako doplněk pro dobrodružné srdce.",
-    "color": "červená",
-    "type": "náramek",
+    "image": "small_size_product_img_005.webp",
+    "detailImage": "full_size_product_img_005.webp",
+    "name": "Černá firesteel klíčenka",
+    "description": "Kompaktní černá paracord klíčenka s křesadlem a kovovým kroužkem. Hodí se jako praktická rezerva do batohu, na klíče nebo do outdoorové výbavy.",
+    "colors": ["černá"],
+    "type": "přívěsek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord 550, plastová spona" },
-      { "label": "Zapletení", "value": "cobra weave s bočním kontrastem" },
-      { "label": "Zapínání", "value": "černá plastová přezka" },
-      { "label": "Barevný vzor", "value": "černá, oranžová, žlutá a červená" },
-      { "label": "Šířka", "value": "cca 2,5 cm" },
-      { "label": "Styl", "value": "výrazný outdoor doplněk" }
-    ],
-    "rating": 4,
-    "price": 49
-  },
-  {
-    "id": 6,
-    "image": "product_img_6.jpg",
-    "name": "Lesní pulz",
-    "description": "Tmavě zelený náramek s jasně žlutými kříženými pruhy. Svěží kombinace barev působí technicky a přitom zůstává pohodlná pro každodenní nošení.",
-    "color": "zelená",
-    "type": "náramek",
-    "parameters": [
-      { "label": "Materiál", "value": "paracord 550, plastová spona" },
-      { "label": "Zapletení", "value": "cobra weave s kříženým opletem" },
-      { "label": "Zapínání", "value": "světlá plastová přezka" },
-      { "label": "Barevný vzor", "value": "tmavě zelená s limetkovým detailem" },
-      { "label": "Šířka", "value": "cca 2,6 cm" },
-      { "label": "Délka", "value": "cca 22 cm" }
-    ],
-    "rating": 4,
-    "price": 59
-  },
-  {
-    "id": 7,
-    "image": "product_img_7.jpg",
-    "name": "Růžový šekl",
-    "description": "Jemně růžový paracord náramek s pevným kovovým šeklem. Vypadá jemně, ale nabízí robustní spojení pro stylový a odolný doplněk.",
-    "color": "růžová",
-    "type": "náramek",
-    "parameters": [
-      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
-      { "label": "Zapletení", "value": "dvojité ploché pletení" },
-      { "label": "Zapínání", "value": "kovový šekl" },
-      { "label": "Barva kovu", "value": "stříbrná" },
-      { "label": "Šířka", "value": "cca 2,2 cm" },
-      { "label": "Délka", "value": "cca 20 cm" }
+      { "label": "Materiál", "value": "paracord, kovový kroužek, ferroceriová tyčinka" },
+      { "label": "Zapletení", "value": "krátké cobra weave" },
+      { "label": "Uchycení", "value": "kovový kroužek na klíče" },
+      { "label": "Výbava", "value": "křesadlo pro rozdělání ohně" },
+      { "label": "Délka", "value": "cca 12 cm" },
+      { "label": "Využití", "value": "klíče, batoh, nouzová výbava" }
     ],
     "rating": 4,
     "price": 99
   },
   {
-    "id": 8,
-    "image": "product_img_8.jpg",
-    "name": "Písečná karabina",
-    "description": "Béžový paracord přívěsek s černou karabinou a kroužkem na klíče. Elegantní přírodní look pro batoh, klíče nebo outdoorovou výbavu.",
-    "color": "béžová",
-    "type": "přívěsek",
+    "id": 6,
+    "image": "small_size_product_img_006.webp",
+    "detailImage": "full_size_product_img_006.webp",
+    "name": "Zdravotnický paracord náramek",
+    "description": "Červený paracord náramek se žlutým detailem a kovovým zdravotnickým symbolem. Nápadný doplněk pro záchranáře, zdravotníky nebo fanoušky rescue stylu.",
+    "colors": ["červená", "žlutá"],
+    "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord, kovový kroužek, plastová karabina" },
-      { "label": "Zapletení", "value": "krátký cobra weave" },
-      { "label": "Uchycení", "value": "černá karabina a kroužek na klíče" },
-      { "label": "Délka", "value": "cca 12 cm včetně karabiny" },
-      { "label": "Využití", "value": "klíče, batoh, zip" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka, kovový emblém" },
+      { "label": "Zapletení", "value": "cobra weave s vloženým středovým lankem" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Doplňky", "value": "kovový znak Star of Life" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Styl", "value": "rescue a zdravotnický motiv" }
     ],
-    "rating": 3,
-    "price": 69
+    "rating": 5,
+    "price": 199
   },
   {
-    "id": 9,
-    "image": "product_img_9.jpg",
-    "name": "Olivová pěst",
-    "description": "Zelený přívěsek s opičí pěstí a černým kroužkem. Kulatý tvar je pevný, snadno se hledá a hodí se k dobrodružným klíčům i batohu.",
-    "color": "zelená",
+    "id": 7,
+    "image": "small_size_product_img_007.webp",
+    "detailImage": "full_size_product_img_007.webp",
+    "name": "Olivová opičí pěst s karabinou",
+    "description": "Olivově zelený přívěsek s uzlem opičí pěst a černou karabinou. Kulatý uzel se dobře drží a snadno najde klíče v kapse, tašce nebo batohu.",
+    "colors": ["zelená", "černá"],
     "type": "přívěsek",
     "parameters": [
       { "label": "Materiál", "value": "paracord, plastová karabina" },
       { "label": "Uzlování", "value": "opičí pěst" },
       { "label": "Uchycení", "value": "černá karabina" },
-      { "label": "Průměr uzlu", "value": "cca 3 cm" },
-      { "label": "Délka", "value": "cca 14 cm" },
-      { "label": "Využití", "value": "přívěsek na batoh nebo klíče" }
+      { "label": "Průměr uzlu", "value": "cca 3,5 cm" },
+      { "label": "Délka", "value": "cca 15 cm" },
+      { "label": "Využití", "value": "klíče, batoh, outdoor doplněk" }
+    ],
+    "rating": 4,
+    "price": 119
+  },
+  {
+    "id": 8,
+    "image": "small_size_product_img_008.webp",
+    "detailImage": "full_size_product_img_008.webp",
+    "name": "Šedý náramek s kovovým šeklem",
+    "description": "Šedý paracord náramek s lesklým kovovým šeklem. Střízlivá barva a robustní zapínání z něj dělají univerzální doplněk pro město i ven.",
+    "colors": ["šedá"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "stříbrný kovový šekl" },
+      { "label": "Povrch", "value": "matný šedý paracord s lesklým kovem" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Styl", "value": "minimalistický outdoor" }
+    ],
+    "rating": 5,
+    "price": 239
+  },
+  {
+    "id": 9,
+    "image": "small_size_product_img_009.webp",
+    "detailImage": "full_size_product_img_009.webp",
+    "name": "Pískový paracord náramek",
+    "description": "Béžový paracord náramek s černou plastovou přezkou. Čisté pískové provedení ladí k outdoorové výbavě, turistickému oblečení i běžnému nošení.",
+    "colors": ["béžová"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "jednolitá písková béžová" },
+      { "label": "Šířka", "value": "cca 2,4 cm" },
+      { "label": "Využití", "value": "každodenní nošení, turistika" }
+    ],
+    "rating": 4,
+    "price": 149
+  },
+  {
+    "id": 10,
+    "image": "small_size_product_img_010.webp",
+    "detailImage": "full_size_product_img_010.webp",
+    "name": "Modro-hnědý šekl náramek",
+    "description": "Úzký paracord náramek v modré a hnědé barvě s kovovým šeklem. Elegantnější provedení drží nízký profil a dobře sedí na každodenní nošení.",
+    "colors": ["modrá", "hnědá"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový šekl" },
+      { "label": "Zapletení", "value": "tenké oplétání s bočním lemem" },
+      { "label": "Zapínání", "value": "stříbrný kovový šekl" },
+      { "label": "Barevný vzor", "value": "modrý základ s hnědým lemem" },
+      { "label": "Šířka", "value": "cca 1,6 cm" },
+      { "label": "Styl", "value": "lehčí městský náramek" }
+    ],
+    "rating": 4,
+    "price": 169
+  },
+  {
+    "id": 11,
+    "image": "small_size_product_img_011.webp",
+    "detailImage": "full_size_product_img_011.webp",
+    "name": "Lesní pulz náramek",
+    "description": "Zelený paracord náramek se žlutým a šedým kříženým opletem. Technický barevný vzor působí svižně a zároveň zůstává dobře použitelný v přírodě.",
+    "colors": ["zelená", "žlutá", "šedá"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave s kříženým opletem" },
+      { "label": "Zapínání", "value": "šedá plastová přezka" },
+      { "label": "Barevný vzor", "value": "tmavě zelená se žlutým a šedým detailem" },
+      { "label": "Šířka", "value": "cca 2,7 cm" },
+      { "label": "Využití", "value": "outdoor, sport, volný čas" }
+    ],
+    "rating": 4,
+    "price": 189
+  },
+  {
+    "id": 12,
+    "image": "small_size_product_img_012.webp",
+    "detailImage": "full_size_product_img_012.webp",
+    "name": "Sekera Viking náramek",
+    "description": "Olivový paracord náramek s ozdobnou kovovou sekerou a světlým opletem. Výrazný kus pro každého, kdo chce robustní doplněk s historickým motivem.",
+    "colors": ["zelená"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, kovový ozdobný háček" },
+      { "label": "Zapletení", "value": "cobra weave s bočním opletem" },
+      { "label": "Zapínání", "value": "kovová sekera/háček s paracord smyčkou" },
+      { "label": "Barevný vzor", "value": "olivový základ se stříbrným opletem" },
+      { "label": "Šířka", "value": "cca 2,6 cm" },
+      { "label": "Styl", "value": "viking, fantasy, outdoor" }
+    ],
+    "rating": 5,
+    "price": 289
+  },
+  {
+    "id": 13,
+    "image": "small_size_product_img_013.webp",
+    "detailImage": "full_size_product_img_013.webp",
+    "name": "Maskáčový šekl náramek",
+    "description": "Tmavý maskáčový paracord náramek se stříbrným kovovým šeklem. Nenápadná zeleno-černá kresba dobře zapadne k taktickému i turistickému vybavení.",
+    "colors": ["zelená", "černá"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, kovový šekl" },
+      { "label": "Zapletení", "value": "robustní cobra weave" },
+      { "label": "Zapínání", "value": "stříbrný kovový šekl" },
+      { "label": "Barevný vzor", "value": "tmavě zelený maskáč s černým melírem" },
+      { "label": "Šířka", "value": "cca 2,8 cm" },
+      { "label": "Využití", "value": "outdoor, taktické nošení" }
+    ],
+    "rating": 4,
+    "price": 239
+  },
+  {
+    "id": 14,
+    "image": "small_size_product_img_014.webp",
+    "detailImage": "full_size_product_img_014.webp",
+    "name": "Olivová karabina na klíče",
+    "description": "Olivový paracord přívěsek s černou karabinou, kovovým kroužkem a sponou. Praktické poutko na klíče, batoh nebo pracovní brašnu.",
+    "colors": ["zelená", "černá"],
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, plastová karabina, kovový kroužek" },
+      { "label": "Zapletení", "value": "dvojité krátké cobra weave" },
+      { "label": "Uchycení", "value": "karabina a kroužek na klíče" },
+      { "label": "Doplňky", "value": "černá plastová spona" },
+      { "label": "Délka", "value": "cca 17 cm" },
+      { "label": "Využití", "value": "klíče, batoh, taška" }
+    ],
+    "rating": 4,
+    "price": 89
+  },
+  {
+    "id": 15,
+    "image": "small_size_product_img_015.webp",
+    "detailImage": "full_size_product_img_015.webp",
+    "name": "Paracord náhrdelník s pazourkem",
+    "description": "Dlouhá hnědá paracord šňůra s černým pazourkovým přívěskem a posuvným uzlem. Stylový survival doplněk, který se nosí na krku a zůstává po ruce.",
+    "colors": ["hnědá", "černá"],
+    "type": "náhrdelník",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, plastový/kovový přívěsek" },
+      { "label": "Zapletení", "value": "volná dvojitá šňůra s uzly" },
+      { "label": "Uchycení", "value": "posuvný uzel pro nastavení délky" },
+      { "label": "Doplňky", "value": "černý pazourkový přívěsek" },
+      { "label": "Délka", "value": "nastavitelná" },
+      { "label": "Styl", "value": "survival, outdoor, festival" }
+    ],
+    "rating": 4,
+    "price": 129
+  },
+  {
+    "id": 16,
+    "image": "small_size_product_img_016.webp",
+    "detailImage": "full_size_product_img_016.webp",
+    "name": "Otvíráková paracord klíčenka",
+    "description": "Olivová paracord klíčenka s černou kovovou karabinou a otvírákem. Kompaktní pomocník na klíče, který zvládne připnutí i otevření lahve.",
+    "colors": ["zelená", "černá"],
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovová karabina, kovový kroužek" },
+      { "label": "Zapletení", "value": "krátké cobra weave" },
+      { "label": "Uchycení", "value": "karabina a kroužek na klíče" },
+      { "label": "Výbava", "value": "integrovaný otvírák" },
+      { "label": "Délka", "value": "cca 16 cm" },
+      { "label": "Využití", "value": "klíče, batoh, kempování" }
+    ],
+    "rating": 5,
+    "price": 119
+  },
+  {
+    "id": 17,
+    "image": "small_size_product_img_017.webp",
+    "detailImage": "full_size_product_img_017.webp",
+    "name": "Hnědá opičí pěst na klíče",
+    "description": "Hnědý paracord přívěsek s uzlem opičí pěst a kovovým kroužkem. Jednoduchý, pevný a dobře uchopitelný doplněk ke klíčům nebo zipu batohu.",
+    "colors": ["hnědá"],
+    "type": "přívěsek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord, kovový kroužek" },
+      { "label": "Uzlování", "value": "opičí pěst s pojistnými uzly" },
+      { "label": "Uchycení", "value": "kovový kroužek na klíče" },
+      { "label": "Průměr uzlu", "value": "cca 3,5 cm" },
+      { "label": "Délka", "value": "cca 18 cm" },
+      { "label": "Využití", "value": "klíče, taška, zip" }
     ],
     "rating": 4,
     "price": 99
   },
   {
-    "id": 10,
-    "image": "product_img_10.jpg",
-    "name": "Modrý hák",
-    "description": "Sytě modrý paracord přívěsek s otočnou kovovou karabinou. Kompaktní a praktický kus pro klíče nebo rychlé zavěšení na kabelku či batoh.",
-    "color": "modrá",
+    "id": 18,
+    "image": "small_size_product_img_018.webp",
+    "detailImage": "full_size_product_img_018.webp",
+    "name": "Tyrkysový vázaný náramek",
+    "description": "Jasně tyrkysový paracord náramek se zavazováním na šňůrky. Lehký, měkký a barevně čistý doplněk pro volnočasové nošení.",
+    "colors": ["tyrkysová"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550" },
+      { "label": "Zapletení", "value": "volnější dekorativní pletení" },
+      { "label": "Zapínání", "value": "zavazovací šňůrky" },
+      { "label": "Barevný vzor", "value": "jednolitá tyrkysová" },
+      { "label": "Šířka", "value": "cca 2,4 cm" },
+      { "label": "Styl", "value": "ležérní a barevný" }
+    ],
+    "rating": 4,
+    "price": 129
+  },
+  {
+    "id": 19,
+    "image": "small_size_product_img_019.webp",
+    "detailImage": "full_size_product_img_019.webp",
+    "name": "Petrolejová karabina",
+    "description": "Petrolejově modrý paracord přívěsek s otočnou černou karabinou. Pevné krátké opletení se dobře drží a působí čistě na klíčích i batohu.",
+    "colors": ["modrá"],
     "type": "přívěsek",
     "parameters": [
       { "label": "Materiál", "value": "paracord, kovová otočná karabina" },
       { "label": "Zapletení", "value": "kompaktní cobra weave" },
-      { "label": "Uchycení", "value": "otočná karabina v tmavém kovu" },
-      { "label": "Délka", "value": "cca 13 cm" },
-      { "label": "Šířka opletu", "value": "cca 2 cm" }
+      { "label": "Uchycení", "value": "černá otočná karabina" },
+      { "label": "Délka", "value": "cca 12 cm" },
+      { "label": "Šířka opletu", "value": "cca 2 cm" },
+      { "label": "Využití", "value": "klíče, taška, batoh" }
     ],
     "rating": 4,
-    "price": 59
+    "price": 79
   },
   {
-    "id": 11,
-    "image": "product_img_11.jpg",
-    "name": "Dračí ocas",
-    "description": "Černo-červený přívěsek s výrazným pleteným tělem. Ostrý kontrast a pevné provedení dávají klíčence osobitý a hravý vzhled.",
-    "color": "červená",
-    "type": "přívěsek",
+    "id": 20,
+    "image": "small_size_product_img_020.webp",
+    "detailImage": "full_size_product_img_020.webp",
+    "name": "Černý survival náramek",
+    "description": "Černý paracord náramek s multifunkční přezkou, píšťalkou a křesadlem. Nenápadná klasika pro každodenní nošení i outdoorovou rezervu.",
+    "colors": ["černá"],
+    "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord, kovový kroužek" },
-      { "label": "Zapletení", "value": "spirálové proplétání" },
-      { "label": "Uchycení", "value": "kroužek na klíče" },
-      { "label": "Barevný vzor", "value": "červená a černá" },
-      { "label": "Délka", "value": "cca 12 cm" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "multifunkční survival přezka" },
+      { "label": "Výbava", "value": "píšťalka, křesadlo a škrabka" },
+      { "label": "Šířka", "value": "cca 2,6 cm" },
+      { "label": "Využití", "value": "outdoor, survival, EDC" }
     ],
-    "rating": 3,
-    "price": 39
+    "rating": 5,
+    "price": 219
   },
   {
-    "id": 12,
-    "image": "product_img_12.jpg",
-    "name": "Modrá vlna",
-    "description": "Modro-černý paracord přívěsek s melírovaným provazem. Lehký, ale odolný doplněk, který krásně ladí k jednoduchým klíčům i sportovnímu batohu.",
-    "color": "modrá",
-    "type": "přívěsek",
+    "id": 21,
+    "image": "small_size_product_img_021.webp",
+    "detailImage": "full_size_product_img_021.webp",
+    "name": "Olivový survival náramek",
+    "description": "Olivový paracord náramek s černou multifunkční přezkou. Praktická zelená varianta survival náramku s kompaktním tvarem a výrazným outdoorovým vzhledem.",
+    "colors": ["zelená"],
+    "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord, kovový kroužek" },
-      { "label": "Zapletení", "value": "spirálové proplétání" },
-      { "label": "Uchycení", "value": "kroužek na klíče" },
-      { "label": "Barevný vzor", "value": "modrá s černo-bílým melírem" },
-      { "label": "Délka", "value": "cca 11 cm" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "multifunkční survival přezka" },
+      { "label": "Výbava", "value": "píšťalka, křesadlo a škrabka" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Využití", "value": "turistika, kempování, EDC" }
     ],
-    "rating": 3,
-    "price": 129
+    "rating": 5,
+    "price": 219
   },
   {
-    "id": 13,
-    "image": "product_img_13.jpg",
-    "name": "Městská opičí pěst",
-    "description": "Maskáčový přívěsek s opičí pěstí a růžovo-šedým vzorem. Stylový detail, který snáze najdete v tašce a zároveň má originální grafiku.",
-    "color": "šedá",
-    "type": "přívěsek",
+    "id": 22,
+    "image": "small_size_product_img_022.webp",
+    "detailImage": "full_size_product_img_022.webp",
+    "name": "Český pískový náramek",
+    "description": "Pískový paracord náramek s trikolorou a kovovým znakem českého lva. Výrazný vlastenecký motiv v praktickém outdoorovém provedení.",
+    "colors": ["béžová", "modrá", "bílá", "červená"],
+    "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord, kovový kroužek" },
-      { "label": "Uzlování", "value": "opičí pěst s pojistným uzlem" },
-      { "label": "Uchycení", "value": "velký kroužek na klíče" },
-      { "label": "Barevný vzor", "value": "šedá, růžová a světlý melír" },
-      { "label": "Průměr uzlu", "value": "cca 3,5 cm" },
-      { "label": "Délka", "value": "cca 15 cm" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka, kovový emblém" },
+      { "label": "Zapletení", "value": "cobra weave s vloženými barvami" },
+      { "label": "Zapínání", "value": "béžová plastová přezka" },
+      { "label": "Doplňky", "value": "kovový znak českého lva" },
+      { "label": "Barevný vzor", "value": "pískový základ s trikolorou" },
+      { "label": "Styl", "value": "vlastenecký a outdoorový" }
     ],
-    "rating": 4,
-    "price": 99
+    "rating": 5,
+    "price": 219
   },
   {
-    "id": 14,
-    "image": "product_img_14.jpg",
-    "name": "Červený klip",
-    "description": "Paracord přívěsek s červeným popiskem a kovovou karabinou. Praktický a nápadný doplněk, který rychle připnete k tašce, pásku nebo klíčům.",
-    "color": "červená",
-    "type": "přívěsek",
+    "id": 23,
+    "image": "small_size_product_img_023.webp",
+    "detailImage": "full_size_product_img_023.webp",
+    "name": "Černý taktický náramek",
+    "description": "Masivní černý paracord náramek s černou plastovou přezkou. Jednoduchý, odolný a univerzální doplněk k bundě, batohu i pracovnímu oblečení.",
+    "colors": ["černá"],
+    "type": "náramek",
     "parameters": [
-      { "label": "Materiál", "value": "paracord, kovová karabina, kovový kroužek" },
-      { "label": "Zapletení", "value": "široký cobra weave" },
-      { "label": "Uchycení", "value": "kovová karabina a kroužek" },
-      { "label": "Doplňky", "value": "červený textilní štítek" },
-      { "label": "Délka", "value": "cca 17 cm" },
-      { "label": "Využití", "value": "klíče, brašna, pracovní poutko" }
-    ],
-    "rating": 4,
-    "price": 59
-  },
-  {
-    "id": 15,
-    "image": "product_img_15.jpg",
-    "name": "Limetková smyčka",
-    "description": "Neonově limetkový paracord přívěsek s jednoduchou smyčkou a uzlem. Jasně viditelný doplněk pro klíče, batoh nebo zip bundy.",
-    "color": "limetková",
-    "type": "přívěsek",
-    "parameters": [
-      { "label": "Materiál", "value": "paracord" },
-      { "label": "Uzlování", "value": "ozdobný koncový uzel" },
-      { "label": "Uchycení", "value": "dlouhá textilní smyčka" },
-      { "label": "Délka", "value": "cca 14 cm" },
-      { "label": "Viditelnost", "value": "výrazná neonově limetková barva" }
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "jednolitá černá" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Využití", "value": "každodenní nošení, outdoor, taktické vybavení" }
     ],
     "rating": 4,
-    "price": 99
+    "price": 149
+  },
+  {
+    "id": 24,
+    "image": "small_size_product_img_024.webp",
+    "detailImage": "full_size_product_img_024.webp",
+    "name": "Fialový paracord náramek",
+    "description": "Fialový paracord náramek s černou plastovou přezkou. Sytá barva přidává klasickému cobra opletu výraznější a osobnější vzhled.",
+    "colors": ["fialová"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "jednolitá fialová" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Styl", "value": "výrazný volnočasový doplněk" }
+    ],
+    "rating": 4,
+    "price": 149
+  },
+  {
+    "id": 25,
+    "image": "small_size_product_img_025.webp",
+    "detailImage": "full_size_product_img_025.webp",
+    "name": "Modrý paracord náramek",
+    "description": "Sytě modrý paracord náramek s černou plastovou přezkou. Klasické robustní pletení v čisté barvě pro jednoduché každodenní nošení.",
+    "colors": ["modrá"],
+    "type": "náramek",
+    "parameters": [
+      { "label": "Materiál", "value": "paracord 550, plastová přezka" },
+      { "label": "Zapletení", "value": "cobra weave" },
+      { "label": "Zapínání", "value": "černá plastová přezka" },
+      { "label": "Barevný vzor", "value": "jednolitá sytě modrá" },
+      { "label": "Šířka", "value": "cca 2,5 cm" },
+      { "label": "Využití", "value": "každodenní nošení, sport, outdoor" }
+    ],
+    "rating": 4,
+    "price": 149
   }
 ]

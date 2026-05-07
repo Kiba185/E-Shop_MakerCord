@@ -15,6 +15,9 @@ const colorPreviewMap = {
   "růžová": "#e85b91",
   "béžová": "#b59a6d",
   "limetková": "#a8c927",
+  "hnědá": "#6b4423",
+  "fialová": "#9b59b6",
+  "tyrkysová": "#1abc9c",
 };
 
 const sortLabels = {
@@ -29,7 +32,10 @@ const ProductsOverview = () => {
     () => (data.length > 0 ? Math.max(...data.map((product) => product.price)) : 0),
     [data]
   );
-  const availableColors = useMemo(() => [...new Set(data.map((product) => product.color).filter(Boolean))], [data]);
+  const availableColors = useMemo(() => {
+    const allColors = data.flatMap((product) => product.colors || []);
+    return [...new Set(allColors)].filter(Boolean).sort();
+  }, [data]);
   const availableTypes = useMemo(() => [...new Set(data.map((product) => product.type).filter(Boolean))], [data]);
 
   const [sortOrder, setSortOrder] = useState("recommended");
@@ -64,7 +70,8 @@ const ProductsOverview = () => {
     return data.filter((product) => {
       const matchesPrice = product.price <= selectedMaxPrice;
       const matchesColor =
-        selectedColors.length === 0 || selectedColors.includes(product.color);
+        selectedColors.length === 0 || 
+        (product.colors || []).some(color => selectedColors.includes(color));
       const matchesType =
         selectedTypes.length === 0 || selectedTypes.includes(product.type);
 

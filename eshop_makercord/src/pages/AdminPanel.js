@@ -12,9 +12,10 @@ const emptyProduct = {
   description: "",
   price: "",
   rating: 0,
-  color: "",
+  colors: [],
   type: "",
   image: "",
+  detailImage: "",
   parameters: [],
 };
 
@@ -42,9 +43,9 @@ const AdminPanel = () => {
     if (!query) return products;
 
     return products.filter((product) =>
-      [product.name, product.description, product.color, product.type]
+      [product.name, product.description, ...product.colors, product.type]
         .filter(Boolean)
-        .some((value) => value.toLowerCase().includes(query))
+        .some((value) => String(value).toLowerCase().includes(query))
     );
   }, [productQuery, products]);
 
@@ -280,7 +281,7 @@ const AdminPanel = () => {
                       )}
                       <div className="admin-row-main">
                         <h2>{product.name}</h2>
-                        <p>{product.type} · {product.color} · {product.price} Kč</p>
+                        <p>{product.type} · {(product.colors || []).join(", ")} · {product.price} Kč</p>
                       </div>
                       <div className="admin-row-actions">
                         <button type="button" onClick={() => openProductEditor(product)} aria-label="Upravit produkt">
@@ -372,8 +373,12 @@ const AdminPanel = () => {
                     <input type="number" min="0" max="5" step="0.1" value={editingProduct.rating} onChange={(event) => updateProductField("rating", event.target.value)} />
                   </label>
                   <label>
-                    Barva
-                    <input value={editingProduct.color} onChange={(event) => updateProductField("color", event.target.value)} />
+                    Barvy (oddělené čárkou)
+                    <input 
+                      value={(editingProduct.colors || []).join(", ")} 
+                      onChange={(event) => updateProductField("colors", event.target.value.split(",").map(c => c.trim()).filter(Boolean))} 
+                      placeholder="např. modrá, bílá, zelená"
+                    />
                   </label>
                   <label>
                     Typ
@@ -381,8 +386,12 @@ const AdminPanel = () => {
                   </label>
                 </div>
                 <label>
-                  URL obrázku
+                  URL obrázku na kartě
                   <input value={editingProduct.image} onChange={(event) => updateProductField("image", event.target.value)} />
+                </label>
+                <label>
+                  URL obrázku v detailu
+                  <input value={editingProduct.detailImage} onChange={(event) => updateProductField("detailImage", event.target.value)} />
                 </label>
 
                 <div className="admin-parameters">

@@ -20,16 +20,30 @@ const normalizeProduct = (product) => ({
   description: product.description?.trim() ?? "",
   price: Number(product.price) || 0,
   rating: Number(product.rating) || 0,
-  color: product.color?.trim() ?? "",
+  colors: Array.isArray(product.colors) 
+    ? product.colors.map(c => c?.trim()).filter(Boolean)
+    : (product.color ? [product.color.trim()] : []),
   type: product.type?.trim() ?? "",
   image: product.image || "",
+  detailImage: product.detailImage || product.image || "",
   parameters: Array.isArray(product.parameters) ? product.parameters : [],
 });
+
+const hasLegacyImageReferences = (products) =>
+  products.some((product) =>
+    typeof product.image === "string" &&
+    product.image.includes("product_img_") &&
+    product.image.endsWith(".jpg")
+  );
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState(() => {
     const stored = readStorageJSON(PRODUCTS_STORAGE_KEY, null);
-    return Array.isArray(stored) && stored.length > 0 ? stored.map(normalizeProduct) : seedProducts;
+    if (Array.isArray(stored) && stored.length > 0 && !hasLegacyImageReferences(stored)) {
+      return stored.map(normalizeProduct);
+    }
+
+    return seedProducts;
   });
 
   useEffect(() => {
@@ -41,8 +55,8 @@ export const ProductProvider = ({ children }) => {
   const saveProduct = (payload) => {
     const product = normalizeProduct(payload);
 
-    if (!product.name || !product.description || !product.color || !product.type) {
-      return { ok: false, message: "Vyplňte název, popis, barvu a typ produktu." };
+    if (!product.name || !product.description || product.colors.length === 0 || !product.type) {
+      return { ok: false, message: "Vyplňte název, popis, barvy a typ produktu." };
     }
 
     if (product.price <= 0) {

@@ -38,7 +38,7 @@ const Product = () => {
         <section className="product-details">
             <div className="product-gallery">
                 <div className="product-image">
-                    <img src={product.image} alt={product.name} />
+                    <img src={product.detailImage || product.image} alt={product.name} />
                 </div>
             </div>
 
