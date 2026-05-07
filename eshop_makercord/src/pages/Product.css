@@ -11,23 +11,25 @@
     color: var(--green);
     font-weight: 800;
     text-decoration: none;
+    font-size: clamp(14px, 1.8vh, 2vh);
 }
 
 .product-details {
     width: 100%;
+    min-height: 120vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(360px, 1fr) minmax(0, 1fr);
-    gap: clamp(2em, 4vw, 4em);
+    gap: clamp(2em, 4vw, 4.2vh);
     align-items: start;
-    padding: 2em;
+    padding: clamp(2em, 3vw, 3.5vh);
     background-color: var(--white);
     border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
 }
 
 .product-details-empty {
-    min-height: 380px;
+    min-height: 50vh;
     grid-template-columns: 1fr;
     place-items: center;
     text-align: center;
@@ -73,15 +75,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.25em;
+    padding: clamp(1em, 2vw, 3vh);
     border-radius: 16px;
-    background: #f7f6f3;
+    background: #ffffff;
     border: 1px solid #e2ded9;
 }
 
 .product-image img {
     width: 100%;
     max-height: 620px;
+    min-height: 70vh;
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
@@ -91,18 +94,18 @@
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.25em;
+    gap: clamp(1.5em, 3vw, 3.5vh);
 }
 
 .product-header {
     display: grid;
-    gap: 0.65em;
+    gap: clamp(0.75em, 1.5vh, 2vh);
 }
 
 .product-header h1 {
     margin: 0;
     color: var(--black);
-    font-size: clamp(34px, 4vw, 54px);
+    font-size: clamp(34px, 4vh, 5vh);
     line-height: 1.04;
 }
 
@@ -113,7 +116,7 @@
     border-radius: 999px;
     background: #f7f6f3;
     color: var(--green);
-    font-size: 13px;
+    font-size: clamp(12px, 1.5vh, 1.8vh);
     font-weight: 900;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -127,8 +130,14 @@
     color: #c9c0b4;
 }
 
+.product-rating FiStar {
+    height: 1vh;
+}
+
 .product-rating svg {
     fill: transparent;
+    width: clamp(18px, 2vh, 3vh);
+    height: clamp(18px, 2vh, 3vh);
 }
 
 .product-rating svg.filled {
@@ -140,6 +149,7 @@
     margin-left: 0.45em;
     color: #5f5b57;
     font-weight: 800;
+    font-size: clamp(14px, 1.8vh, 2vh);
 }
 
 .product-purchase-card {
@@ -147,9 +157,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 1em;
-    padding: 1.25em;
+    padding: clamp(1em, 1.3vw, 1.8vw);
     border: 1px solid #e2ded9;
-    border-radius: 16px;
+    border-radius: var(--border_radius);
     background: #fbfbfb;
 }
 
@@ -163,7 +173,7 @@
     margin: 0;
     color: var(--black);
     font-family: "Karantina";
-    font-size: clamp(48px, 6vw, 74px);
+    font-size: clamp(48px, 6vh, 7vh);
     font-weight: 500;
     line-height: 0.9;
 }
@@ -172,7 +182,7 @@
     margin-left: 0.12em;
     color: var(--black);
     font-family: "Roboto Condensed";
-    font-size: 0.35em;
+    font-size: clamp(18px, 2.5vh, 2.6vh);
     font-weight: 900;
     vertical-align: 0.75em;
 }
@@ -180,19 +190,20 @@
 .product-price span:last-child {
     color: #6b6864;
     font-weight: 700;
+    font-size: clamp(14px, 1.8vh, 2vh);
 }
 
 .product-details .add-to-cart-button {
     min-width: 190px;
-    padding: 0.95em 1.3em;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: clamp(20px, 1vw, 2vw) clamp(20px, 1vw, 2vw);
+    border-radius: var(--border_radius);
+    font-size: clamp(16px, 2vh, 2.2vh);
 }
 
 .product-service-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85em;
+    gap: clamp(1em, 2vw, 3vh);
 }
 
 .product-service-list div {
@@ -205,31 +216,32 @@
     background: rgba(96, 119, 68, 0.09);
     color: #4f4b47;
     font-weight: 800;
+    font-size: clamp(14px, 1.8vh, 2vh);
 }
 
 .product-service-list svg {
     flex: 0 0 auto;
     color: var(--green);
-    font-size: 24px;
+    font-size: clamp(22px, 3vh, 4vh);
 }
 
 .product-description,
 .product-parameters {
-    padding-top: 0.4em;
+    padding-top: clamp(1.5em, 3vw, 3.5vh);
 }
 
 .product-description h3,
 .product-parameters h3 {
     margin: 0 0 0.75em;
     color: var(--green);
-    font-size: clamp(22px, 2.5vw, 30px);
+    font-size: clamp(22px, 2.5vw, 3vh);
 }
 
 .product-description p {
     margin: 0;
     color: #3f3a36;
     line-height: 1.7;
-    font-size: 17px;
+    font-size: clamp(17px, 2vh, 2.5vh);
 }
 
 .product-parameters {
@@ -239,25 +251,25 @@
 .product-parameters-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75em;
+    gap: clamp(1em, 2vw, 3vh);
     margin: 0;
 }
 
 .product-parameter {
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
-    min-height: 82px;
-    padding: 0.9em 1em;
+    gap: clamp(0.25em, 1vh, 1.2vh);
+    min-height: 6vh;
+    padding: clamp(1em, 1.2vw, 2vh) clamp(1.5em, 2vw, 3vh);
     border: 1px solid #e2ded9;
-    border-left: 4px solid var(--green);
-    border-radius: 10px;
+    border-left: 0.5vh solid var(--green);
+    border-radius: var(--border_radius);
     background-color: #fbfbfb;
 }
 
 .product-parameter dt {
     color: #626262;
-    font-size: 0.82em;
+    font-size: clamp(12px, 1.5vh, 1.8vh);
     font-weight: 800;
     letter-spacing: 0.03em;
     line-height: 1.2;
@@ -267,7 +279,7 @@
 
 .product-parameter dd {
     color: var(--black);
-    font-size: 1em;
+    font-size: clamp(14px, 1.8vh, 2vh);
     font-weight: 700;
     line-height: 1.35;
     margin: 0;
