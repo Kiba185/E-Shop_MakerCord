@@ -18,14 +18,14 @@
     left: 50%;
     width: 85%;
     transform: translateX(-50%);
-    height: 50%;
+    height: 45%;
     object-fit: cover;
     border-radius: 6px;
 }
 
 .product-card h2 {
-    top: 55%;
-    left: 10%;
+    top: 50%;
+    margin: 1.2vh 0.5vw 0 0.5vw;
     position: absolute;
     text-decoration: none;
     color: var(--black);
