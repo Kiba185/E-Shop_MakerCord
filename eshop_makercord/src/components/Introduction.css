@@ -1,6 +1,6 @@
 .introduction {
     text-align: center;
-    margin: clamp(20px, 2vw, 3vh) 0.625em;
+    margin: clamp(20px, 2vw, 3vh) 0;
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 25px;
     padding: 1.5vw;

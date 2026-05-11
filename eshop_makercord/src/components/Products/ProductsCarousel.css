@@ -1,86 +1,96 @@
-/* --- Hlavní okno karuselu --- */
-.products-carousel {
-    width: 100%;
-    overflow: hidden; /* Skryje vše, co odjede mimo obrazovku */
-}
-
-/* --- Pás, ve kterém jsou karty vedle sebe --- */
-.carousel-content {
-    position: relative;
-    display: flex; 
-    width: 100%;
-    height: 500px;
-    min-height: 60vh;
-    /* Odstranil jsem left: 50% a transform, už nejsou potřeba */
-}
-
-/* --- Obal pro každou jednotlivou kartu --- */
-.carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: all 0.6s ease;
+/* --- HLAVNÍ OBAL (OKNO) --- */
+.products-carousel-container {
+    /* Gilotina, která schovává odscrollované karty */
+    overflow: hidden; 
     
-    /* Místo vw použijeme pevný padding a box-sizing */
-    padding: 1.25em; 
-    box-sizing: border-box; /* Zajistí, že padding nerozhodí procentuální šířku */
-
-    /* VÝCHOZÍ STAV (Desktop): 4 karty, každá zabírá přesně čtvrtinu */
-    width: 25%; 
+    /* KOUZLO PRO ZÁCHRANU STÍNŮ NA KRAJÍCH: */
+    /* 1. Roztáhneme obal o 25px do stran (gilotina se posune ven) */
+    margin: 0 -25px; 
+    
+    /* 2. Vrátíme obsah zpět na místo pomocí paddingu.
+       Zároveň necháme 30px nahoře a dole pro vertikální stíny. */
+    padding: 30px 25px; 
+    
+    /* VÝCHOZÍ NASTAVENÍ (Desktop): 4 karty = 25% šířky pro každou */
+    --item-width: 25%;
 }
 
-/* --- Logika posunu a viditelnosti (zůstává stejná) --- */
-.carousel-item.c0 { opacity: 0; transform: translateX(-100%); pointer-events: none; }
-.carousel-item.c1 { opacity: 1; transform: translateX(0); }
-.carousel-item.c2 { opacity: 1; transform: translateX(100%); }
-.carousel-item.c3 { opacity: 1; transform: translateX(200%); }
-.carousel-item.c4 { opacity: 1; transform: translateX(300%); }
-.carousel-item.c5 { opacity: 0; transform: translateX(400%); pointer-events: none; }
+/* Vypnutí stínů pro karty mimo viditelnou oblast */
+.carousel-item.hidden-shadow .carousel-item-inner > * {
+    box-shadow: none !important;
+    /* transition zaručí, že stín nezmizí tvrdě, ale plynule */
+    transition: box-shadow 0.3s ease; 
+}
+
+.carousel-track {
+    display: flex;
+    /* transition zde už NENÍ, řídí to React inline stylem! */
+    margin: 0 -15px; 
+    width: calc(100% + 30px);
+    transform: translateX(calc(-1 * var(--current-index) * var(--item-width)));
+}
+/* --- NEVIDITELNÁ BUŇKA PRO KARTU --- */
+.carousel-item {
+    /* Zafixuje šířku buňky přesně podle naší proměnné (25%, 33%, atd.) */
+    flex: 0 0 var(--item-width);
+    max-width: var(--item-width);
+    
+    /* TADY VZNIKÁ MEZERA MEZI PRODUKTY: 15px vlevo + 15px vpravo = 30px mezera.
+       Tento prázdný prostor zároveň tvoří ochrannou zónu pro stíny (box-shadow). */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* --- VNITŘNÍ OBAL (Zde žije tvá ProductCard) --- */
+.carousel-item-inner {
+    width: 100%;
+    height: 100%;
+    /* Tvůj produkt se roztáhne na 100 % tohoto vnitřního obalu 
+       a jeho stíny se krásně rozlijí do 15px paddingu nadřazené buňky. */
+}
 
 
 /* =========================================
-   RESPONZIVITA (Jen 3 jednoduché zarážky!)
+   RESPONZIVITA (Změna šířky a mezer na malých displejích)
    ========================================= */
 
-/* 1. Menší monitory / Notebooky: 3 karty */
-@media (max-width: 1300px) {
-    .carousel-item { 
-        width: 33.333%; /* Každá karta zabere třetinu */
-    }
-    
-    /* Čtvrtá pozice (c4) už se na obrazovku nevejde, schováme ji doprava */
-    .carousel-item.c4 { 
-        opacity: 0; 
-        transform: translateX(300%); 
-        pointer-events: none; 
+/* Velké notebooky / Menší monitory: 3 karty */
+@media (max-width: 1400px) {
+    .products-carousel-container {
+        --item-width: 33.3333%;
     }
 }
 
-/* 2. Tablety / Menší displeje: 2 karty */
-@media (max-width: 960px) {
-    .carousel-item { 
-        width: 50%; /* Každá karta zabere polovinu */
+/* Tablety: 2 karty */
+@media (max-width: 1000px) {
+    .products-carousel-container {
+        --item-width: 50%;
     }
     
-    /* Pozice c3 a c4 se nevejdou, schováme je */
-    .carousel-item.c3, .carousel-item.c4 { 
-        opacity: 0; 
-        transform: translateX(200%); 
-        pointer-events: none; 
+    /* Na tabletech zmenšíme mezery mezi kartami na 20px (10+10) */
+    .carousel-item { 
+        padding: 0 10px; 
+    }
+    .carousel-track { 
+        margin: 0 -10px; 
+        width: calc(100% + 20px); 
     }
 }
 
-/* 3. Mobilní telefony: 1 karta */
+/* Mobily: 1 karta */
 @media (max-width: 600px) {
-    .carousel-item { 
-        width: 100%; /* Karta zabere celou šířku */
+    .products-carousel-container {
+        --item-width: 100%;
+        /* Mírně zmenšíme vertikální prostor pro stíny, ať to na mobilu nezabírá tolik místa */
+        padding: 20px 0; 
     }
     
-    /* Necháme viditelnou jen c1, zbytek posuneme doprava */
-    .carousel-item.c2, .carousel-item.c3, .carousel-item.c4 { 
-        opacity: 0; 
-        transform: translateX(100%); 
-        pointer-events: none; 
+    /* Na mobilech stačí malá mezera 10px (5+5), aby okraj karty nebyl nalepený na display */
+    .carousel-item { 
+        padding: 0 5px; 
+    }
+    .carousel-track { 
+        margin: 0 -5px; 
+        width: calc(100% + 10px); 
     }
 }
