@@ -3,7 +3,7 @@
     "id": 1,
     "image": "small_size_product_img_001.webp",
     "detailImage": "full_size_product_img_001.webp",
-    "name": "Olivový survival náramek s kompasem",
+    "name": "Survival náramek s kompasem",
     "description": "Olivově zelený paracord náramek s multifunkční černou přezkou a kompasem. Praktický outdoorový doplněk pro výlety, kempování i nouzovou výbavu.",
     "colors": ["zelená", "černá"],
     "type": "náramek",
@@ -22,7 +22,7 @@
     "id": 2,
     "image": "small_size_product_img_002.webp",
     "detailImage": "full_size_product_img_002.webp",
-    "name": "Modro-žlutý šekl náramek",
+    "name": "Modro-žlutý náramek",
     "description": "Výrazný modro-žlutý paracord náramek s kovovým šeklem. Barevná kombinace působí sportovně a stříbrné zapínání mu dodává pevný technický detail.",
     "colors": ["modrá", "žlutá"],
     "type": "náramek",
@@ -79,7 +79,7 @@
     "id": 5,
     "image": "small_size_product_img_005.webp",
     "detailImage": "full_size_product_img_005.webp",
-    "name": "Černá firesteel klíčenka",
+    "name": "Firesteel klíčenka",
     "description": "Kompaktní černá paracord klíčenka s křesadlem a kovovým kroužkem. Hodí se jako praktická rezerva do batohu, na klíče nebo do outdoorové výbavy.",
     "colors": ["černá"],
     "type": "přívěsek",
@@ -117,7 +117,7 @@
     "id": 7,
     "image": "small_size_product_img_007.webp",
     "detailImage": "full_size_product_img_007.webp",
-    "name": "Olivová opičí pěst s karabinou",
+    "name": "Přívěsek skarabinou",
     "description": "Olivově zelený přívěsek s uzlem opičí pěst a černou karabinou. Kulatý uzel se dobře drží a snadno najde klíče v kapse, tašce nebo batohu.",
     "colors": ["zelená", "černá"],
     "type": "přívěsek",
@@ -174,7 +174,7 @@
     "id": 10,
     "image": "small_size_product_img_010.webp",
     "detailImage": "full_size_product_img_010.webp",
-    "name": "Modro-hnědý šekl náramek",
+    "name": "Modro-hnědý náramek",
     "description": "Úzký paracord náramek v modré a hnědé barvě s kovovým šeklem. Elegantnější provedení drží nízký profil a dobře sedí na každodenní nošení.",
     "colors": ["modrá", "hnědá"],
     "type": "náramek",
@@ -193,7 +193,7 @@
     "id": 11,
     "image": "small_size_product_img_011.webp",
     "detailImage": "full_size_product_img_011.webp",
-    "name": "Lesní pulz náramek",
+    "name": "Lesní náramek",
     "description": "Zelený paracord náramek se žlutým a šedým kříženým opletem. Technický barevný vzor působí svižně a zároveň zůstává dobře použitelný v přírodě.",
     "colors": ["zelená", "žlutá", "šedá"],
     "type": "náramek",
@@ -212,7 +212,7 @@
     "id": 12,
     "image": "small_size_product_img_012.webp",
     "detailImage": "full_size_product_img_012.webp",
-    "name": "Sekera Viking náramek",
+    "name": "Vikingský náramek",
     "description": "Olivový paracord náramek s ozdobnou kovovou sekerou a světlým opletem. Výrazný kus pro každého, kdo chce robustní doplněk s historickým motivem.",
     "colors": ["zelená"],
     "type": "náramek",
@@ -231,7 +231,7 @@
     "id": 13,
     "image": "small_size_product_img_013.webp",
     "detailImage": "full_size_product_img_013.webp",
-    "name": "Maskáčový šekl náramek",
+    "name": "Vojenský náramek",
     "description": "Tmavý maskáčový paracord náramek se stříbrným kovovým šeklem. Nenápadná zeleno-černá kresba dobře zapadne k taktickému i turistickému vybavení.",
     "colors": ["zelená", "černá"],
     "type": "náramek",
@@ -282,7 +282,7 @@
       { "label": "Styl", "value": "survival, outdoor, festival" }
     ],
     "rating": 4,
-    "price": 129
+    "price": 69
   },
   {
     "id": 16,
@@ -301,13 +301,13 @@
       { "label": "Využití", "value": "klíče, batoh, kempování" }
     ],
     "rating": 5,
-    "price": 119
+    "price": 59
   },
   {
     "id": 17,
     "image": "small_size_product_img_017.webp",
     "detailImage": "full_size_product_img_017.webp",
-    "name": "Hnědá opičí pěst na klíče",
+    "name": "Přívěsek na klíče",
     "description": "Hnědý paracord přívěsek s uzlem opičí pěst a kovovým kroužkem. Jednoduchý, pevný a dobře uchopitelný doplněk ke klíčům nebo zipu batohu.",
     "colors": ["hnědá"],
     "type": "přívěsek",
@@ -339,7 +339,7 @@
       { "label": "Styl", "value": "ležérní a barevný" }
     ],
     "rating": 4,
-    "price": 129
+    "price": 29
   },
   {
     "id": 19,
@@ -377,7 +377,7 @@
       { "label": "Využití", "value": "outdoor, survival, EDC" }
     ],
     "rating": 5,
-    "price": 219
+    "price": 89
   },
   {
     "id": 21,
@@ -396,7 +396,7 @@
       { "label": "Využití", "value": "turistika, kempování, EDC" }
     ],
     "rating": 5,
-    "price": 219
+    "price": 99
   },
   {
     "id": 22,
@@ -415,7 +415,7 @@
       { "label": "Styl", "value": "vlastenecký a outdoorový" }
     ],
     "rating": 5,
-    "price": 219
+    "price": 89
   },
   {
     "id": 23,
@@ -453,7 +453,7 @@
       { "label": "Styl", "value": "výrazný volnočasový doplněk" }
     ],
     "rating": 4,
-    "price": 149
+    "price": 49
   },
   {
     "id": 25,
@@ -472,6 +472,6 @@
       { "label": "Využití", "value": "každodenní nošení, sport, outdoor" }
     ],
     "rating": 4,
-    "price": 149
+    "price": 56
   }
 ]

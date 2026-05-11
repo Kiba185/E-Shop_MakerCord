@@ -10,7 +10,7 @@ const ProductsCarousel = () => {
     const [shuffledProducts, setShuffledProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // 2. Zamíchání produktů (spustí se po načtení dat)
+    // 2. Zamíchání produktů (spustí se po načtení dat z kontextu)
     useEffect(() => {
         // Kontrola: Zamícháme pouze pokud máme data z kontextu a ještě jsme nemíchali
         if (products && products.length > 0 && shuffledProducts.length === 0) {
@@ -28,7 +28,7 @@ const ProductsCarousel = () => {
         }
     }, [products, shuffledProducts.length]);
 
-    // 3. Časovač rotace (nyní používá už zamíchané pole)
+    // 3. Časovač rotace
     useEffect(() => {
         if (shuffledProducts.length === 0) return;
 

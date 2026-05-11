@@ -1,371 +1,86 @@
-/* Hlavní okno karuselu (zabere celou šířku main) */
+/* --- Hlavní okno karuselu --- */
 .products-carousel {
     width: 100%;
+    overflow: hidden; /* Skryje vše, co odjede mimo obrazovku */
 }
 
-/* Pás, ve kterém jsou karty vedle sebe */
+/* --- Pás, ve kterém jsou karty vedle sebe --- */
 .carousel-content {
     position: relative;
     display: flex; 
-    flex-direction: row;
     width: 100%;
     height: 500px;
     min-height: 60vh;
-    overflow: hidden; 
-    padding: 0 0 0 0.625em ;
-    left: 50%;
-    transform: translateX(-50%);
+    /* Odstranil jsem left: 50% a transform, už nejsou potřeba */
 }
 
-/* Obal pro každou jednotlivou kartu */
+/* --- Obal pro každou jednotlivou kartu --- */
 .carousel-item {
     position: absolute;
-    opacity: 0;
-    transition: all 0.6s ease ;
-    padding: 1.25em 1.2vw 1.25em 0;
-}
-
-.carousel-item.c0 {
-    opacity: 0;
-    transform: translateX(-100%);
-}
-
-.carousel-item.c1 {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.carousel-item.c2 {
-    opacity: 1;
-    transform: translateX(100%);
-}
-
-.carousel-item.c3 {
-    opacity: 1;
-    transform: translateX(200%);
-}
-
-.carousel-item.c4 {
-    opacity: 1;
-    transform: translateX(300%);
-}
-
-.carousel-item.c5 {
-    opacity: 0;
-    transform: translateX(400%);
-}
-
-@media (min-width: 8000px) {
-    .carousel-item {
-        padding: 1.25em 2.4vw 1.25em 0;
-    }
-}
-
-@media (max-width: 8000px) {
-    .carousel-item {
-        padding: 1.25em 0.9vw 1.25em 0;
-    }
-}
-
-@media (max-width: 7000px) {
-    .carousel-item {
-        padding: 1.25em 1vw 1.25em 0;
-    }
-}
-
-@media (max-width: 6000px) {
-    .carousel-item {
-        padding: 1.25em 0.9vw 1.25em 0;
-    }
-}
-
-@media (max-width: 5000px) {
-    .carousel-item {
-        padding: 1.25em 0.9vw 1.25em 0;
-    }
-}
-
-@media (max-width: 4000px) {
-    .carousel-item {
-        padding: 1.25em 0.8vw 1.25em 0;
-    }
-}
-
-@media (max-width: 3000px) {
-    .carousel-item {
-        padding: 1.25em 0.75vw 1.25em 0;
-    }
-}
-
-@media (max-width: 2300px) {
-    .carousel-item {
-        padding: 1.25em 0.7vw 1.25em 0;
-    }
-}
-
-@media (max-width: 2000px) {
-    .carousel-item {
-        padding: 1.25em 0.65vw 1.25em 0;
-    }
-}
-
-@media (max-width: 1800px) {
-    .carousel-item {
-        padding: 1.25em 0.5vw 1.25em 0;
-    }
-}
-
-/* Tablet: 3 karty */
-@media (max-width: 1750px) {
-    .carousel-content {
-        width: 90%;
-    }
-
-    .carousel-item {
-        padding: 1.25em 4vw 1.25em 0;
-    }
-
-    .carousel-item.c0 {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    .carousel-item.c1 {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .carousel-item.c2 {
-        opacity: 1;
-        transform: translateX(100%);
-    }
-
-    .carousel-item.c3 {
-        opacity: 1;
-        transform: translateX(200%);
-    }
-
-    .carousel-item.c4 {
-        opacity: 0;
-        transform: translateX(300%);
-    }
-
-    .carousel-item.c5 {
-        opacity: 0;
-        transform: translateX(300%);
-    }
-}
-
-@media (max-width: 1550px) {
-
-    .carousel-item {
-        padding: 1.25em 3.75vw 1.25em 0;
-    }
-
-}
-
-@media (max-width: 1500px) {
-
-    .carousel-item {
-        padding: 1.25em 3vw 1.25em 0;
-    }
-
-}
-
-@media (max-width: 1450px) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease;
     
-    .carousel-item {
-        padding: 1.25em 1.2vw 1.25em 0;
-    }
+    /* Místo vw použijeme pevný padding a box-sizing */
+    padding: 1.25em; 
+    box-sizing: border-box; /* Zajistí, že padding nerozhodí procentuální šířku */
 
-    .carousel-content {
-        width: 93%;
-    }
+    /* VÝCHOZÍ STAV (Desktop): 4 karty, každá zabírá přesně čtvrtinu */
+    width: 25%; 
 }
 
+/* --- Logika posunu a viditelnosti (zůstává stejná) --- */
+.carousel-item.c0 { opacity: 0; transform: translateX(-100%); pointer-events: none; }
+.carousel-item.c1 { opacity: 1; transform: translateX(0); }
+.carousel-item.c2 { opacity: 1; transform: translateX(100%); }
+.carousel-item.c3 { opacity: 1; transform: translateX(200%); }
+.carousel-item.c4 { opacity: 1; transform: translateX(300%); }
+.carousel-item.c5 { opacity: 0; transform: translateX(400%); pointer-events: none; }
 
-/* Menší obrazovky: 2 karty */
+
+/* =========================================
+   RESPONZIVITA (Jen 3 jednoduché zarážky!)
+   ========================================= */
+
+/* 1. Menší monitory / Notebooky: 3 karty */
 @media (max-width: 1300px) {
-    .carousel-content {
-        width: 80%;
+    .carousel-item { 
+        width: 33.333%; /* Každá karta zabere třetinu */
     }
-    .carousel-item {
-        padding: 1.25em 11.5vw 1.25em 0;
-    }
-
-    .carousel-item.c0 {
-        opacity: 0;
-        transform: translateX(-100%);
-        padding-right: 0;
-    }
-
-    .carousel-item.c1 {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .carousel-item.c2 {
-        opacity: 1;
-        transform: translateX(100%);
-    }
-
-    .carousel-item.c3 {
-        opacity: 0;
-        transform: translateX(200%);
-    }
-
-    .carousel-item.c4 {
-        opacity: 0;
-        transform: translateX(200%);
-    }
-
-    .carousel-item.c5 {
-        opacity: 0;
-        transform: translateX(200%);
+    
+    /* Čtvrtá pozice (c4) už se na obrazovku nevejde, schováme ji doprava */
+    .carousel-item.c4 { 
+        opacity: 0; 
+        transform: translateX(300%); 
+        pointer-events: none; 
     }
 }
 
-@media (max-width: 1250px) {
-
-    .carousel-content {
-        width: 82%;
-    }
-
-}
-
-
-@media (max-width: 1190px) {
-
-    .carousel-item {
-        padding: 1.25em 3.75em 1.25em 0;
-    }
-
-}
-
-@media (max-width: 1120px) {
-
-    .carousel-content {
-        width: 90%;
-    }
-
-    .carousel-item {
-        padding: 1.25em 6.25em 1.25em 0;
-    }
-
-}
-
-@media (max-width: 1070px) {
-
-
-    .carousel-item {
-        padding: 1.25em 3.75em 1.25em 0;
-    }
-
-}
-
-@media (max-width: 1000px) {
-
-    .carousel-content {
-        width: 89%;
-    }
-
-    .carousel-item {
-        padding: 1.25em 1.875em 1.25em 0;
-    }
-
-}
-
-@media (max-width: 970px) {
-
-    .carousel-content {
-        width: 98%;
-    }
-
-    .carousel-item {
-        padding: 1.25em 1.5em 1.25em 0;
-    }
-
-}
-
-/* Mobil: 1 karta */
+/* 2. Tablety / Menší displeje: 2 karty */
 @media (max-width: 960px) {
-    .carousel-content {
-        width: 45%;
+    .carousel-item { 
+        width: 50%; /* Každá karta zabere polovinu */
     }
-    .carousel-item {
-        padding: 1.25em 0 1.25em 0;
-    }
-
-    .carousel-item.c0 {
-        opacity: 0;
-        transform: translateX(-100%);
-        padding-right: 3.125em;
-    }
-
-    .carousel-item.c1 {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .carousel-item.c2 {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    .carousel-item.c3 {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    .carousel-item.c4 {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    .carousel-item.c5 {
-        opacity: 0;
-        transform: translateX(100%);
+    
+    /* Pozice c3 a c4 se nevejdou, schováme je */
+    .carousel-item.c3, .carousel-item.c4 { 
+        opacity: 0; 
+        transform: translateX(200%); 
+        pointer-events: none; 
     }
 }
 
-@media (max-width: 940px) {
-
-    .carousel-content {
-        width: 50%;
-    }
-}
-
-@media (max-width: 840px) {
-
-    .carousel-content {
-        width: 60%;
-    }
-}
-
-@media (max-width: 700px) {
-
-    .carousel-content {
-        width: 70%;
-    }
-}
-
+/* 3. Mobilní telefony: 1 karta */
 @media (max-width: 600px) {
-
-    .carousel-content {
-        width: 86%;
+    .carousel-item { 
+        width: 100%; /* Karta zabere celou šířku */
     }
-}
-
-@media (max-width: 480px) {
-
-    .carousel-content {
-        width: 94%;
-    }
-}
-
-@media (max-width: 430px) {
-
-    .carousel-content {
-        width: 100%;
+    
+    /* Necháme viditelnou jen c1, zbytek posuneme doprava */
+    .carousel-item.c2, .carousel-item.c3, .carousel-item.c4 { 
+        opacity: 0; 
+        transform: translateX(100%); 
+        pointer-events: none; 
     }
 }

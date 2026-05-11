@@ -40,7 +40,15 @@ export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState(() => {
     const stored = readStorageJSON(PRODUCTS_STORAGE_KEY, null);
     if (Array.isArray(stored) && stored.length > 0 && !hasLegacyImageReferences(stored)) {
-      return stored.map(normalizeProduct);
+      // Re-map image references from seedProducts when loading from localStorage
+      return stored.map(storedProduct => {
+        const seedProduct = seedProducts.find(p => p.id === storedProduct.id);
+        return {
+          ...normalizeProduct(storedProduct),
+          image: seedProduct?.image || storedProduct.image || "",
+          detailImage: seedProduct?.detailImage || storedProduct.detailImage || seedProduct?.image || storedProduct.image || "",
+        };
+      });
     }
 
     return seedProducts;

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { useProducts } from "./ProductContext";
 
 const CartContext = createContext();
 const CHECKOUT_STORAGE_KEY = "cartCheckout";
@@ -26,6 +27,8 @@ const readStorageJSON = (key, fallback) => {
 };
 
 export const CartProvider = ({ children }) => {
+  const { products: allProducts } = useProducts();
+
   const shippingOptions = {
     pickup: { label: "Osobní odběr", price: 0 },
     courier: { label: "Kurýrní služba", price: 150 },
@@ -42,7 +45,18 @@ export const CartProvider = ({ children }) => {
     GIFT: 0.99,
   };
 
-  const [cart, setCart] = useState(() => readStorageJSON(CART_STORAGE_KEY, []));
+  const [cart, setCart] = useState(() => {
+    const stored = readStorageJSON(CART_STORAGE_KEY, []);
+    // Re-map image references from allProducts when loading cart from localStorage
+    return stored.map(storedProduct => {
+      const fullProduct = allProducts.find(p => p.id === storedProduct.id);
+      return {
+        ...storedProduct,
+        image: fullProduct?.image || storedProduct.image || "",
+        detailImage: fullProduct?.detailImage || storedProduct.detailImage || fullProduct?.image || storedProduct.image || "",
+      };
+    });
+  });
   const storedCheckout = readStorageJSON(CHECKOUT_STORAGE_KEY, {});
 
   useEffect(() => {

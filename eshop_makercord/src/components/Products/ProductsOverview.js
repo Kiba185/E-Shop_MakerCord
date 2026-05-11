@@ -9,6 +9,7 @@ const colorPreviewMap = {
   "červená": "#cf2f2f",
   "zelená": "#3f8f4f",
   "modrá": "#2f66cf",
+  "žlutá": "#f1c40f",
   "šedá": "#777777",
   "bílá": "#f3f3f3",
   "oranžová": "#f07a22",

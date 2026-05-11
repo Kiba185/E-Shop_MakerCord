@@ -12,8 +12,50 @@
     font-weight: bold;
 }
 
-@media (max-width: 1720px) {
+@media (max-width: 1919px) {
+    .home-page {
+        padding: 8vh auto;
+    }
+}
+
+@media (max-width: 1790px) {
+    .home-page {
+        padding: 8vh 14%;
+    }
+}
+
+@media (max-width: 1710px) {
+    .home-page {
+        padding: 8vh 13%
+    }
+}
+
+@media (max-width: 1650px) {
     .home-page {
         padding: 8vh 12%;
+    }
+}
+
+@media (max-width: 1570px) {
+    .home-page {
+        padding: 8vh 11%
+    }
+}
+
+@media (max-width: 1650px) {
+    .home-page {
+        padding: 8vh 10%
+    }
+}
+
+@media (max-width: 1570px) {
+    .home-page {
+        padding: 8vh 9%
+    }
+}
+
+@media (max-width: 1570px) {
+    .home-page {
+        padding: 8vh 8%
     }
 }
