@@ -88,12 +88,11 @@
     text-align: center;
     font-weight: 600;
     color: #888;
-    font-size: clamp(5px, 2vh, 50px);
+    font-size: clamp(2vh, 2.5vh, 10px);
     text-transform: uppercase;
     letter-spacing: 0.03em;
     line-height: 1.3;
     max-width: clamp(5vw, 8vw, 10vw);
-    word-wrap: break-word;
 }
 
 .order-status-step-circle.active + .order-status-label,

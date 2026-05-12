@@ -206,6 +206,8 @@
 .pagination-pages {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pagination-page.active {
@@ -235,8 +237,14 @@
         position: static;
     }
 
+    .filter-section-inner {
+        min-height: auto;
+    }
+
     .sorting-section {
         flex-direction: column;
+        align-items: flex-start;
+        gap: clamp(12px, 2vh, 3vh);
     }
 
     .sorting-actions {
@@ -251,17 +259,5 @@
 
     .products-list {
         grid-template-columns: 1fr;
-    }
-
-    .sorting-actions button,
-    .pagination-button,
-    .pagination-page {
-        width: 100%;
-    }
-
-    .pagination,
-    .pagination-pages {
-        width: 100%;
-        flex-direction: column;
     }
 }

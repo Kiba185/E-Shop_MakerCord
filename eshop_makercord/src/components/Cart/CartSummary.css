@@ -15,7 +15,7 @@
 .cart-summary h3 {
     margin: 0 0 20px 0;
     text-transform: none;
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(2vh, 3vh, 25px);
     font-weight: 700;
     color: var(--black);
 }
@@ -25,7 +25,7 @@
     justify-content: space-between;
     padding: 1vh 0;
     border-bottom: 1px dashed #e8e8e8;
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(1vh, 2vh, 20px);
 }
 
 .summary-row span:first-child {
@@ -42,11 +42,11 @@
     margin-top: 12px;
     padding-top: 1.5vh;
     border-top: 2px solid #e8e8e8;
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(1vh, 2vh, 20px);
 }
 
 .summary-row.total strong {
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(1vh, 2vh, 15px);
 }
 
 .summary-row.discount span {
@@ -61,7 +61,7 @@
 
 .promo > label {
     display: block;
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 20px);
     font-weight: 600;
     color: #666;
     margin-bottom: 1vh;
@@ -81,7 +81,7 @@
     border: 1px solid #ddd;
     border-radius: var(--border_radius);
     padding: 1.5vh 2vh;
-    font-size: clamp(0.7vw, 1vw, 10px);
+    font-size: clamp(1vh, 2.5vh, 25px);
     transition: all 0.2s ease;
 }
 
@@ -120,8 +120,9 @@
     border-radius: var(--border_radius);
 }
 
+
 .applied span {
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 15px);
     color: var(--green);
 }
 
@@ -133,7 +134,7 @@
     background: none;
     border: none;
     color: #e74c3c;
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 15px);
     cursor: pointer;
     font-weight: 500;
     padding: 0.4vh 0.8vh;
@@ -146,7 +147,7 @@
 
 .message {
     margin-top: 10px;
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 15px);
     padding: 1vh 1.4vh;
     border-radius: var(--border_radius);
 }
@@ -176,7 +177,7 @@
     border-radius: var(--border_radius);
     cursor: pointer;
     font-weight: 600;
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 15px);
     transition: all 0.2s ease;
 }
 
@@ -197,7 +198,7 @@
     border-radius: var(--border_radius);
     cursor: pointer;
     font-weight: 700;
-    font-size: clamp(0.8vw, 1.5vw, 14px);
+    font-size: clamp(1vh, 2vh, 15px);
     transition: all 0.2s ease;
 }
 
@@ -229,7 +230,7 @@
         width: 100%;
         position: static;
         margin-bottom: 20vh;
-        padding: 10vh 4vw;
+        padding: 4vh 4vw;
     }
 }
 
@@ -238,22 +239,18 @@
         padding: 20px;
     }
 
-    .summary-row {
-        font-size: clamp(0.8vw, 1.5vw, 14px);
-    }
-
-    .summary-row.total {
-        font-size: clamp(1vw, 2vw, 20px);
-    }
-
     .promo-controls {
         flex-direction: column;
     }
 
     .promo-controls .apply {
         width: 100%;
-        padding: 4vh;
+        padding: 2vh;
         font-size: 5vh;
+    }
+
+    .promo-controls input {
+        padding: 2vh;
     }
 
     .applied {
@@ -269,7 +266,7 @@
     .back,
     .continue {
         width: 100%;
-        padding: 4vh;
+        padding: 2vh;
         font-size: 5vh;
         text-align: center;
     }

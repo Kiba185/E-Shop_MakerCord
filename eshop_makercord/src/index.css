@@ -27,6 +27,18 @@ main {
     min-width: 70vw;
 }
 
+@media (max-width: 980px) {
+    main.products-page {
+        min-height: 4000px;
+    }
+}
+
+@media (max-width: 720px) {
+    main.products-page {
+        min-height: 7000px;
+    }
+}
+
 /* Velké monitory */
 @media (min-width: 1920px) {
     main {

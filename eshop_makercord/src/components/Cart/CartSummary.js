@@ -102,7 +102,7 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
       <div className="promo">
         <label htmlFor="promo">Slevový kód</label>
         <div className="promo-controls">
-          <input id="promo" value={code} onChange={(e) => setCode(e.target.value)} placeholder="Zadejte kód" />
+          <input id="promo" value={code} onChange={(e) => setCode(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleApply()} placeholder="Zadejte kód" />
           <button className="apply" onClick={handleApply}>Použít</button>
         </div>
         {appliedCode && (

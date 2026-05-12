@@ -8,7 +8,7 @@ footer {
 footer p {
     text-align: center;
     color: var(--black);
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(2vh, 3vw, 20px);
 }
 
 .footer-links {
@@ -22,5 +22,5 @@ footer p {
 .footer-links a {
     color: var(--black);
     text-decoration: none;
-    font-size: clamp(1vw, 2vw, 20px);
+    font-size: clamp(2vh, 3vw, 20px);
 }
