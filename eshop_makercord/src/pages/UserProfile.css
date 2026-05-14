@@ -1,37 +1,43 @@
 .user-profile-page {
     padding: 1.25em 16%;
+    min-height: 100vh;
 }
 
 .user-profile-shell {
-    width: min(980px, 100%);
+    width: 100%;
+    min-height: 40vh;
     margin: 0 auto;
-    padding: 3em;
+    padding: clamp(2.5vh, 3vh, 40px);
     background: var(--white);
     border-radius: var(--border_radius);
     box-shadow: var(--box_shadow);
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: clamp(1.5vh, 2vh, 20px);
 }
 
 .user-profile-intro {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: clamp(1.5vh, 2vh, 20px);
 }
 
 .user-profile-kicker {
     margin: 0;
     color: var(--green);
-    font-size: 13px;
+    font-size: clamp(1.5vh, 2vh, 20px);
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-.user-profile-intro h2,
+.user-profile-intro h2 {
+    margin: 0;
+    font-size: clamp(2.5vh, 3.5vh, 35px);
+}
 .user-profile-intro p {
     margin: 0;
+    font-size: clamp(1.5vh, 2vh, 20px);
 }
 
 .auth-toggle {
@@ -61,22 +67,22 @@
 .user-profile-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: clamp(1.8vh, 2.5vh, 25px);
 }
 
 .user-profile-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1em;
+    gap: clamp(1.5vh, 2vh, 20px);
 }
 
 .user-profile-grid input {
     width: 100%;
     padding: 0.875em 1em;
     border: 1px solid #d7d3ce;
-    border-radius: 10px;
+    border-radius: var(--border_radius);
     background: #fbfbfb;
-    font-size: 15px;
+    font-size: clamp(1.5vh, 2vh, 20px);
 }
 
 .user-profile-grid input:focus {
@@ -102,7 +108,7 @@
     border: none;
     background: transparent;
     color: #6b6864;
-    font-size: 20px;
+    font-size: clamp(1.5vh, 2vh, 20px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -116,13 +122,13 @@
 
 .password-rules {
     padding: 1.25em;
-    border-radius: 12px;
+    border-radius: var(--border_radius);
     background: #f7f6f3;
 }
 
 .password-rules h3 {
     margin: 0 0 0.75em 0;
-    font-size: 18px;
+    font-size: clamp(1.5vh, 2vh, 20px);
 }
 
 .password-rules ul {
@@ -143,7 +149,8 @@
 
 .user-profile-message {
     padding: 0.875em 1em;
-    border-radius: 10px;
+    border-radius: var(--border_radius);
+    font-size: clamp(1.5vh, 2vh, 20px);
     font-weight: 700;
 }
 
@@ -159,7 +166,7 @@
 
 .user-profile-actions {
     display: flex;
-    gap: 1em;
+    gap: clamp(1.5vh, 2vh, 20px);
     flex-wrap: wrap;
 }
 
@@ -167,8 +174,8 @@
 .secondary-action {
     min-width: 190px;
     padding: 0.875em 1.5em;
-    border-radius: 10px;
-    font-size: 15px;
+    border-radius: var(--border_radius);
+    font-size: clamp(1.5vh, 2vh, 20px);
     font-weight: 800;
     cursor: pointer;
 }
@@ -193,7 +200,6 @@
     .auth-toggle {
         width: 100%;
         flex-direction: column;
-        border-radius: 18px;
     }
 
     .user-profile-grid {

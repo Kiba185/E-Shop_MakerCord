@@ -1,5 +1,5 @@
 import "./CartSummary.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../../context/CartContext";
 
 const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
@@ -20,10 +20,19 @@ const CartSummary = ({ setOrderStatus, orderStatus, products }) => {
   const [code, setCode] = useState("");
   const [message, setMessage] = useState(null);
 
+  useEffect(() => {
+    if (message?.type === "error") {
+      const timer = setTimeout(() => {
+        setMessage(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
+
   const handleApply = () => {
     const ok = applyPromoCode(code);
     if (ok) {
-      setMessage({ type: "success", text: `Kód ${code.toUpperCase()} byl použit.` });
+      setMessage(null);
     } else {
       setMessage({ type: "error", text: "Neplatný slevový kód." });
     }

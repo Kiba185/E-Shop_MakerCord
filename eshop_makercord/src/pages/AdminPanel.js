@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiEdit2, FiPlus, FiSearch, FiTrash2, FiX } from "react-icons/fi";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/PageHeading/PageHeading";
 import { useUser } from "../context/UserContext";
 import { useProducts } from "../context/ProductContext";
 import "./AdminPanel.css";

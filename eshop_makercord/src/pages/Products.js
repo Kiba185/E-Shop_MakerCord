@@ -1,5 +1,5 @@
 import ProductsOverview from '../components/Products/ProductsOverview';
-import PageHeading from '../components/PageHeading';
+import PageHeading from '../components/PageHeading/PageHeading';
 
 const Products = () => {
   return <main className="products-page">

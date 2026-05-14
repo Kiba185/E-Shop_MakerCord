@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 
 const countryLabels = {
-  cz: "Ceska republika",
+  cz: "Česka republika",
   sk: "Slovensko",
 };
 
@@ -26,7 +26,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
   } = useCart();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const fmt = (n) => `${n?.toFixed(2) ?? "0.00"} Kc`;
+  const fmt = (n) => `${n?.toFixed(2) ?? "0.00"} Kč`;
   const fullName = `${deliveryDetails.firstName} ${deliveryDetails.lastName}`.trim();
   const fullAddress = `${deliveryDetails.street} ${deliveryDetails.streetNumber}`.trim();
   const country = countryLabels[deliveryDetails.country] ?? deliveryDetails.country;
@@ -54,7 +54,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
 
       <div className="order-summary-grid">
         <div className="order-summary-card order-summary-totals">
-          <h4>Cenovy přehled</h4>
+          <h4>Cenový přehled</h4>
 
           <div className="order-summary-row">
             <span>Celkem bez DPH</span>
@@ -95,7 +95,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
         </div>
 
         <div className="order-summary-card order-summary-contact">
-          <h4>Kontakt a doručeni</h4>
+          <h4>Kontakt a doručení</h4>
           <div className="order-summary-info">
             <div className="order-summary-info-block">
               <span>Kontakt</span>
@@ -120,7 +120,7 @@ const Summary = ({ setOrderStatus, onCompleteOrder }) => {
             <div className="order-summary-info-block">
               <span>Platba</span>
               <strong>{paymentOptions[paymentMethod]?.label ?? "-"}</strong>
-              <p>{paymentMethodAmount === 0 ? "Bez priplatku" : fmt(paymentMethodAmount)}</p>
+              <p>{paymentMethodAmount === 0 ? "Bez příplatku" : fmt(paymentMethodAmount)}</p>
             </div>
           </div>
         </div>

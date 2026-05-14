@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from "react";
-import PageHeading from "../components/PageHeading";
+import React, { useEffect, useMemo, useState } from "react";
+import PageHeading from "../components/PageHeading/PageHeading";
 import { useUser } from "../context/UserContext";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import "./UserProfile.css";
@@ -42,7 +42,7 @@ const UserProfile = () => {
     password: currentUser?.password ?? "",
   }));
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!currentUser) return;
 
     setProfileForm({
@@ -53,6 +53,15 @@ const UserProfile = () => {
       password: currentUser.password ?? "",
     });
   }, [currentUser]);
+
+  useEffect(() => {
+    if (message?.type === "success") {
+      const timer = setTimeout(() => {
+        setMessage(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   const passwordChecks = useMemo(() => {
     const password = registerForm.password;
@@ -105,8 +114,13 @@ const UserProfile = () => {
       return;
     }
 
-    if (registerForm.password !== registerForm.confirmPassword) {
-      setMessage({ type: "error", text: "Potvrzení hesla se neshoduje." });
+    if (registerForm.password !== registerForm.confirmPassword && registerForm.confirmPassword !== "") {
+      setMessage({ type: "error", text: "Hesla se neshodují." });
+      return;
+    }
+
+    if (registerForm.confirmPassword === "") {
+      setMessage({ type: "error", text: "Musíte potvrdit heslo." });
       return;
     }
 

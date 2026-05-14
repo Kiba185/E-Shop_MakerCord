@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiBox, FiHome, FiMail, FiMap, FiShoppingCart, FiUser } from "react-icons/fi";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/PageHeading/PageHeading";
 import { useProducts } from "../context/ProductContext";
 import { useUser } from "../context/UserContext";
 import "./SiteMap.css";

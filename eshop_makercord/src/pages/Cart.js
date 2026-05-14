@@ -1,6 +1,6 @@
 import "./Cart.css";
 import { useEffect, useState } from "react";
-import PageHeading from "../components/PageHeading"
+import PageHeading from "../components/PageHeading/PageHeading"
 import OrderStatus from "../components/Cart/OrderStatus"
 import CartProductList from "../components/Cart/CartProductList"
 import ShippingPaymentSection from "../components/Cart/ShippingPaymentSection"

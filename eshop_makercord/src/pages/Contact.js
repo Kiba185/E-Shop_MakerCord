@@ -1,4 +1,4 @@
-import PageHeading from "../components/PageHeading"
+import PageHeading from "../components/PageHeading/PageHeading"
 import ContactSection from "../components/Contact/ContactSection"
 
 const Contact = () => {

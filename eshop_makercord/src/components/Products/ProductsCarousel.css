@@ -3,13 +3,12 @@
     /* Gilotina, která schovává odscrollované karty */
     overflow: hidden; 
     
-    /* KOUZLO PRO ZÁCHRANU STÍNŮ NA KRAJÍCH: */
     /* 1. Roztáhneme obal o 25px do stran (gilotina se posune ven) */
     margin: 0 -25px; 
     
     /* 2. Vrátíme obsah zpět na místo pomocí paddingu.
        Zároveň necháme 30px nahoře a dole pro vertikální stíny. */
-    padding: 30px 25px; 
+    padding: 2vh 25px; 
     
     /* VÝCHOZÍ NASTAVENÍ (Desktop): 4 karty = 25% šířky pro každou */
     --item-width: 25%;

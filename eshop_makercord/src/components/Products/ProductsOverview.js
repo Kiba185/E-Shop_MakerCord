@@ -152,7 +152,6 @@ const ProductsOverview = () => {
                   type="range"
                   min="0"
                   max={maxPrice}
-                  step="10"
                   value={selectedMaxPrice}
                   onChange={(e) => setSelectedMaxPrice(Number(e.target.value))}
                 />

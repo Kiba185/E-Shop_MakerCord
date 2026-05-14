@@ -1,4 +1,4 @@
-import Introduction from '../components/Introduction';
+import Introduction from '../components/Introduction/Introduction';
 import ProductsCarousel from '../components/Products/ProductsCarousel';
 import "./Home.css"
 

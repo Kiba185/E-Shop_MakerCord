@@ -20,7 +20,7 @@ const ShippingPaymentSection = () => {
                 <form>
                     <label className={`shipping-payment-option ${shippingMethod === "pickup" ? "selected" : ""}`} htmlFor="shipping2">
                         <input type="radio" id="shipping2" name="shipping" value="pickup" checked={shippingMethod === "pickup"} onChange={(e) => setShippingMethod(e.target.value)} />
-                        <span>Osobní odběr - {shippingOptions.pickup.price === 0 ? "Zdarma" : fmt(shippingOptions.pickup.price)} (Vyzdvihnutí na prodejně)</span>
+                        <span>Osobní odběr - {shippingOptions.pickup.price === 0 ? "Zdarma" : fmt(shippingOptions.pickup.price)} (Vyzvednutí na prodejně)</span>
                     </label>
                     <label className={`shipping-payment-option ${shippingMethod === "courier" ? "selected" : ""}`} htmlFor="shipping1">
                         <input type="radio" id="shipping1" name="shipping" value="courier" checked={shippingMethod === "courier"} onChange={(e) => setShippingMethod(e.target.value)} />
